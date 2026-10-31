@@ -17,7 +17,7 @@ This repository documents a paired comparison of an original NIH News in Health 
 1. Read the full [instrument](forms/instrument.md) and [form setup](forms/google-forms.md).
 2. Open the [original-first draft](https://docs.google.com/forms/d/1Q65UDgX-x9PvnkmanHsWrMa9MXg_I2Uhwi6J7-UVCAQ/edit) and [AI-first draft](https://docs.google.com/forms/d/1g33aG8Z6tIRb-glQeaP0DlqJ3O-1-y5ycDqjkkdvM0w/edit). Edit access depends on the form owner's Google permissions. The instrument file allows recreation if access is unavailable.
 3. Check the passage order, required questions, debrief, and response settings in each form. Use Preview on desktop and phone.
-4. Resolve any instructor or ethics review of the brief nondisclosure, finalize the [analysis plan](ANALYSIS_PLAN.md), and run a pilot with 3–4 people before publishing.
+4. Resolve any instructor or ethics review of the brief nondisclosure, finalize the [analysis plan](ANALYSIS_PLAN.md), and follow the [pilot protocol](PILOT_PROTOCOL.md) with 3–4 people before publishing.
 5. Assign participants to the two responder links using a documented alternating or randomly generated assignment list. Record which version each respondent received. Google Forms does not balance the two links automatically.
 
 The forms do not collect email addresses or require Google sign-in. The free-text explanation could still contain identifying details, so treat responses as potentially sensitive.
