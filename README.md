@@ -4,9 +4,11 @@ Paired comparison of an NIH science-news passage and an AI rewrite. Each partici
 
 ## Current evidence and remaining work
 
+Owner sections are in [report/](report/README.md). Run `make report` to assemble `report/report.md` in the course order. Debshree’s slides and the shared theme are in [presentation/](presentation/README.md); charts and aggregate inputs all live in `results/`.
+
 The circulated form was changed to fixed **AI first** on October 31, 2026, and published. Recruitment eligibility was broadened to adults who are students, working professionals or other. Names are optional; responses with names are identifiable. Debrief is shown after Submit and response editing is off. See [form setup](forms/google-forms.md) and [revision log](forms/REVISION_LOG.md). Live collection status and final form contents need verification; older instrument documentation is historical.
 
-Aggregate report results are in results/report_statistics.json; raw exports are withheld because names and free text may identify participants. The completed [report](report/REPORT.md) describes actual results, uncertainty and retrospective decisions. Power outputs are assumption-based planning scenarios.
+Aggregate report results are in results/report_statistics.json; raw exports are withheld because names and free text may identify participants. The completed [report](report/report.md) describes actual results, uncertainty and retrospective decisions. Power outputs are assumption-based planning scenarios.
 
 ## Reproduction
 
@@ -34,7 +36,7 @@ See [report reproduction](report/REPRODUCE.md) for the completed snapshot analys
 
 ## Report and collaboration
 
-- [Written report](report/REPORT.md) covers every supplied rubric section; final report is submitted via the course Byline link.
+- [Written report](report/report.md) covers every supplied rubric section; final report is submitted via the course Byline link.
 - [Work allocation and PR tracker](PROJECT_PLAN.md): Debshree works on `debshree/report-design`; Kuba on `kuba/data-analysis`.
 - [Analysis plan](ANALYSIS_PLAN.md) is a draft; decisions made after launch must be dated as amendments.
 - Follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [PR template](.github/pull_request_template.md). Each member authors a substantive PR and the other reviews it before merging. Branch creation is not evidence of a member contribution or review.

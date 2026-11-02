@@ -1,0 +1,79 @@
+[
+  {
+    "heading": null,
+    "files": [
+      "shared/title_abstract.md"
+    ]
+  },
+  {
+    "heading": "Background and motivation",
+    "files": [
+      "debshree/background.md"
+    ]
+  },
+  {
+    "heading": "Null and alternative hypotheses",
+    "files": [
+      "kuba/hypotheses.md",
+      "debshree/hypotheses.md"
+    ]
+  },
+  {
+    "heading": "Description of experimental design",
+    "files": [
+      "debshree/experimental_design.md"
+    ]
+  },
+  {
+    "heading": "Power analysis",
+    "files": [
+      "kuba/power.md",
+      "debshree/power.md"
+    ]
+  },
+  {
+    "heading": "Data collection and cleaning procedures",
+    "files": [
+      "kuba/data_collection_cleaning.md"
+    ]
+  },
+  {
+    "heading": "Statistical analysis",
+    "files": [
+      "kuba/statistical_analysis.md",
+      "debshree/statistical_analysis.md"
+    ]
+  },
+  {
+    "heading": "Interpretation of results",
+    "files": [
+      "kuba/interpretation.md",
+      "debshree/interpretation.md"
+    ]
+  },
+  {
+    "heading": "Limitations",
+    "files": [
+      "kuba/limitations.md",
+      "debshree/limitations.md"
+    ]
+  },
+  {
+    "heading": "Conclusion and recommendations",
+    "files": [
+      "shared/conclusion.md"
+    ]
+  },
+  {
+    "heading": "References",
+    "files": [
+      "debshree/references.md"
+    ]
+  },
+  {
+    "heading": "Reproducibility and contribution note",
+    "files": [
+      "shared/contribution_note.md"
+    ]
+  }
+]

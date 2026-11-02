@@ -25,7 +25,7 @@ field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');f._p.append(fie
 def clean(t):
  t=re.sub(r'\[([^]]+)\]\(([^)]+)\)',r'\1 (\2)',t)
  return t.replace('**','').replace('`','')
-lines=(root/'report/REPORT.md').read_text().splitlines();i=0
+lines=(root/'report/report.md').read_text().splitlines();i=0
 while i<len(lines):
  line=lines[i].strip()
  if not line:i+=1;continue
@@ -38,7 +38,10 @@ while i<len(lines):
   table=doc.add_table(rows=1,cols=len(rows[0]));table.autofit=False
   width=6.8/len(rows[0]); widths=[width]*len(rows[0])
   if len(rows[0])==4:widths=[2.65,1.38,1.38,1.39]
-  if len(rows[0])==5:widths=[2.45,.55,.7,1.5,1.0]
+  if len(rows[0])==5:
+   widths=[2.15,.85,.7,1.5,1.0]
+   if rows[0][0]=='Background':widths=[1.7,.9,1.0,1.1,2.1]
+   if rows[0][0]=='Assumed accuracies':widths=[1.8,1.25,1.25,1.25,1.25]
   for j,w in enumerate(widths):table.columns[j].width=Inches(w)
   for ri,values in enumerate(rows):
    cells=table.rows[0].cells if ri==0 else table.add_row().cells
