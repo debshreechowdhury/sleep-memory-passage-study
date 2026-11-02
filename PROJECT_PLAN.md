@@ -17,10 +17,10 @@ Each member must commit their own substantive contribution and open their own PR
 
 | Member | Branch | PR | Review |
 |---|---|---|---|
-| Debshree | debshree/report-design | Pending member contribution | Pending |
+| Debshree | debshree/report-design | Report and design PR prepared | Peer review pending |
 | Kuba | kuba/data-analysis | Pending member contribution | Pending |
 
 Existing docs/pilot-protocol work and open PRs are preserved; reconcile with the actual study before merging.
 
 ## Shared setup review
-The project scaffold lives on project/setup and must be reviewed before merging to main. Member branches include that baseline. Merge the setup first, then base member PRs on main; do not count the shared setup as either member's substantive contribution.
+The shared scaffold was merged to main in [PR #2](https://github.com/debshreechowdhury/sleep-memory-passage-study/pull/2). Debshree’s branch includes that merged baseline. Do not count the shared setup as either member’s substantive contribution.

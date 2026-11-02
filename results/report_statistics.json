@@ -1,0 +1,422 @@
+{
+  "source_sha256": "783fbb244712b774c93d15e97843c08e89a71af41a9c1888600c2fb137b9d8f3",
+  "raw_n": 54,
+  "both_wrong_excluded": 5,
+  "missing_core": 0,
+  "assumption": "Current form AI first; legacy first response version uncertain",
+  "filtered_current_mapping": {
+    "n": 49,
+    "quality_AI_mean": 5.4149659863945585,
+    "quality_O_mean": 5.829931972789116,
+    "quality_AI_sd": 1.1273752954049252,
+    "quality_O_sd": 0.8690204388008753,
+    "AI_minus_O": -0.4149659863945578,
+    "difference_sd": 0.8620889042967462,
+    "t": -3.3694458776632557,
+    "df": 48,
+    "p": 0.0014932741805032785,
+    "ci95": [
+      -0.6625868314147332,
+      -0.16734514137438236
+    ],
+    "cohen_dz": -0.4813494110947508,
+    "original_higher": 23,
+    "AI_higher": 8,
+    "ties": 18,
+    "cronbach_alpha": {
+      "AI": 0.8647413024085637,
+      "O": 0.8754535218316026
+    },
+    "shapiro_differences": {
+      "statistic": 0.9170393174622348,
+      "p": 0.00207835914575789
+    },
+    "difference_range": [
+      -2.6666666666666665,
+      1.0
+    ],
+    "wilcoxon_sensitivity": {
+      "statistic": 94.0,
+      "p": 0.0024227421237450306,
+      "note": "Exploratory normal approximation; ties/zeros present; two-sided; differences rounded to 10 decimals to preserve mathematical ties"
+    },
+    "items_exploratory": [
+      {
+        "item": "clear",
+        "mean_AI": 5.755102040816326,
+        "sd_AI": 1.146200466848658,
+        "mean_O": 6.081632653061225,
+        "sd_O": 0.975464305981976,
+        "difference": -0.32653061224489793,
+        "p": 0.02790228671889568,
+        "ci95": [
+          -0.6160751908304567,
+          -0.036986033659339224
+        ]
+      },
+      {
+        "item": "engage",
+        "mean_AI": 5.163265306122449,
+        "sd_AI": 1.3439205515876271,
+        "mean_O": 5.653061224489796,
+        "sd_O": 0.9253607496575608,
+        "difference": -0.4897959183673469,
+        "p": 0.0031229097349673054,
+        "ci95": [
+          -0.8062010157934606,
+          -0.17339082094123326
+        ]
+      },
+      {
+        "item": "write",
+        "mean_AI": 5.326530612244898,
+        "sd_AI": 1.313198307917874,
+        "mean_O": 5.755102040816326,
+        "sd_O": 1.0109939878839118,
+        "difference": -0.42857142857142855,
+        "p": 0.003571706198063674,
+        "ci95": [
+          -0.7097572662368407,
+          -0.14738559090601644
+        ]
+      }
+    ],
+    "detection": {
+      "correct": 18,
+      "incorrect": 31,
+      "accuracy": 0.3673469387755102,
+      "exact_p": 0.08543313315739454,
+      "ci95": [
+        0.23422415553704332,
+        0.517122308830759
+      ],
+      "chi2": 3.4489795918367347,
+      "chi2_p": 0.06329083223334532,
+      "cohen_w": 0.2653061224489796
+    },
+    "confidence": {
+      "mean": 3.163265306122449,
+      "correct_mean": 3.0555555555555554,
+      "incorrect_mean": 3.225806451612903,
+      "spearman_r": -0.08825682659759776,
+      "spearman_p": 0.5464902068231978
+    },
+    "status_counts": {
+      "Yes": 1,
+      "Working professional": 33,
+      "Student": 14,
+      "Other": 1
+    }
+  },
+  "sensitivity_without_legacy": {
+    "n": 48,
+    "quality_AI_mean": 5.388888888888888,
+    "quality_O_mean": 5.8125,
+    "quality_AI_sd": 1.12427193847706,
+    "quality_O_sd": 0.8695159110802685,
+    "AI_minus_O": -0.423611111111111,
+    "difference_sd": 0.8690626545636002,
+    "t": -3.3770452026319537,
+    "df": 47,
+    "p": 0.0014791537370283433,
+    "ci95": [
+      -0.6759606010214418,
+      -0.1712616212007802
+    ],
+    "cohen_dz": -0.4874344892012732,
+    "original_higher": 23,
+    "AI_higher": 8,
+    "ties": 17,
+    "cronbach_alpha": {
+      "AI": 0.8621025561097259,
+      "O": 0.8749267148719955
+    },
+    "shapiro_differences": {
+      "statistic": 0.9217881658314897,
+      "p": 0.0034391789505486573
+    },
+    "difference_range": [
+      -2.6666666666666665,
+      1.0
+    ],
+    "wilcoxon_sensitivity": {
+      "statistic": 94.0,
+      "p": 0.0024227421237450306,
+      "note": "Exploratory normal approximation; ties/zeros present; two-sided; differences rounded to 10 decimals to preserve mathematical ties"
+    },
+    "items_exploratory": [
+      {
+        "item": "clear",
+        "mean_AI": 5.729166666666667,
+        "sd_AI": 1.143707731846963,
+        "mean_O": 6.0625,
+        "sd_O": 0.9764514564526547,
+        "difference": -0.3333333333333333,
+        "p": 0.02786740672046064,
+        "ci95": [
+          -0.6288066145295295,
+          -0.03786005213713717
+        ]
+      },
+      {
+        "item": "engage",
+        "mean_AI": 5.145833333333333,
+        "sd_AI": 1.3525324290497458,
+        "mean_O": 5.645833333333333,
+        "sd_O": 0.9337543376716207,
+        "difference": -0.5,
+        "p": 0.003102127343595601,
+        "ci95": [
+          -0.8225643826861873,
+          -0.1774356173138128
+        ]
+      },
+      {
+        "item": "write",
+        "mean_AI": 5.291666666666667,
+        "sd_AI": 1.3039764606499145,
+        "mean_O": 5.729166666666667,
+        "sd_O": 1.005084591196678,
+        "difference": -0.4375,
+        "p": 0.0035495608105540156,
+        "ci95": [
+          -0.7241780293604008,
+          -0.15082197063959918
+        ]
+      }
+    ],
+    "detection": {
+      "correct": 17,
+      "incorrect": 31,
+      "accuracy": 0.3541666666666667,
+      "exact_p": 0.05946337525377034,
+      "ci95": [
+        0.22160593291145428,
+        0.5054317445633696
+      ],
+      "chi2": 4.083333333333333,
+      "chi2_p": 0.04330814281079202,
+      "cohen_w": 0.29166666666666663
+    },
+    "confidence": {
+      "mean": 3.1666666666666665,
+      "correct_mean": 3.0588235294117645,
+      "incorrect_mean": 3.225806451612903,
+      "spearman_r": -0.081600696937715,
+      "spearman_p": 0.5813836819000833
+    },
+    "status_counts": {
+      "Working professional": 33,
+      "Student": 14,
+      "Other": 1
+    }
+  },
+  "sensitivity_legacy_original_first": {
+    "n": 49,
+    "quality_AI_mean": 5.4149659863945585,
+    "quality_O_mean": 5.829931972789116,
+    "quality_AI_sd": 1.1273752954049252,
+    "quality_O_sd": 0.8690204388008753,
+    "AI_minus_O": -0.4149659863945578,
+    "difference_sd": 0.8620889042967462,
+    "t": -3.3694458776632557,
+    "df": 48,
+    "p": 0.0014932741805032785,
+    "ci95": [
+      -0.6625868314147332,
+      -0.16734514137438236
+    ],
+    "cohen_dz": -0.4813494110947508,
+    "original_higher": 23,
+    "AI_higher": 8,
+    "ties": 18,
+    "cronbach_alpha": {
+      "AI": 0.8647413024085637,
+      "O": 0.8754535218316026
+    },
+    "shapiro_differences": {
+      "statistic": 0.9170393174622348,
+      "p": 0.00207835914575789
+    },
+    "difference_range": [
+      -2.6666666666666665,
+      1.0
+    ],
+    "wilcoxon_sensitivity": {
+      "statistic": 94.0,
+      "p": 0.0024227421237450306,
+      "note": "Exploratory normal approximation; ties/zeros present; two-sided; differences rounded to 10 decimals to preserve mathematical ties"
+    },
+    "items_exploratory": [
+      {
+        "item": "clear",
+        "mean_AI": 5.755102040816326,
+        "sd_AI": 1.146200466848658,
+        "mean_O": 6.081632653061225,
+        "sd_O": 0.975464305981976,
+        "difference": -0.32653061224489793,
+        "p": 0.02790228671889568,
+        "ci95": [
+          -0.6160751908304567,
+          -0.036986033659339224
+        ]
+      },
+      {
+        "item": "engage",
+        "mean_AI": 5.163265306122449,
+        "sd_AI": 1.3439205515876271,
+        "mean_O": 5.653061224489796,
+        "sd_O": 0.9253607496575608,
+        "difference": -0.4897959183673469,
+        "p": 0.0031229097349673054,
+        "ci95": [
+          -0.8062010157934606,
+          -0.17339082094123326
+        ]
+      },
+      {
+        "item": "write",
+        "mean_AI": 5.326530612244898,
+        "sd_AI": 1.313198307917874,
+        "mean_O": 5.755102040816326,
+        "sd_O": 1.0109939878839118,
+        "difference": -0.42857142857142855,
+        "p": 0.003571706198063674,
+        "ci95": [
+          -0.7097572662368407,
+          -0.14738559090601644
+        ]
+      }
+    ],
+    "detection": {
+      "correct": 17,
+      "incorrect": 32,
+      "accuracy": 0.3469387755102041,
+      "exact_p": 0.04438416098714981,
+      "ci95": [
+        0.21672437810748105,
+        0.49638719771970474
+      ],
+      "chi2": 4.591836734693878,
+      "chi2_p": 0.03212457120765664,
+      "cohen_w": 0.30612244897959184
+    },
+    "confidence": {
+      "mean": 3.163265306122449,
+      "correct_mean": 3.0588235294117645,
+      "incorrect_mean": 3.21875,
+      "spearman_r": -0.07563369017353133,
+      "spearman_p": 0.6054988592743213
+    },
+    "status_counts": {
+      "Yes": 1,
+      "Working professional": 33,
+      "Student": 14,
+      "Other": 1
+    }
+  },
+  "unfiltered": {
+    "n": 54,
+    "quality_AI_mean": 5.271604938271605,
+    "quality_O_mean": 5.71604938271605,
+    "quality_AI_sd": 1.2045930166410366,
+    "quality_O_sd": 0.9934954226105119,
+    "AI_minus_O": -0.4444444444444444,
+    "difference_sd": 0.8417810807096289,
+    "t": -3.8798523732056895,
+    "df": 53,
+    "p": 0.0002908957024874877,
+    "ci95": [
+      -0.6742064505305609,
+      -0.2146824383583279
+    ],
+    "cohen_dz": -0.5279810328711283,
+    "original_higher": 28,
+    "AI_higher": 8,
+    "ties": 18,
+    "cronbach_alpha": {
+      "AI": 0.8690336044520548,
+      "O": 0.8971444304594084
+    },
+    "shapiro_differences": {
+      "statistic": 0.9261978402575035,
+      "p": 0.0025854868187590715
+    },
+    "difference_range": [
+      -2.6666666666666665,
+      1.0
+    ],
+    "wilcoxon_sensitivity": {
+      "statistic": 116.5,
+      "p": 0.0006210366202306861,
+      "note": "Exploratory normal approximation; ties/zeros present; two-sided; differences rounded to 10 decimals to preserve mathematical ties"
+    },
+    "items_exploratory": [
+      {
+        "item": "clear",
+        "mean_AI": 5.611111111111111,
+        "sd_AI": 1.2799862420644272,
+        "mean_O": 5.925925925925926,
+        "sd_O": 1.1631423257199447,
+        "difference": -0.3148148148148148,
+        "p": 0.020424822155305465,
+        "ci95": [
+          -0.5789903805412915,
+          -0.05063924908833817
+        ]
+      },
+      {
+        "item": "engage",
+        "mean_AI": 4.981481481481482,
+        "sd_AI": 1.4600431725426237,
+        "mean_O": 5.574074074074074,
+        "sd_O": 0.9635205073035081,
+        "difference": -0.5925925925925926,
+        "p": 0.0002983009026077471,
+        "ci95": [
+          -0.8995644234156072,
+          -0.28562076176957796
+        ]
+      },
+      {
+        "item": "write",
+        "mean_AI": 5.222222222222222,
+        "sd_AI": 1.3127339563870404,
+        "mean_O": 5.648148148148148,
+        "sd_O": 1.1353232007190046,
+        "difference": -0.42592592592592593,
+        "p": 0.0039638520263606085,
+        "ci95": [
+          -0.7094912966494278,
+          -0.14236055520242402
+        ]
+      }
+    ],
+    "detection": {
+      "correct": 19,
+      "incorrect": 35,
+      "accuracy": 0.35185185185185186,
+      "exact_p": 0.04022356409571669,
+      "ci95": [
+        0.2268118840984716,
+        0.4937621382407827
+      ],
+      "chi2": 4.7407407407407405,
+      "chi2_p": 0.02945638563257139,
+      "cohen_w": 0.2962962962962963
+    },
+    "confidence": {
+      "mean": 3.2037037037037037,
+      "correct_mean": 3.1052631578947367,
+      "incorrect_mean": 3.257142857142857,
+      "spearman_r": -0.07702241079128125,
+      "spearman_p": 0.5798686607884135
+    },
+    "status_counts": {
+      "Yes": 1,
+      "Working professional": 36,
+      "Student": 15,
+      "Other": 2
+    }
+  }
+}
