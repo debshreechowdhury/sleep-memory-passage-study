@@ -1,4 +1,4 @@
-"""Write paired rating and detection statistics from cleaned data."""
+"""Write paired rating statistics from cleaned data."""
 import argparse, csv, json, math
 from pathlib import Path
 import numpy as np
@@ -34,14 +34,6 @@ def main():
         output["ratings"]=result
         output["cronbach_alpha"]={v:alpha([[float(r[f"{x}_{v}"]) for x in ("clear","engage","write")] for r in paired]) for v in ("AI","O")}
     else: output["ratings"]={"warning":"Fewer than two complete pairs"}
-    detected=[int(r["detect_correct"]) for r in rows if r["detect_correct"]!=""]
-    if detected:
-        n=len(detected); k=sum(detected); exact=stats.binomtest(k,n,p=0.5);ci=exact.proportion_ci()
-        detection={"n":n,"correct":k,"incorrect":n-k,"accuracy":k/n,"accuracy_minus_chance":k/n-0.5,"exact_binomial_p":float(exact.pvalue),"exact_ci95":[float(ci.low),float(ci.high)]}
-        if n/2>=5:
-            test=stats.chisquare([k,n-k],f_exp=[n/2,n/2]); detection.update(chi2=float(test.statistic),chi2_df=1,chi2_p=float(test.pvalue),cohen_w=float(math.sqrt(test.statistic/n)))
-        else: detection["chi2_warning"]="Expected counts below 5; chi-square omitted; report exact test"
-        output["detection"]=detection
     def finite(obj):
         if isinstance(obj,float) and not math.isfinite(obj): return None
         if isinstance(obj,dict): return {k:finite(v) for k,v in obj.items()}

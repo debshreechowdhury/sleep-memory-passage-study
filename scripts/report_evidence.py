@@ -9,9 +9,10 @@ parser.add_argument('--output',required=True)
 args=parser.parse_args()
 p=Path(args.output).parent
 p.mkdir(parents=True,exist_ok=True)
-sys.path.insert(0,str(Path(__file__).resolve().parent))
+scripts=Path(__file__).resolve().parent
+sys.path[:0]=[str(scripts/'data'),str(scripts/'quality')]
 from clean import clean_row
-from analyze import alpha
+from quality import alpha
 rawpath=Path(args.input)
 with rawpath.open(encoding='utf-8-sig',newline='') as f:
  reader=csv.reader(f);headers=next(reader);raw=list(reader)

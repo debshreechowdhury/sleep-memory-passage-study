@@ -5,7 +5,7 @@ The analyzed CSV is withheld because optional names and free text may identify p
 From the repository root, after installing requirements-report.txt:
 
 ```sh
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -t . -v
 python scripts/report_evidence.py --input data/raw/responses.csv --output results/report_statistics.json
 python scripts/report_power.py --output results/report_power.json
 python scripts/report_figures.py --input data/raw/responses.csv --statistics results/report_statistics.json --output-dir results/figures

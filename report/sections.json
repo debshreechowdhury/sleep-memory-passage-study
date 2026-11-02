@@ -2,78 +2,78 @@
   {
     "heading": null,
     "files": [
-      "shared/title_abstract.md"
+      "sections/00_title_abstract.md"
     ]
   },
   {
     "heading": "Background and motivation",
     "files": [
-      "debshree/background.md"
+      "sections/01_background.md"
     ]
   },
   {
     "heading": "Null and alternative hypotheses",
     "files": [
-      "kuba/hypotheses.md",
-      "debshree/hypotheses.md"
+      "sections/02_hypotheses_quality.md",
+      "sections/02_hypotheses_detection.md"
     ]
   },
   {
     "heading": "Description of experimental design",
     "files": [
-      "debshree/experimental_design.md"
+      "sections/03_design.md"
     ]
   },
   {
     "heading": "Power analysis",
     "files": [
-      "kuba/power.md",
-      "debshree/power.md"
+      "sections/04_power_quality.md",
+      "sections/04_power_detection.md"
     ]
   },
   {
     "heading": "Data collection and cleaning procedures",
     "files": [
-      "kuba/data_collection_cleaning.md"
+      "sections/05_data_collection_cleaning.md"
     ]
   },
   {
     "heading": "Statistical analysis",
     "files": [
-      "kuba/statistical_analysis.md",
-      "debshree/statistical_analysis.md"
+      "sections/06_analysis_quality.md",
+      "sections/06_analysis_detection.md"
     ]
   },
   {
     "heading": "Interpretation of results",
     "files": [
-      "kuba/interpretation.md",
-      "debshree/interpretation.md"
+      "sections/07_interpretation_quality.md",
+      "sections/07_interpretation_detection.md"
     ]
   },
   {
     "heading": "Limitations",
     "files": [
-      "kuba/limitations.md",
-      "debshree/limitations.md"
+      "sections/08_limitations_ratings_data.md",
+      "sections/08_limitations_stimulus_sampling.md"
     ]
   },
   {
     "heading": "Conclusion and recommendations",
     "files": [
-      "shared/conclusion.md"
+      "sections/09_conclusion.md"
     ]
   },
   {
     "heading": "References",
     "files": [
-      "debshree/references.md"
+      "sections/10_references.md"
     ]
   },
   {
     "heading": "Reproducibility and contribution note",
     "files": [
-      "shared/contribution_note.md"
+      "sections/11_contribution_note.md"
     ]
   }
 ]
