@@ -13,3 +13,7 @@ data/raw/*.csv
 data/clean/*.csv
 data/cleaned/*.csv
 *.xlsx
+
+data/interim/*.csv
+config/*.local.json
+results/analysis*.json

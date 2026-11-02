@@ -1,26 +1,28 @@
-# Analysis plan — draft, not preregistered
+# Analysis plan — draft; not preregistered
 
-Finalize this plan before collecting responses. The Google Forms implementation cannot measure passage-page time, so the originally proposed exclusion for spending under 30 seconds on either passage page cannot be applied.
+Updated November 2, 2026 to reflect chat-documented form changes. Collection had already begun at least to the extent of one observed response; these decisions must not be represented as prospectively preregistered. Team review and actual exports remain necessary.
 
-## Planned fields
+## Design and hypotheses
 
-Assign `order` from the form used (`Original first` or `AI first`). Each form exports passage-position ratings. Map the Passage 1 and Passage 2 columns to version-specific fields using the order:
+Within-person comparison of AI and original quality (mean of clarity, engagement and writing items, each 1–7). H0: mean AI-minus-original difference = 0; H1: difference ≠ 0. Detection H0: correctness probability = .5; H1: probability ≠ .5. Nominal alpha .05; two co-primary tests currently have unadjusted p-values. Decide and document a multiplicity policy before interpreting them; report deviations transparently.
 
-| Analysis field | Original-first form | AI-first form |
-| --- | --- | --- |
-| `clear_O`, `engage_O`, `write_O` | Passage 1 ratings | Passage 2 ratings |
-| `clear_AI`, `engage_AI`, `write_AI` | Passage 2 ratings | Passage 1 ratings |
-| `check_1`, `check_2` | First and second check | First and second check |
-| `detect_correct = 1` | Detection answer is Passage 2 | Detection answer is Passage 1 |
+Last circulated link is fixed AI first, so Passage 1 maps to *_AI, Passage 2 to *_O, and Passage 1 is the correct detection answer. Importer supports Original first only for a source with verified assignment evidence. Fixed order confounds version with position; no claim of randomized or balanced presentation is justified.
 
-Also retain student status, confidence, optional explanation, AI-tool use, and English proficiency. Inspect actual export headers before implementing column mappings. Preserve raw values and document every transformation.
+## Cleaning baseline for member review
 
-## Proposed rules and tests
+- Affirmative consent required; participation instructions restrict to 18+. Actual age check was absent in the last observed form, so do not claim verified age eligibility. Student / Working professional / Other are all allowed.
+- Exclude both comprehension checks incorrect. Hold missing comprehension out pending review. Do not implement the proposed under-30-second rule: page times are not collected.
+- Compute each quality score only with all three ratings; paired analysis requires both scores. Detection uses available responses among included records; use a separate denominator.
+- Preserve unchanged exports privately and retain exclusion reasons. Resolve duplicate submissions through a documented rule; generated row IDs do not identify duplicate people. Do not remove identical rating patterns automatically.
+- Optional names are identifiable and excluded from analysis exports. Retain any private withdrawal crosswalk separately and record withdrawals without disclosing names in Git.
+- Record form revisions and pilot inclusion rules; do not pool incompatible records silently. Missing AI-use or English items are not recoverable by imputation from other questions.
 
-- Include respondents who affirm age 18+, current graduate-student status, and consent. Exclude completed responses only if **both** comprehension checks are incorrect. Confirm this rule before collection and report exclusions by reason.
-- For each version, compute quality as the mean of clarity, engagement, and overall writing ratings. Report Cronbach's alpha separately for the three original and three AI ratings.
-- Primary rating comparison: two-sided paired t-test of AI versus original quality, alpha = .05. Report the paired mean difference, 95% confidence interval, effect size, and analyzed sample size.
-- Primary detection comparison: two-category chi-square goodness-of-fit test of correct versus incorrect detection against 50/50, alpha = .05. Report counts.
-- Exploratory: Fisher's exact test for student status by detection correctness; logistic regression of detection correctness on AI-tool use and English proficiency. Treat small-sample estimates cautiously.
+## Analyses
 
-The team should decide how to handle missing responses, duplicate submissions, and any post-collection withdrawal request before collecting data. Do not choose exclusions after inspecting outcome differences.
+Paired t-test on AI-minus-original composite differences; report mean difference, SD, 95% CI, t, df, p and Cohen dz. Inspect difference distribution and outliers; recruitment/duplicate review informs independence. Compute Cronbach alpha separately by version on complete paired data and state its denominator. Diagnostics and a justified sensitivity analysis remain work to complete.
+
+Detection: chi-square goodness-of-fit against 50/50 only if expected cell counts are at least 5. Also report exact two-sided binomial p and exact 95% CI, accuracy and accuracy-minus-chance. No post hoc pairwise test is needed for two versions.
+
+Exploratory status analysis has three categories; do not apply a 2×2 Fisher test directly. A declared student versus non-student collapse or an appropriate multi-category method needs justification. Logistic regression on AI use/English is possible only if both were actually collected and sample/outcome variation supports estimation. Document any omission or instability.
+
+Power: scripts/power.py uses the noncentral t distribution for a two-sided one-sample test of within-person differences, dz = mean difference / SD differences. Default n=30, target .8, alpha .05 and dz .3/.5/.8 are scenarios, not established sample facts. Include exact detection-power planning separately if retaining detection as co-primary. Do not report observed power as evidence for a null result.

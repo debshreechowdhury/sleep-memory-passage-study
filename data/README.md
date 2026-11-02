@@ -1,13 +1,21 @@
-# Response data
+# Participant data and dictionary
 
-No participant responses have been collected. Accordingly, this repository contains no raw or cleaned dataset and no simulated data presented as real responses.
+No participant exports have been downloaded into this repository. A response was visible during form editing on October 31; the present sample size is unverified. Do not describe collection as not started.
 
-The Google Forms are configured without email collection or sign-in limits, but the optional free-text answer could contain identifying information. Before adding data to GitHub, check the approved consent and institutional data-sharing rules. Keep original CSV exports unchanged in approved access-controlled storage. If raw responses cannot be shared, document where they are held, who can request access, export dates, file hashes, row counts, and the reason for withholding them. Publish a de-identified cleaned dataset only if permitted.
+Names are now optional and linked to responses. Raw exports and free text may identify people and must remain in approved access-controlled storage. Local data/raw, data/interim and data/cleaned CSVs are ignored by Git. Do not commit the manifest with raw headers if they contain private details. Only release de-identified data after the team confirms permission; a private repository still exposes data to collaborators.
 
-When data become available, update this file with:
+For withheld data, record approved storage location, access contact/procedure, export date, form revision, SHA-256 checksum, row count and reason for withholding. These entries are pending actual exports. Retain original exports unchanged; retain any identifier-to-response crosswalk separately if needed for withdrawals. Do not publish names.
 
-- Form version and export date for each raw CSV.
-- Data dictionary and response coding.
-- Storage or access instructions for withheld raw data.
-- Cleaning script command and output file names.
-- Participant counts before and after exclusions.
+## Canonical fields
+The importer retains only configured fields; response_id is a generated row identifier, not a person identifier. It does not resolve duplicate submissions.
+
+- order: verified AI first or Original first for each source file.
+- consent: actual affirmative consent text; status: Student, Working professional, Other (older exports may use an earlier eligibility question).
+- clear_1/2, engage_1/2, write_1/2: passage-position ratings, integers 1–7.
+- check_1/2: 30, 60, 90, 120 minutes; 90 is correct.
+- detect: Passage 1 or Passage 2; confidence: 1–5.
+- ai_use: 1–5 and english: 1–7 only if actually collected; leave absent fields empty.
+- cleaned *_AI/*_O: version-mapped items; quality_AI/O: complete three-item means.
+- detect_correct: 0/1; included: 0/1; exclusion_reason: auditable rule flags.
+
+Ages, names, timestamps, free text and emails are not exported by the importer. Verify adult eligibility from collection records; the current form's 18+ statement is an instruction rather than a recorded age check. Do not infer age from status.

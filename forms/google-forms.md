@@ -1,19 +1,11 @@
-# Google Forms implementation
+# Current collection setup
 
-| Version | Editor link | Passage 1 | Passage 2 | Correct detection choice |
-| --- | --- | --- | --- | --- |
-| Original first | [Edit form](https://docs.google.com/forms/d/1Q65UDgX-x9PvnkmanHsWrMa9MXg_I2Uhwi6J7-UVCAQ/edit) | Original | AI rewrite | Passage 2 |
-| AI first | [Edit form](https://docs.google.com/forms/d/1g33aG8Z6tIRb-glQeaP0DlqJ3O-1-y5ycDqjkkdvM0w/edit) | AI rewrite | Original | Passage 1 |
+Participant link: https://docs.google.com/forms/d/e/1FAIpQLSf5SEjYjmPw3QvF2UZh_jkJqBtFvRPnzImhqG4rXV7sVcIuIg/viewform?usp=header
 
-Both drafts have seven sections: consent and eligibility; student background; Passage 1 and its questions; Passage 2 and its questions; reveal and detection; AI use and English proficiency; debrief. The two passages appear in the same plain-text style. The form title does not reveal the authorship condition.
+Editor: https://docs.google.com/forms/d/1Q65UDgX-x9PvnkmanHsWrMa9MXg_I2Uhwi6J7-UVCAQ/edit
 
-The three eligibility/consent questions each have only an affirmative required option. The intro tells people who cannot answer Yes to close the form without submitting. Email collection and the one-response sign-in limit are off. Response draft autosave is disabled, the progress bar is on, and question shuffling is off.
+Last observed order: Passage 1 AI, Passage 2 original; correct detection is Passage 1. The title was changed to AI first (DRAFT), but the form was published. Do not infer order from an old filename or title. Verify it for every export.
 
-## Google Forms limitations
+Last observed flow: intro/consent and status; participant background and optional name; Passage 1 ratings/check; Passage 2 ratings/check; reveal/detection; debrief shown after Submit. AI-use and English items were absent in the last observed form state. See REVISION_LOG.md. The historical second form is not confirmed active and must not be treated as an assigned counterbalanced condition without evidence.
 
-- Standard Forms does not assign respondents evenly between these two fixed orders. Use an external assignment list and preserve the order variable when combining exports.
-- Respondents can use Back after the reveal. They should be instructed not to revisit earlier ratings; this remains a design limitation.
-- The passage pages have no hidden page timers. The proposed under-30-second exclusion rule is unavailable and must be removed or implemented through a different approved collection tool **before data collection**.
-- An anonymous submitted response cannot reliably be located for later withdrawal. The debrief tells respondents to close the form before Submit if they wish to withdraw.
-
-Do not publish or distribute responder links until the study team has reviewed both forms and finalized the preregistration and approval requirements. The editor links above are not responder links.
+Google Forms has no native balanced section-order randomizer, hidden passage-page timing, embedded order metadata or per-section Back disabling. Moving debrief after submission and disabling response editing protects submitted answers after the answer reveal; it does not prevent revisiting ratings from the earlier detection section. Names make responses identifiable. Review the current form, privacy text and approval requirements before any further collection.

@@ -1,13 +1,8 @@
-# Scripts
+# Script workflow
 
-No data collection, cleaning, or analysis script has been used yet. Data collection is through the two Google Forms documented in `forms/`.
+Run from repository root. Use Python 3.10+ and requirements.txt. Data collection is manual Google Forms; no automated collection code was used. CSV header mapping is intentionally explicit rather than guessed, because duplicated question labels and revisions can swap passage columns.
 
-After collecting responses, add **scripts, not notebooks** for:
-
-1. Importing both unchanged Google Forms CSV exports and attaching the passage-order variable.
-2. Cleaning responses and applying the preregistered exclusion rules.
-3. Building version-specific rating variables and the detection-correctness variable.
-4. Computing quality scores, reliability, primary tests, and exploratory analyses.
-5. Producing tables or figures from the cleaned dataset.
-
-Scripts should accept input and output paths as arguments, declare dependency versions, avoid absolute personal paths, and run from a fresh checkout. Add a small validation dataset or test only when it checks a real risk in the mapping or scoring logic. Document exact commands in the top-level README.
+1. Copy config/export_manifest.example.json to config/export_manifest.local.json. Replace the example path, exact expected header list, and zero-based column positions with a privately reviewed real export. Include one source per verified order/version. Optional absent fields must be omitted. The example is deliberately not executable against real data.
+2. Run import_forms.py to discard identifiers and attach order, clean.py to score, analyze.py for core statistics. See README for commands.
+3. Review all decisions before interpreting results. Current cleaning is a proposed baseline, not a registered protocol: missing comprehension is held out for review, both incorrect is excluded, quality uses complete triples, and detection uses available answers among included rows. No age or duplicate-person verification is automated. Missing AI-use/English fields are not imputed.
+4. Add diagnostic plots, exact detection power and exploratory models through Kuba's substantive PR once actual data and assumptions are known. These are outstanding work, not completed analyses.

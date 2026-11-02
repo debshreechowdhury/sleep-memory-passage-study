@@ -1,40 +1,59 @@
 # Sleep and memory passage study
 
-This repository documents a paired comparison of an original NIH News in Health passage and an AI rewrite. Participants rate both passages, answer a comprehension check after each, and then identify the AI rewrite. The Google Forms are drafted but **not published**.
+Paired comparison of an NIH science-news passage and an AI rewrite. Each participant rates both passages and attempts to identify the AI version. This repository contains a working analysis scaffold and report outline, **not completed empirical results**.
 
-## Current status
+## Current evidence and remaining work
 
-| Component | Status |
-| --- | --- |
-| Google Forms | Two seven-section drafts, one for each passage order |
-| Pilot and participant responses | Not started |
-| Raw and cleaned data | Not available yet; see [data/README.md](data/README.md) |
-| Cleaning and analysis scripts | To be written after the export format is known; see [scripts/README.md](scripts/README.md) |
-| Preregistration | Draft only; finalize before collecting responses |
+The circulated form was changed to fixed **AI first** on October 31, 2026, and published. Recruitment eligibility was broadened to adults who are students, working professionals or other. Names are optional; responses with names are identifiable. Debrief is shown after Submit and response editing is off. See [form setup](forms/google-forms.md) and [revision log](forms/REVISION_LOG.md). Live collection status and final form contents need verification; older instrument documentation is historical.
 
-## Reproduce the data collection setup
+No real response exports have been imported here. Do not claim counterbalancing, page timing, prospective preregistration or sample size without records. Power outputs below are assumption-based planning scenarios, not results from participants.
 
-1. Read the full [instrument](forms/instrument.md) and [form setup](forms/google-forms.md).
-2. Open the [original-first draft](https://docs.google.com/forms/d/1Q65UDgX-x9PvnkmanHsWrMa9MXg_I2Uhwi6J7-UVCAQ/edit) and [AI-first draft](https://docs.google.com/forms/d/1g33aG8Z6tIRb-glQeaP0DlqJ3O-1-y5ycDqjkkdvM0w/edit). Edit access depends on the form owner's Google permissions. The instrument file allows recreation if access is unavailable.
-3. Check the passage order, required questions, debrief, and response settings in each form. Use Preview on desktop and phone.
-4. Resolve any instructor or ethics review of the brief nondisclosure, finalize the [analysis plan](ANALYSIS_PLAN.md), and run a pilot with 3–4 people before publishing.
-5. Assign participants to the two responder links using a documented alternating or randomly generated assignment list. Record which version each respondent received. Google Forms does not balance the two links automatically.
+## Reproduction
 
-The forms do not collect email addresses or require Google sign-in. The free-text explanation could still contain identifying details, so treat responses as potentially sensitive.
+Python 3.10+; commands run from this directory:
 
-## Reproduce cleaning and analysis after collection
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python scripts/power.py --n 30 --output results/power_scenarios.csv
+```
 
-1. Export responses from both forms as CSV. Keep an unchanged copy of each export in approved storage and record export date and form order.
-2. Add the scripts used to combine, clean, exclude, score, and analyze responses under `scripts/` through reviewed pull requests. Commit exact dependency versions and command-line instructions in this README.
-3. Place publishable, de-identified raw and cleaned files under `data/` only after checking institutional rules and the consent language. If sharing is not permitted, update [data/README.md](data/README.md) with the storage location, access procedure, schema, and reasons for withholding files.
-4. Record the final sample counts, exclusions, outputs, software versions, and exact reproduction commands here.
+After obtaining authorized response exports, review the exact headers and create an ignored local manifest as described in [scripts/README.md](scripts/README.md). Example columns must be replaced; never assume they match the actual form.
 
-There is currently no response export and no cleaning or analysis code to run. This README will be updated when those materials exist; empty or simulated results are not presented as collected data.
+```sh
+python scripts/import_forms.py --manifest config/export_manifest.local.json --output data/interim/mapped.csv
+python scripts/clean.py --input data/interim/mapped.csv --output data/cleaned/analysis.csv
+python scripts/analyze.py --input data/cleaned/analysis.csv --output results/analysis.json
+```
 
-## Collaboration
+Raw exports stay unchanged in restricted storage. Raw/interim/cleaned CSVs are ignored by default; see [data policy and dictionary](data/README.md) for how to describe withheld data and release only approved de-identified data. Names, emails, timestamps and free text are not imported. Keep any withdrawal crosswalk separately.
 
-Use a separate branch and pull request for each change. Each group member should author at least one substantive PR and request review from another member. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [PR template](.github/pull_request_template.md). Do not merge your own PR without another member's review.
+Core outputs: paired composite difference, 95% CI, paired t statistic and p-value, Cohen dz, per-version Cronbach alpha; detection counts, chi-square when expected counts permit, exact binomial p-value and exact CI. Scripts report missing-data denominators and do not fabricate absent covariates or page times. Diagnostics, detection-power calculation and supported exploratory analyses remain member tasks.
 
-## Source
+## Report and collaboration
 
-Original passage: [NIH News in Health, “Sleep On It”](https://newsinhealth.nih.gov/2013/04/sleep-it). The supplied excerpt is reproduced exactly in the instrument, including its unusual final quotation mark.
+- [Written-report outline](report/REPORT.md) covers every supplied rubric section; final report is submitted via the course Byline link.
+- [Work allocation and PR tracker](PROJECT_PLAN.md): Debshree works on `debshree/report-design`; Kuba on `kuba/data-analysis`.
+- [Analysis plan](ANALYSIS_PLAN.md) is a draft; decisions made after launch must be dated as amendments.
+- Follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [PR template](.github/pull_request_template.md). Each member authors a substantive PR and the other reviews it before merging. Branch creation is not evidence of a member contribution or review.
+
+The shared scaffold is proposed on `project/setup` for review. Both member branches start at that scaffold; review and merge the setup PR before opening member PRs to main to keep their diffs focused. To begin:
+
+```sh
+git fetch origin
+git switch --track origin/debshree/report-design
+# Kuba instead uses: git switch --track origin/kuba/data-analysis
+# Make your own substantive changes, commit, push, then open a PR to main.
+```
+
+Preserve existing branches/PRs; reconcile their proposed changes with the current study before merging. Final submission includes this repository link, scripts, reproducible instructions, reviewed PR history and approved data or a clear withholding description.
+
+## Sources
+
+- [NIH News in Health: Sleep On It](https://newsinhealth.nih.gov/2013/04/sleep-it).
+- [SciPy paired t-test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html).
+- [SciPy exact binomial test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html).
+
+Validation data in tests are explicitly synthetic and are never analyzed as participant responses.
