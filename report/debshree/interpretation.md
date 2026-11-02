@@ -1,0 +1,7 @@
+### Detection, group and confidence findings
+
+Respondents more frequently identified the original as AI-written under the current mapping. Yet the cleaned exact interval includes .50, and the legacy-version sensitivities change nominal detection significance. The appropriate conclusion is uncertain detection performance for this pair, not demonstrated equivalence to chance or universal inability to detect AI. The lower unfiltered p-value must not replace the comprehension-filtered result.
+
+The international-background group had higher descriptive accuracy, but the small cells, wide conditional odds-ratio interval, and sensitivity to group definition prevent a firm population claim. The employment/student comparison likewise supplies no clear evidence of different detection rates. Neither analysis identifies a causal effect or measures English proficiency. A difference between one significant and one nonsignificant within-group test would not establish a between-group difference; the direct Fisher comparisons answer that question here.
+
+Confidence did not meaningfully separate correct and incorrect choices in this snapshot. Respondents with greater confidence were not reliably more accurate, but the uncertainty does not prove the absence of an association. These results support keeping perceived writing quality, authorship judgments and confidence conceptually separate. All conclusions concern this particular passage pair under fixed presentation order.

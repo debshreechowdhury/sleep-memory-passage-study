@@ -2,7 +2,7 @@
 import json,math
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
-x=json.loads((root/'results/report_statistics.json').read_text());r=x['filtered_current_mapping'];text=(root/'report/REPORT.md').read_text()
+x=json.loads((root/'results/report_statistics.json').read_text());r=x['filtered_current_mapping'];text=(root/'report/report.md').read_text()
 assert x['raw_n']-x['both_wrong_excluded']==r['n']==49
 assert r['detection']['correct']+r['detection']['incorrect']==49
 assert math.isclose(r['quality_O_mean']-r['quality_AI_mean'],-r['AI_minus_O'])

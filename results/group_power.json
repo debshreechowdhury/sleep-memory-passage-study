@@ -1,0 +1,91 @@
+{
+  "timing": "Retrospective illustrative planning; no rates estimated from observed groups",
+  "test": "Two-sided Fisher exact, probability-ordered tails; independent binomial groups",
+  "target_power": 0.8,
+  "scenarios": [
+    {
+      "n_per_group": 15,
+      "assumed_accuracy_group_1": 0.4,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.09543363364738508
+    },
+    {
+      "n_per_group": 30,
+      "assumed_accuracy_group_1": 0.4,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.25714328423583005
+    },
+    {
+      "n_per_group": 50,
+      "assumed_accuracy_group_1": 0.4,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.46210013289763474
+    },
+    {
+      "n_per_group": 100,
+      "assumed_accuracy_group_1": 0.4,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.7868482821060607
+    },
+    {
+      "n_per_group": 15,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.22749686357992793
+    },
+    {
+      "n_per_group": 30,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.5608135795900732
+    },
+    {
+      "n_per_group": 50,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.8290006283632811
+    },
+    {
+      "n_per_group": 100,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.6,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.9888205743386174
+    },
+    {
+      "n_per_group": 15,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.7,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.4337799475602078
+    },
+    {
+      "n_per_group": 30,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.7,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.8383425879256033
+    },
+    {
+      "n_per_group": 50,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.7,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.9790121295772781
+    },
+    {
+      "n_per_group": 100,
+      "assumed_accuracy_group_1": 0.3,
+      "assumed_accuracy_group_2": 0.7,
+      "alpha": 0.05,
+      "exact_fisher_power": 0.9999329508631419
+    }
+  ]
+}

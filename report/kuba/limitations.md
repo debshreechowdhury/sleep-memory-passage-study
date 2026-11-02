@@ -1,0 +1,3 @@
+### Ratings and data
+
+The three bounded rating items are subjective; internal consistency is not proof of construct validity. Paired differences depart from normality and contain many ties, so the nonparametric sensitivity is relevant but does not test exactly the same mean hypothesis. Duplicate-person, pilot and test-response status could not be verified; repeated answer patterns were retained. Age, passage-page timing, AI-use and English proficiency were not collected in the export, preventing the proposed timing exclusion and covariate regression. Optional names made some responses identifiable, and early anonymous and later identified records followed different notices.

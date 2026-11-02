@@ -17,3 +17,6 @@ data/cleaned/*.csv
 data/interim/*.csv
 config/*.local.json
 results/analysis*.json
+
+.presentation-build/
+node_modules/

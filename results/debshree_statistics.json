@@ -1,0 +1,505 @@
+{
+  "source_sha256": "783fbb244712b774c93d15e97843c08e89a71af41a9c1888600c2fb137b9d8f3",
+  "raw_n": 54,
+  "retained_n": 49,
+  "analysis_status": "Retrospective exploratory; H3 group definition awaits team confirmation",
+  "student_background": {
+    "field": "student_background",
+    "groups": [
+      {
+        "label": "International",
+        "n": 11,
+        "correct": 7,
+        "incorrect": 4,
+        "accuracy": 0.6363636363636364,
+        "ci95": [
+          0.30790471501181976,
+          0.890736556181063
+        ]
+      },
+      {
+        "label": "Domestic",
+        "n": 6,
+        "correct": 1,
+        "incorrect": 5,
+        "accuracy": 0.16666666666666666,
+        "ci95": [
+          0.004210744514489595,
+          0.6412345789974864
+        ]
+      }
+    ],
+    "table_columns": [
+      "correct",
+      "incorrect"
+    ],
+    "table": [
+      [
+        7,
+        4
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "excluded_from_comparison": 32,
+    "fisher_two_sided_p": 0.13122171945701358,
+    "conditional_odds_ratio_first_vs_second": 7.633546488443346,
+    "odds_ratio_ci95": [
+      0.5607334066691313,
+      471.48397303473547
+    ],
+    "risk_difference_first_minus_second": 0.4696969696969697
+  },
+  "student_background_strict_student": {
+    "field": "student_background",
+    "groups": [
+      {
+        "label": "International",
+        "n": 8,
+        "correct": 4,
+        "incorrect": 4,
+        "accuracy": 0.5,
+        "ci95": [
+          0.15701277048705803,
+          0.842987229512942
+        ]
+      },
+      {
+        "label": "Domestic",
+        "n": 5,
+        "correct": 1,
+        "incorrect": 4,
+        "accuracy": 0.2,
+        "ci95": [
+          0.005050763379468115,
+          0.7164179361180895
+        ]
+      }
+    ],
+    "table_columns": [
+      "correct",
+      "incorrect"
+    ],
+    "table": [
+      [
+        4,
+        4
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "excluded_from_comparison": 1,
+    "fisher_two_sided_p": 0.5648795648795648,
+    "conditional_odds_ratio_first_vs_second": 3.5980966463709225,
+    "odds_ratio_ci95": [
+      0.20825864385292958,
+      245.34285368652354
+    ],
+    "risk_difference_first_minus_second": 0.3
+  },
+  "participant_status": {
+    "field": "status",
+    "groups": [
+      {
+        "label": "Student",
+        "n": 14,
+        "correct": 5,
+        "incorrect": 9,
+        "accuracy": 0.35714285714285715,
+        "ci95": [
+          0.1275984298591593,
+          0.6486198893840085
+        ]
+      },
+      {
+        "label": "Working professional",
+        "n": 33,
+        "correct": 11,
+        "incorrect": 22,
+        "accuracy": 0.3333333333333333,
+        "ci95": [
+          0.17960513493255995,
+          0.5182674724875506
+        ]
+      }
+    ],
+    "table_columns": [
+      "correct",
+      "incorrect"
+    ],
+    "table": [
+      [
+        5,
+        9
+      ],
+      [
+        11,
+        22
+      ]
+    ],
+    "excluded_from_comparison": 2,
+    "fisher_two_sided_p": 1.0,
+    "conditional_odds_ratio_first_vs_second": 1.1086054418440328,
+    "odds_ratio_ci95": [
+      0.23278038981322388,
+      4.85215220093884
+    ],
+    "risk_difference_first_minus_second": 0.023809523809523836
+  },
+  "confidence": {
+    "n": 49,
+    "mean": 3.163265306122449,
+    "median": 3.0,
+    "correct": {
+      "n": 18,
+      "mean": 3.0555555555555554,
+      "median": 3.0
+    },
+    "incorrect": {
+      "n": 31,
+      "mean": 3.225806451612903,
+      "median": 3.0
+    },
+    "mann_whitney_u_correct": 253.0,
+    "mann_whitney_p": 0.5487046142868306,
+    "rank_biserial_correct_minus_incorrect": -0.09318996415770608,
+    "spearman_rho": -0.08825682659759776,
+    "spearman_asymptotic_p": 0.5464902068231978,
+    "permutation_p": 0.5378,
+    "permutation_repetitions": 99999,
+    "seed": 510,
+    "levels": [
+      {
+        "level": 1,
+        "correct": 1,
+        "incorrect": 1
+      },
+      {
+        "level": 2,
+        "correct": 1,
+        "incorrect": 3
+      },
+      {
+        "level": 3,
+        "correct": 12,
+        "incorrect": 17
+      },
+      {
+        "level": 4,
+        "correct": 4,
+        "incorrect": 8
+      },
+      {
+        "level": 5,
+        "correct": 0,
+        "incorrect": 2
+      }
+    ]
+  },
+  "legacy_sensitivity": {
+    "omit": {
+      "student_background": {
+        "field": "student_background",
+        "groups": [
+          {
+            "label": "International",
+            "n": 10,
+            "correct": 6,
+            "incorrect": 4,
+            "accuracy": 0.6,
+            "ci95": [
+              0.2623780766069451,
+              0.8784477418801728
+            ]
+          },
+          {
+            "label": "Domestic",
+            "n": 6,
+            "correct": 1,
+            "incorrect": 5,
+            "accuracy": 0.16666666666666666,
+            "ci95": [
+              0.004210744514489595,
+              0.6412345789974864
+            ]
+          }
+        ],
+        "table_columns": [
+          "correct",
+          "incorrect"
+        ],
+        "table": [
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "excluded_from_comparison": 32,
+        "fisher_two_sided_p": 0.14510489510489513,
+        "conditional_odds_ratio_first_vs_second": 6.5742435560772305,
+        "odds_ratio_ci95": [
+          0.46636519781872504,
+          412.4863115591883
+        ],
+        "risk_difference_first_minus_second": 0.43333333333333335
+      },
+      "participant_status": {
+        "field": "status",
+        "groups": [
+          {
+            "label": "Student",
+            "n": 14,
+            "correct": 5,
+            "incorrect": 9,
+            "accuracy": 0.35714285714285715,
+            "ci95": [
+              0.1275984298591593,
+              0.6486198893840085
+            ]
+          },
+          {
+            "label": "Working professional",
+            "n": 33,
+            "correct": 11,
+            "incorrect": 22,
+            "accuracy": 0.3333333333333333,
+            "ci95": [
+              0.17960513493255995,
+              0.5182674724875506
+            ]
+          }
+        ],
+        "table_columns": [
+          "correct",
+          "incorrect"
+        ],
+        "table": [
+          [
+            5,
+            9
+          ],
+          [
+            11,
+            22
+          ]
+        ],
+        "excluded_from_comparison": 1,
+        "fisher_two_sided_p": 1.0,
+        "conditional_odds_ratio_first_vs_second": 1.1086054418440328,
+        "odds_ratio_ci95": [
+          0.23278038981322388,
+          4.85215220093884
+        ],
+        "risk_difference_first_minus_second": 0.023809523809523836
+      },
+      "confidence": {
+        "n": 48,
+        "mean": 3.1666666666666665,
+        "median": 3.0,
+        "correct": {
+          "n": 17,
+          "mean": 3.0588235294117645,
+          "median": 3.0
+        },
+        "incorrect": {
+          "n": 31,
+          "mean": 3.225806451612903,
+          "median": 3.0
+        },
+        "mann_whitney_u_correct": 240.5,
+        "mann_whitney_p": 0.5841968544704363,
+        "rank_biserial_correct_minus_incorrect": -0.0872865275142315,
+        "spearman_rho": -0.081600696937715,
+        "spearman_asymptotic_p": 0.5813836819000833,
+        "permutation_p": 0.59752,
+        "permutation_repetitions": 99999,
+        "seed": 510,
+        "levels": [
+          {
+            "level": 1,
+            "correct": 1,
+            "incorrect": 1
+          },
+          {
+            "level": 2,
+            "correct": 1,
+            "incorrect": 3
+          },
+          {
+            "level": 3,
+            "correct": 11,
+            "incorrect": 17
+          },
+          {
+            "level": 4,
+            "correct": 4,
+            "incorrect": 8
+          },
+          {
+            "level": 5,
+            "correct": 0,
+            "incorrect": 2
+          }
+        ]
+      }
+    },
+    "reverse": {
+      "student_background": {
+        "field": "student_background",
+        "groups": [
+          {
+            "label": "International",
+            "n": 11,
+            "correct": 6,
+            "incorrect": 5,
+            "accuracy": 0.5454545454545454,
+            "ci95": [
+              0.23379359765934504,
+              0.8325119059362929
+            ]
+          },
+          {
+            "label": "Domestic",
+            "n": 6,
+            "correct": 1,
+            "incorrect": 5,
+            "accuracy": 0.16666666666666666,
+            "ci95": [
+              0.004210744514489595,
+              0.6412345789974864
+            ]
+          }
+        ],
+        "table_columns": [
+          "correct",
+          "incorrect"
+        ],
+        "table": [
+          [
+            6,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "excluded_from_comparison": 32,
+        "fisher_two_sided_p": 0.3042986425339367,
+        "conditional_odds_ratio_first_vs_second": 5.403576275901601,
+        "odds_ratio_ci95": [
+          0.39709750954594975,
+          330.088320965511
+        ],
+        "risk_difference_first_minus_second": 0.3787878787878788
+      },
+      "participant_status": {
+        "field": "status",
+        "groups": [
+          {
+            "label": "Student",
+            "n": 14,
+            "correct": 5,
+            "incorrect": 9,
+            "accuracy": 0.35714285714285715,
+            "ci95": [
+              0.1275984298591593,
+              0.6486198893840085
+            ]
+          },
+          {
+            "label": "Working professional",
+            "n": 33,
+            "correct": 11,
+            "incorrect": 22,
+            "accuracy": 0.3333333333333333,
+            "ci95": [
+              0.17960513493255995,
+              0.5182674724875506
+            ]
+          }
+        ],
+        "table_columns": [
+          "correct",
+          "incorrect"
+        ],
+        "table": [
+          [
+            5,
+            9
+          ],
+          [
+            11,
+            22
+          ]
+        ],
+        "excluded_from_comparison": 2,
+        "fisher_two_sided_p": 1.0,
+        "conditional_odds_ratio_first_vs_second": 1.1086054418440328,
+        "odds_ratio_ci95": [
+          0.23278038981322388,
+          4.85215220093884
+        ],
+        "risk_difference_first_minus_second": 0.023809523809523836
+      },
+      "confidence": {
+        "n": 49,
+        "mean": 3.163265306122449,
+        "median": 3.0,
+        "correct": {
+          "n": 17,
+          "mean": 3.0588235294117645,
+          "median": 3.0
+        },
+        "incorrect": {
+          "n": 32,
+          "mean": 3.21875,
+          "median": 3.0
+        },
+        "mann_whitney_u_correct": 250.0,
+        "mann_whitney_p": 0.6085835726875644,
+        "rank_biserial_correct_minus_incorrect": -0.08088235294117652,
+        "spearman_rho": -0.07563369017353133,
+        "spearman_asymptotic_p": 0.6054988592743213,
+        "permutation_p": 0.62156,
+        "permutation_repetitions": 99999,
+        "seed": 510,
+        "levels": [
+          {
+            "level": 1,
+            "correct": 1,
+            "incorrect": 1
+          },
+          {
+            "level": 2,
+            "correct": 1,
+            "incorrect": 3
+          },
+          {
+            "level": 3,
+            "correct": 11,
+            "incorrect": 18
+          },
+          {
+            "level": 4,
+            "correct": 4,
+            "incorrect": 8
+          },
+          {
+            "level": 5,
+            "correct": 0,
+            "incorrect": 2
+          }
+        ]
+      }
+    }
+  }
+}
