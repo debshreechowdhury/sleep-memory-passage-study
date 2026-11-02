@@ -1,0 +1,80 @@
+{
+  "timing": "Retrospective planning sensitivity, not a prospective calculation or observed power",
+  "target": 0.8,
+  "paired": [
+    {
+      "alpha": 0.05,
+      "assumed_dz": 0.3,
+      "required_complete_pairs": 90,
+      "power_at_30": 0.35546273116552507
+    },
+    {
+      "alpha": 0.05,
+      "assumed_dz": 0.5,
+      "required_complete_pairs": 34,
+      "power_at_30": 0.7539647157437904
+    },
+    {
+      "alpha": 0.05,
+      "assumed_dz": 0.8,
+      "required_complete_pairs": 15,
+      "power_at_30": 0.9884752400890072
+    },
+    {
+      "alpha": 0.025,
+      "assumed_dz": 0.3,
+      "required_complete_pairs": 109,
+      "power_at_30": 0.2518630489496325
+    },
+    {
+      "alpha": 0.025,
+      "assumed_dz": 0.5,
+      "required_complete_pairs": 41,
+      "power_at_30": 0.6472611326421425
+    },
+    {
+      "alpha": 0.025,
+      "assumed_dz": 0.8,
+      "required_complete_pairs": 18,
+      "power_at_30": 0.974157935386698
+    }
+  ],
+  "detection": [
+    {
+      "alpha": 0.05,
+      "assumed_accuracy": 0.6,
+      "first_n_with_80_percent_power": 199,
+      "power_at_30": 0.1771428766997378
+    },
+    {
+      "alpha": 0.05,
+      "assumed_accuracy": 0.7,
+      "first_n_with_80_percent_power": 49,
+      "power_at_30": 0.5888159630760974
+    },
+    {
+      "alpha": 0.05,
+      "assumed_accuracy": 0.8,
+      "first_n_with_80_percent_power": 20,
+      "power_at_30": 0.9389128561889023
+    },
+    {
+      "alpha": 0.025,
+      "assumed_accuracy": 0.6,
+      "first_n_with_80_percent_power": 240,
+      "power_at_30": 0.09423348376928536
+    },
+    {
+      "alpha": 0.025,
+      "assumed_accuracy": 0.7,
+      "first_n_with_80_percent_power": 58,
+      "power_at_30": 0.4315191448845645
+    },
+    {
+      "alpha": 0.025,
+      "assumed_accuracy": 0.8,
+      "first_n_with_80_percent_power": 24,
+      "power_at_30": 0.8713492465364093
+    }
+  ]
+}

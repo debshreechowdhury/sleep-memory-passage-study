@@ -1,6 +1,6 @@
 # Participant data and dictionary
 
-No participant exports have been downloaded into this repository. A response was visible during form editing on October 31; the present sample size is unverified. Do not describe collection as not started.
+The report uses a privately held CSV of 54 submissions downloaded November 2, 2026. Five both-check failures were excluded, leaving 49 paired responses. Raw and row-level cleaned data are withheld from this repository because names and free text may identify participants. The owner holds the local CSV; request access from the repository owner. The checksum, aggregate results and reproduction procedure are in results/report_statistics.json and report/REPRODUCE.md. This snapshot does not establish that collection has closed.
 
 Names are now optional and linked to responses. Raw exports and free text may identify people and must remain in approved access-controlled storage. Local data/raw, data/interim and data/cleaned CSVs are ignored by Git. Do not commit the manifest with raw headers if they contain private details. Only release de-identified data after the team confirms permission; a private repository still exposes data to collaborators.
 

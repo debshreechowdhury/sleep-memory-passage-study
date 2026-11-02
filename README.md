@@ -1,12 +1,12 @@
 # Sleep and memory passage study
 
-Paired comparison of an NIH science-news passage and an AI rewrite. Each participant rates both passages and attempts to identify the AI version. This repository contains a working analysis scaffold and report outline, **not completed empirical results**.
+Paired comparison of an NIH science-news passage and an AI rewrite. Each participant rates both passages and attempts to identify the AI version. This repository contains the report and reproducible analysis of a 54-response snapshot, with 49 responses retained after the documented comprehension exclusions.
 
 ## Current evidence and remaining work
 
 The circulated form was changed to fixed **AI first** on October 31, 2026, and published. Recruitment eligibility was broadened to adults who are students, working professionals or other. Names are optional; responses with names are identifiable. Debrief is shown after Submit and response editing is off. See [form setup](forms/google-forms.md) and [revision log](forms/REVISION_LOG.md). Live collection status and final form contents need verification; older instrument documentation is historical.
 
-No real response exports have been imported here. Do not claim counterbalancing, page timing, prospective preregistration or sample size without records. Power outputs below are assumption-based planning scenarios, not results from participants.
+Aggregate report results are in results/report_statistics.json; raw exports are withheld because names and free text may identify participants. The completed [report](report/REPORT.md) describes actual results, uncertainty and retrospective decisions. Power outputs are assumption-based planning scenarios.
 
 ## Reproduction
 
@@ -30,16 +30,16 @@ python scripts/analyze.py --input data/cleaned/analysis.csv --output results/ana
 
 Raw exports stay unchanged in restricted storage. Raw/interim/cleaned CSVs are ignored by default; see [data policy and dictionary](data/README.md) for how to describe withheld data and release only approved de-identified data. Names, emails, timestamps and free text are not imported. Keep any withdrawal crosswalk separately.
 
-Core outputs: paired composite difference, 95% CI, paired t statistic and p-value, Cohen dz, per-version Cronbach alpha; detection counts, chi-square when expected counts permit, exact binomial p-value and exact CI. Scripts report missing-data denominators and do not fabricate absent covariates or page times. Diagnostics, detection-power calculation and supported exploratory analyses remain member tasks.
+See [report reproduction](report/REPRODUCE.md) for the completed snapshot analysis and [peer-review notes](report/REVIEW_NOTES.md) for outstanding team verification. Core outputs: paired composite difference, 95% CI, paired t statistic and p-value, Cohen dz, per-version Cronbach alpha; detection counts, chi-square when expected counts permit, exact binomial p-value and exact CI. Scripts report missing-data denominators and do not fabricate absent covariates or page times. The report includes distribution diagnostics, a Wilcoxon sensitivity analysis and exact detection-power scenarios. Uncollected AI-use and English measures cannot support the proposed regression.
 
 ## Report and collaboration
 
-- [Written-report outline](report/REPORT.md) covers every supplied rubric section; final report is submitted via the course Byline link.
+- [Written report](report/REPORT.md) covers every supplied rubric section; final report is submitted via the course Byline link.
 - [Work allocation and PR tracker](PROJECT_PLAN.md): Debshree works on `debshree/report-design`; Kuba on `kuba/data-analysis`.
 - [Analysis plan](ANALYSIS_PLAN.md) is a draft; decisions made after launch must be dated as amendments.
 - Follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [PR template](.github/pull_request_template.md). Each member authors a substantive PR and the other reviews it before merging. Branch creation is not evidence of a member contribution or review.
 
-The shared scaffold is proposed on `project/setup` for review. Both member branches start at that scaffold; review and merge the setup PR before opening member PRs to main to keep their diffs focused. To begin:
+The shared scaffold was merged in [PR #2](https://github.com/debshreechowdhury/sleep-memory-passage-study/pull/2). Member contributions are reviewed separately against main. To begin:
 
 ```sh
 git fetch origin
