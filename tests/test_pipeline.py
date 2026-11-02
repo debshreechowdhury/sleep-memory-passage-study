@@ -1,0 +1,28 @@
+"""Temporary synthetic exports exercise mapping and analysis without publishing data."""
+import csv,json,subprocess,sys,tempfile,unittest
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+class Pipeline(unittest.TestCase):
+ def test_private_columns_removed_and_statistics_match(self):
+  with tempfile.TemporaryDirectory() as d:
+   d=Path(d);raw=d/'raw.csv';mapped=d/'mapped.csv';clean=d/'clean.csv';out=d/'result.json'
+   headers=['Name','Consent','Status','Clear','Engage','Write','Check','Clear','Engage','Write','Check','Detection']
+   with raw.open('w',newline='') as f:
+    w=csv.writer(f);w.writerow(headers)
+    for i in range(12):
+     w.writerow(['SYNTHETIC PRIVATE NAME','Yes','Student',str(2+i%3),str(3+i%3),str(4+i%3),'90 minutes','2','3','4','60 minutes','Passage 1' if i<9 else 'Passage 2'])
+   manifest={'sources':[dict(path='raw.csv',order='AI first',expected_headers=headers,columns=dict(consent=1,status=2,clear_1=3,engage_1=4,write_1=5,check_1=6,clear_2=7,engage_2=8,write_2=9,check_2=10,detect=11))]}
+   (d/'manifest.json').write_text(json.dumps(manifest))
+   for script,args in [('import_forms',['--manifest',str(d/'manifest.json'),'--output',str(mapped)]),('clean',['--input',str(mapped),'--output',str(clean)]),('analyze',['--input',str(clean),'--output',str(out)])]:
+    subprocess.run([sys.executable,str(ROOT/'scripts'/f'{script}.py')]+args,check=True,capture_output=True)
+   self.assertNotIn('PRIVATE NAME',mapped.read_text())
+   x=json.loads(out.read_text());self.assertEqual(x['paired_n'],12)
+   self.assertAlmostEqual(x['ratings']['mean_difference'],1)
+   self.assertEqual(x['detection']['correct'],9)
+   self.assertAlmostEqual(x['detection']['chi2'],3)
+   self.assertAlmostEqual(x['detection']['exact_binomial_p'],.14599609375)
+   manifest['sources'][0]['expected_headers']=['wrong']
+   (d/'manifest.json').write_text(json.dumps(manifest))
+   r=subprocess.run([sys.executable,str(ROOT/'scripts/import_forms.py'),'--manifest',str(d/'manifest.json'),'--output',str(mapped)],capture_output=True)
+   self.assertNotEqual(r.returncode,0)
+if __name__=='__main__':unittest.main()
