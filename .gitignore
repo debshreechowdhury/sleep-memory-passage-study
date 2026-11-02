@@ -9,12 +9,14 @@ venv/
 .env
 .env.*
 !*.example
+data/private/*
+!data/private/.gitkeep
 data/raw/*.csv
+!data/raw/responses_deidentified.csv
 data/clean/*.csv
-data/cleaned/*.csv
+!data/clean/analysis.csv
 *.xlsx
 
-data/interim/*.csv
 config/*.local.json
 results/analysis*.json
 

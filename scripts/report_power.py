@@ -1,7 +1,8 @@
 """Planning sensitivity at declared effects; calculated after collection began."""
-import argparse,json
+import argparse,json,sys
 from pathlib import Path
 from scipy import stats
+sys.path.insert(0,str(Path(__file__).resolve().parent/'quality'))
 from power import power
 
 def detection_power(n,p,alpha):

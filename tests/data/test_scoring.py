@@ -1,7 +1,7 @@
 """Synthetic validation of order reversal, missingness and exclusions."""
 import sys, unittest
 from pathlib import Path
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'scripts'/'data'))
 from clean import clean_row
 
 def row(order='AI first'):

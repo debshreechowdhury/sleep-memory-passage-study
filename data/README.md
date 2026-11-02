@@ -2,9 +2,14 @@
 
 The report uses a privately held CSV of 54 submissions downloaded November 2, 2026. Five both-check failures were excluded, leaving 49 paired responses. Raw and row-level cleaned data are withheld from this repository because names and free text may identify participants. The owner holds the local CSV; request access from the repository owner. The checksum, aggregate results and reproduction procedure are in results/report_statistics.json and report/REPRODUCE.md. This snapshot does not establish that collection has closed.
 
-Names are now optional and linked to responses. Raw exports and free text may identify people and must remain in approved access-controlled storage. Local data/raw, data/interim and data/cleaned CSVs are ignored by Git. Do not commit the manifest with raw headers if they contain private details. Only release de-identified data after the team confirms permission; a private repository still exposes data to collaborators.
+Names are now optional and linked to responses. Raw exports and free text may identify people and must remain in approved access-controlled storage. Keep original exports in data/private/, which Git ignores. In data/raw and data/clean, Git only accepts `responses_deidentified.csv` and `analysis.csv`. Do not commit the manifest with raw headers if they contain private details. Only commit those de-identified files after the team confirms permission; a private repository still exposes data to collaborators.
 
 For withheld data, record approved storage location, access contact/procedure, export date, form revision, SHA-256 checksum, row count and reason for withholding. These entries are pending actual exports. Retain original exports unchanged; retain any identifier-to-response crosswalk separately if needed for withdrawals. Do not publish names.
+
+## Folders
+- data/private/: unchanged original exports and any withdrawal crosswalk (ignored).
+- data/raw/responses_deidentified.csv: importer output, with identifiers removed.
+- data/clean/analysis.csv: cleaner output and the handoff file for quality and detection analysis. tests/fixtures/synthetic_analysis.csv has the same columns.
 
 ## Canonical fields
 The importer retains only configured fields; response_id is a generated row identifier, not a person identifier. It does not resolve duplicate submissions.
