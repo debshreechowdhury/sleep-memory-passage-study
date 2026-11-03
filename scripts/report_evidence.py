@@ -1,4 +1,5 @@
 """Analyze private export; write aggregate results only. No identifiers in outputs."""
+# Record of the 54-response snapshot, which coded AI as Passage 1. The team later corrected this: Passage 1 was the original.
 import argparse,csv,json,sys,hashlib,collections,math
 from pathlib import Path
 import numpy as np

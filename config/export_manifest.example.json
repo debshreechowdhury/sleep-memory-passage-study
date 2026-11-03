@@ -2,7 +2,7 @@
   "sources": [
     {
       "path": "../data/private/REPLACE_WITH_EXPORT.csv",
-      "order": "AI first",
+      "order": "Original first",
       "expected_headers": [
         "REPLACE WITH THE EXACT COMPLETE CSV HEADER ROW"
       ],

@@ -19,7 +19,7 @@ assert sum(r['incorrect'] for r in confidence['levels'])==31
 assert c['detection']['counts']==[18,31]
 assert c['groups']['student_background']['counts']==[11,6]
 text=(ROOT/'report/report.md').read_text()
-for phrase in ('H1:','H2:','H3:','9/14','1/12','.0053','.239','.1312','retrospective'):
+for phrase in ('H1:','H2:','H3:','5/14','11/12','.0053','.239','.1312','retrospective'):
     assert phrase in text, phrase
 assert not (ROOT/'report/figures').exists()
 print('Detection/group/confidence counts, Fisher p-values, provenance and report checked.')

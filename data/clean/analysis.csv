@@ -1,65 +1,65 @@
-response_id,order,status,check_1,check_2,clear_AI,engage_AI,write_AI,quality_AI,clear_O,engage_O,write_O,quality_O,detect_correct,confidence,ai_use,english,included,exclusion_reason,student_background,included_both_wrong_rule
-R00001,AI first,Yes,90,90,7,6,7,6.666666666666667,7,6,7,6.666666666666667,1,3,,,1,,International,1
-R00002,AI first,Working professional,90,60,4,5,3,4.0,4,4,4,4.0,1,4,,,0,one_check_wrong,International,1
-R00003,AI first,Student,90,90,7,6,7,6.666666666666667,7,6,7,6.666666666666667,1,3,,,1,,International,1
-R00004,AI first,Working professional,90,90,7,7,7,7.0,7,6,5,6.0,1,4,,,1,,International,1
-R00005,AI first,Other,120,60,4,1,5,3.3333333333333335,4,4,3,3.6666666666666665,0,3,,,0,both_checks_wrong,Domestic,0
-R00006,AI first,Working professional,90,90,7,6,7,6.666666666666667,7,6,7,6.666666666666667,0,3,,,0,not_a_student,Not applicable,1
-R00007,AI first,Student,90,90,5,3,4,4.0,6,6,6,6.0,1,4,,,1,,International,1
-R00008,AI first,Working professional,90,90,4,4,5,4.333333333333333,6,6,6,6.0,1,3,,,0,not_a_student,Not applicable,1
-R00009,AI first,Working professional,90,90,6,7,6,6.333333333333333,6,7,6,6.333333333333333,1,2,,,0,not_a_student,Not applicable,1
-R00010,AI first,Student,90,90,5,6,5,5.333333333333333,7,6,4,5.666666666666667,0,4,,,1,,International,1
-R00011,AI first,Working professional,90,90,3,5,3,3.6666666666666665,5,5,5,5.0,1,3,,,0,not_a_student,Not applicable,1
-R00012,AI first,Working professional,90,90,5,5,5,5.0,6,6,6,6.0,0,3,,,1,,Domestic,1
-R00013,AI first,Working professional,90,90,6,5,5,5.333333333333333,6,5,6,5.666666666666667,0,4,,,0,not_a_student,Not applicable,1
-R00014,AI first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,0,3,,,0,not_a_student,Not applicable,1
-R00015,AI first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,0,3,,,0,not_a_student,Not applicable,1
-R00016,AI first,Student,90,90,5,3,4,4.0,5,5,6,5.333333333333333,0,3,,,1,,International,1
-R00017,AI first,Student,90,90,5,5,5,5.0,5,5,5,5.0,1,3,,,1,,International,1
-R00018,AI first,Working professional,90,90,6,7,7,6.666666666666667,7,7,7,7.0,0,3,,,0,not_a_student,Not applicable,1
-R00019,AI first,Student,90,90,5,4,5,4.666666666666667,6,6,6,6.0,1,3,,,1,,Domestic,1
-R00020,AI first,Working professional,90,90,7,5,6,6.0,6,5,7,6.0,1,3,,,0,not_a_student,Not applicable,1
-R00021,AI first,Student,90,90,5,4,6,5.0,5,5,6,5.333333333333333,0,3,,,1,,International,1
-R00022,AI first,Working professional,90,90,5,2,2,3.0,5,4,4,4.333333333333333,1,3,,,0,not_a_student,Not applicable,1
-R00023,AI first,Student,90,90,6,4,5,5.0,7,7,7,7.0,1,1,,,1,,International,1
-R00024,AI first,Working professional,60,90,5,6,5,5.333333333333333,6,5,5,5.333333333333333,0,4,,,0,not_a_student;one_check_wrong,Not applicable,1
-R00025,AI first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,1,3,,,0,not_a_student,Not applicable,1
-R00026,AI first,Working professional,90,90,7,7,7,7.0,6,6,6,6.0,0,2,,,0,not_a_student,Not applicable,1
-R00027,AI first,Working professional,120,120,4,4,4,4.0,5,6,6,5.666666666666667,1,4,,,0,both_checks_wrong;not_a_student,Not applicable,0
-R00028,AI first,Working professional,90,90,5,5,5,5.0,5,5,5,5.0,1,3,,,0,not_a_student,Not applicable,1
-R00029,AI first,Working professional,90,90,7,5,6,6.0,6,5,5,5.333333333333333,0,3,,,0,not_a_student,Not applicable,1
-R00030,AI first,Working professional,90,90,6,5,5,5.333333333333333,4,5,4,4.333333333333333,0,4,,,0,not_a_student,Not applicable,1
-R00031,AI first,Working professional,90,90,6,5,6,5.666666666666667,7,7,7,7.0,0,4,,,0,not_a_student,Not applicable,1
-R00032,AI first,Working professional,90,90,5,5,6,5.333333333333333,5,5,6,5.333333333333333,0,3,,,0,not_a_student,Not applicable,1
-R00033,AI first,Working professional,90,90,5,4,5,4.666666666666667,5,5,5,5.0,0,3,,,0,not_a_student,Not applicable,1
-R00034,AI first,Working professional,90,90,6,6,5,5.666666666666667,5,5,5,5.0,0,3,,,0,not_a_student,Not applicable,1
-R00035,AI first,Working professional,60,60,7,5,5,5.666666666666667,7,6,7,6.666666666666667,0,4,,,0,both_checks_wrong;not_a_student,Not applicable,0
-R00036,AI first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,0,5,,,0,not_a_student,Not applicable,1
-R00037,AI first,Working professional,90,90,6,6,5,5.666666666666667,7,7,7,7.0,1,4,,,0,not_a_student,Not applicable,1
-R00038,AI first,Working professional,90,90,5,2,3,3.3333333333333335,4,3,3,3.3333333333333335,0,3,,,0,not_a_student,Not applicable,1
-R00039,AI first,Working professional,90,90,3,3,4,3.3333333333333335,7,6,5,6.0,0,5,,,0,not_a_student,Not applicable,1
-R00040,AI first,Student,60,60,2,3,3,2.6666666666666665,2,4,3,3.0,0,4,,,0,both_checks_wrong,Domestic,0
-R00041,AI first,Student,90,90,7,6,6,6.333333333333333,7,6,6,6.333333333333333,0,2,,,0,not_a_student,Not applicable,1
-R00042,AI first,Working professional,60,60,4,3,4,3.6666666666666665,4,4,4,4.0,0,3,,,0,both_checks_wrong;not_a_student,Not applicable,0
-R00043,AI first,Working professional,90,90,7,5,5,5.666666666666667,7,6,6,6.333333333333333,1,3,,,0,not_a_student,Not applicable,1
-R00044,AI first,Working professional,90,90,6,4,5,5.0,7,5,6,6.0,0,3,,,0,not_a_student,Not applicable,1
-R00045,AI first,Student,90,90,7,5,4,5.333333333333333,7,5,5,5.666666666666667,0,4,,,1,,Domestic,1
-R00046,AI first,Student,90,90,7,5,6,6.0,7,5,5,5.666666666666667,0,3,,,1,,Domestic,1
-R00047,AI first,Working professional,90,90,6,5,7,6.0,5,5,6,5.333333333333333,0,3,,,0,not_a_student,Not applicable,1
-R00048,AI first,Working professional,90,90,5,6,5,5.333333333333333,6,5,6,5.666666666666667,0,2,,,0,not_a_student,Not applicable,1
-R00049,AI first,Working professional,90,90,5,6,5,5.333333333333333,5,5,5,5.0,0,1,,,0,not_a_student,Not applicable,1
-R00050,AI first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,0,4,,,0,not_a_student,Not applicable,1
-R00051,AI first,Other,90,90,3,3,3,3.0,5,5,5,5.0,1,3,,,0,not_a_student,Not applicable,1
-R00052,AI first,Student,90,90,6,4,4,4.666666666666667,7,6,6,6.333333333333333,0,3,,,1,,Domestic,1
-R00053,AI first,Student,90,90,6,6,6,6.0,6,6,6,6.0,0,4,,,1,,International,1
-R00054,AI first,Student,90,90,6,5,4,5.0,7,6,5,6.0,0,3,,,1,,Domestic,1
-R00055,AI first,Student,90,90,7,5,3,5.0,7,5,5,5.666666666666667,0,4,,,1,,Domestic,1
-R00056,AI first,Student,90,90,5,4,4,4.333333333333333,6,5,6,5.666666666666667,1,3,,,1,,International,1
-R00057,AI first,Student,90,90,6,5,7,6.0,7,6,5,6.0,1,3,,,1,,International,1
-R00058,AI first,Student,90,90,6,7,6,6.333333333333333,7,6,7,6.666666666666667,0,3,,,1,,Domestic,1
-R00059,AI first,Student,90,90,6,6,6,6.0,6,6,6,6.0,0,3,,,1,,Domestic,1
-R00060,AI first,Student,90,90,6,7,6,6.333333333333333,7,6,7,6.666666666666667,0,3,,,1,,Domestic,1
-R00061,AI first,Student,90,90,7,5,6,6.0,7,6,7,6.666666666666667,0,4,,,1,,Domestic,1
-R00062,AI first,Student,90,90,6,7,6,6.333333333333333,6,7,6,6.333333333333333,0,5,,,1,,Domestic,1
-R00063,AI first,Student,90,90,6,5,5,5.333333333333333,6,5,5,5.333333333333333,0,4,,,1,,International,1
-R00064,AI first,Student,90,90,5,5,6,5.333333333333333,6,4,4,4.666666666666667,1,3,,,1,,International,1
+response_id,order,status,check_1,check_2,clear_O,engage_O,write_O,quality_O,clear_AI,engage_AI,write_AI,quality_AI,detect_correct,confidence,ai_use,english,included,exclusion_reason,student_background,included_both_wrong_rule
+R00001,Original first,Yes,90,90,7,6,7,6.666666666666667,7,6,7,6.666666666666667,0,3,,,1,,International,1
+R00002,Original first,Working professional,90,60,4,5,3,4.0,4,4,4,4.0,0,4,,,0,one_check_wrong,International,1
+R00003,Original first,Student,90,90,7,6,7,6.666666666666667,7,6,7,6.666666666666667,0,3,,,1,,International,1
+R00004,Original first,Working professional,90,90,7,7,7,7.0,7,6,5,6.0,0,4,,,1,,International,1
+R00005,Original first,Other,120,60,4,1,5,3.3333333333333335,4,4,3,3.6666666666666665,1,3,,,0,both_checks_wrong,Domestic,0
+R00006,Original first,Working professional,90,90,7,6,7,6.666666666666667,7,6,7,6.666666666666667,1,3,,,0,not_a_student,Not applicable,1
+R00007,Original first,Student,90,90,5,3,4,4.0,6,6,6,6.0,0,4,,,1,,International,1
+R00008,Original first,Working professional,90,90,4,4,5,4.333333333333333,6,6,6,6.0,0,3,,,0,not_a_student,Not applicable,1
+R00009,Original first,Working professional,90,90,6,7,6,6.333333333333333,6,7,6,6.333333333333333,0,2,,,0,not_a_student,Not applicable,1
+R00010,Original first,Student,90,90,5,6,5,5.333333333333333,7,6,4,5.666666666666667,1,4,,,1,,International,1
+R00011,Original first,Working professional,90,90,3,5,3,3.6666666666666665,5,5,5,5.0,0,3,,,0,not_a_student,Not applicable,1
+R00012,Original first,Working professional,90,90,5,5,5,5.0,6,6,6,6.0,1,3,,,1,,Domestic,1
+R00013,Original first,Working professional,90,90,6,5,5,5.333333333333333,6,5,6,5.666666666666667,1,4,,,0,not_a_student,Not applicable,1
+R00014,Original first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,1,3,,,0,not_a_student,Not applicable,1
+R00015,Original first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,1,3,,,0,not_a_student,Not applicable,1
+R00016,Original first,Student,90,90,5,3,4,4.0,5,5,6,5.333333333333333,1,3,,,1,,International,1
+R00017,Original first,Student,90,90,5,5,5,5.0,5,5,5,5.0,0,3,,,1,,International,1
+R00018,Original first,Working professional,90,90,6,7,7,6.666666666666667,7,7,7,7.0,1,3,,,0,not_a_student,Not applicable,1
+R00019,Original first,Student,90,90,5,4,5,4.666666666666667,6,6,6,6.0,0,3,,,1,,Domestic,1
+R00020,Original first,Working professional,90,90,7,5,6,6.0,6,5,7,6.0,0,3,,,0,not_a_student,Not applicable,1
+R00021,Original first,Student,90,90,5,4,6,5.0,5,5,6,5.333333333333333,1,3,,,1,,International,1
+R00022,Original first,Working professional,90,90,5,2,2,3.0,5,4,4,4.333333333333333,0,3,,,0,not_a_student,Not applicable,1
+R00023,Original first,Student,90,90,6,4,5,5.0,7,7,7,7.0,0,1,,,1,,International,1
+R00024,Original first,Working professional,60,90,5,6,5,5.333333333333333,6,5,5,5.333333333333333,1,4,,,0,not_a_student;one_check_wrong,Not applicable,1
+R00025,Original first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,0,3,,,0,not_a_student,Not applicable,1
+R00026,Original first,Working professional,90,90,7,7,7,7.0,6,6,6,6.0,1,2,,,0,not_a_student,Not applicable,1
+R00027,Original first,Working professional,120,120,4,4,4,4.0,5,6,6,5.666666666666667,0,4,,,0,both_checks_wrong;not_a_student,Not applicable,0
+R00028,Original first,Working professional,90,90,5,5,5,5.0,5,5,5,5.0,0,3,,,0,not_a_student,Not applicable,1
+R00029,Original first,Working professional,90,90,7,5,6,6.0,6,5,5,5.333333333333333,1,3,,,0,not_a_student,Not applicable,1
+R00030,Original first,Working professional,90,90,6,5,5,5.333333333333333,4,5,4,4.333333333333333,1,4,,,0,not_a_student,Not applicable,1
+R00031,Original first,Working professional,90,90,6,5,6,5.666666666666667,7,7,7,7.0,1,4,,,0,not_a_student,Not applicable,1
+R00032,Original first,Working professional,90,90,5,5,6,5.333333333333333,5,5,6,5.333333333333333,1,3,,,0,not_a_student,Not applicable,1
+R00033,Original first,Working professional,90,90,5,4,5,4.666666666666667,5,5,5,5.0,1,3,,,0,not_a_student,Not applicable,1
+R00034,Original first,Working professional,90,90,6,6,5,5.666666666666667,5,5,5,5.0,1,3,,,0,not_a_student,Not applicable,1
+R00035,Original first,Working professional,60,60,7,5,5,5.666666666666667,7,6,7,6.666666666666667,1,4,,,0,both_checks_wrong;not_a_student,Not applicable,0
+R00036,Original first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,1,5,,,0,not_a_student,Not applicable,1
+R00037,Original first,Working professional,90,90,6,6,5,5.666666666666667,7,7,7,7.0,0,4,,,0,not_a_student,Not applicable,1
+R00038,Original first,Working professional,90,90,5,2,3,3.3333333333333335,4,3,3,3.3333333333333335,1,3,,,0,not_a_student,Not applicable,1
+R00039,Original first,Working professional,90,90,3,3,4,3.3333333333333335,7,6,5,6.0,1,5,,,0,not_a_student,Not applicable,1
+R00040,Original first,Student,60,60,2,3,3,2.6666666666666665,2,4,3,3.0,1,4,,,0,both_checks_wrong,Domestic,0
+R00041,Original first,Student,90,90,7,6,6,6.333333333333333,7,6,6,6.333333333333333,1,2,,,0,not_a_student,Not applicable,1
+R00042,Original first,Working professional,60,60,4,3,4,3.6666666666666665,4,4,4,4.0,1,3,,,0,both_checks_wrong;not_a_student,Not applicable,0
+R00043,Original first,Working professional,90,90,7,5,5,5.666666666666667,7,6,6,6.333333333333333,0,3,,,0,not_a_student,Not applicable,1
+R00044,Original first,Working professional,90,90,6,4,5,5.0,7,5,6,6.0,1,3,,,0,not_a_student,Not applicable,1
+R00045,Original first,Student,90,90,7,5,4,5.333333333333333,7,5,5,5.666666666666667,1,4,,,1,,Domestic,1
+R00046,Original first,Student,90,90,7,5,6,6.0,7,5,5,5.666666666666667,1,3,,,1,,Domestic,1
+R00047,Original first,Working professional,90,90,6,5,7,6.0,5,5,6,5.333333333333333,1,3,,,0,not_a_student,Not applicable,1
+R00048,Original first,Working professional,90,90,5,6,5,5.333333333333333,6,5,6,5.666666666666667,1,2,,,0,not_a_student,Not applicable,1
+R00049,Original first,Working professional,90,90,5,6,5,5.333333333333333,5,5,5,5.0,1,1,,,0,not_a_student,Not applicable,1
+R00050,Original first,Working professional,90,90,7,7,7,7.0,7,7,7,7.0,1,4,,,0,not_a_student,Not applicable,1
+R00051,Original first,Other,90,90,3,3,3,3.0,5,5,5,5.0,0,3,,,0,not_a_student,Not applicable,1
+R00052,Original first,Student,90,90,6,4,4,4.666666666666667,7,6,6,6.333333333333333,1,3,,,1,,Domestic,1
+R00053,Original first,Student,90,90,6,6,6,6.0,6,6,6,6.0,1,4,,,1,,International,1
+R00054,Original first,Student,90,90,6,5,4,5.0,7,6,5,6.0,1,3,,,1,,Domestic,1
+R00055,Original first,Student,90,90,7,5,3,5.0,7,5,5,5.666666666666667,1,4,,,1,,Domestic,1
+R00056,Original first,Student,90,90,5,4,4,4.333333333333333,6,5,6,5.666666666666667,0,3,,,1,,International,1
+R00057,Original first,Student,90,90,6,5,7,6.0,7,6,5,6.0,0,3,,,1,,International,1
+R00058,Original first,Student,90,90,6,7,6,6.333333333333333,7,6,7,6.666666666666667,1,3,,,1,,Domestic,1
+R00059,Original first,Student,90,90,6,6,6,6.0,6,6,6,6.0,1,3,,,1,,Domestic,1
+R00060,Original first,Student,90,90,6,7,6,6.333333333333333,7,6,7,6.666666666666667,1,3,,,1,,Domestic,1
+R00061,Original first,Student,90,90,7,5,6,6.0,7,6,7,6.666666666666667,1,4,,,1,,Domestic,1
+R00062,Original first,Student,90,90,6,7,6,6.333333333333333,6,7,6,6.333333333333333,1,5,,,1,,Domestic,1
+R00063,Original first,Student,90,90,6,5,5,5.333333333333333,6,5,5,5.333333333333333,1,4,,,1,,International,1
+R00064,Original first,Student,90,90,5,5,6,5.333333333333333,6,4,4,4.666666666666667,0,3,,,1,,International,1

@@ -32,8 +32,8 @@ def group_test(rows):
             "expected_counts":expected.tolist(),"reject_at_threshold":bool(stats.fisher_exact(table).pvalue<THRESHOLD),**fisher(table)}
 
 def quality_test(rows):
-    """H2: paired original-minus-AI composite difference."""
-    test=stats.ttest_rel([float(r["quality_O"]) for r in rows],[float(r["quality_AI"]) for r in rows])
+    """H2: paired AI-minus-original composite difference."""
+    test=stats.ttest_rel([float(r["quality_AI"]) for r in rows],[float(r["quality_O"]) for r in rows])
     return {"t":float(test.statistic),"df":int(test.df),"p":float(test.pvalue),"reject_at_threshold":bool(test.pvalue<THRESHOLD)}
 
 def detection_test(rows,reversed_record=lambda r:False):
@@ -73,9 +73,11 @@ def summarize(raw):
             "H1_group_difference":group_test(rows),"H2_quality":quality_test(rows),"H3_overall_detection":detection_test(rows),
             "H1_sensitivity":{"planned_both_wrong_rule":fisher(group_table(planned)),"legacy_record_omitted":fisher(group_table([r for r in rows if not legacy(r)])),
                               "legacy_record_reversed":fisher(group_table(rows,legacy)),"status_student_only":fisher(group_table([r for r in rows if r["status"]=="Student"])),
-                              "without_responses_after_row_54":fisher(group_table([r for r in rows if position(r)<=SNAPSHOT_ROWS]))},
+                              "without_responses_after_row_54":fisher(group_table([r for r in rows if position(r)<=SNAPSHOT_ROWS])),
+                              "planned_rule_first_54_rows":fisher(group_table([r for r in planned if position(r)<=SNAPSHOT_ROWS])),"last_ten_responses":fisher(group_table([r for r in rows if position(r)>SNAPSHOT_ROWS]))},
             "H3_sensitivity":{"planned_both_wrong_rule_students":detection_test(planned),"planned_both_wrong_rule_all_respondents":detection_test([r for r in raw if r["included_both_wrong_rule"]=="1"]),
-                              "legacy_record_omitted":detection_test([r for r in rows if not legacy(r)]),"legacy_record_reversed":detection_test(rows,legacy)},
+                              "legacy_record_omitted":detection_test([r for r in rows if not legacy(r)]),"legacy_record_reversed":detection_test(rows,legacy),
+                              "planned_rule_first_54_rows":detection_test([r for r in raw if r["included_both_wrong_rule"]=="1" and position(r)<=SNAPSHOT_ROWS])},
             "confidence_exploratory":confidence_test(rows),
             "H3_power_assumed_rates":[{"rate":x,"first_n_80_at_05":first_n_with_power(x,.05),"first_n_80_at_threshold":first_n_with_power(x,THRESHOLD),"power_at_n_05":chi_square_power(len(rows),x,.05),"power_at_n_threshold":chi_square_power(len(rows),x,THRESHOLD)} for x in (.6,.7,.8)],
             "H1_future_n_per_group_30_vs_60":{"at_05":first_n_per_group(.3,.6,.05),"at_threshold":first_n_per_group(.3,.6,THRESHOLD)},
