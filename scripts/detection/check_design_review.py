@@ -24,7 +24,7 @@ def check():
     assert x['n']==26 and x['threshold']==.05
     deck=Presentation(ROOT/'presentation/design_detection.pptx')
     assert len(deck.slides)==7
-    expected=[1,2,3,4,6,10,11]
+    expected=[1,2,3,4,7,11,12]
     for number,slide in zip(expected,deck.slides):
         footer=next(sh.text for sh in slide.shapes if sh.name=='Footer')
         assert footer.startswith(f'{number}  ')

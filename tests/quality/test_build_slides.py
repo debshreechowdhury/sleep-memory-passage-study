@@ -29,15 +29,15 @@ class Slides(unittest.TestCase):
         self.assertEqual(len(deck.slides),7)
         self.assertEqual(sum(sh.has_chart for s in deck.slides for sh in s.shapes),1)
 
-    def test_final_deck_has_eleven_ordered_slides_with_native_charts(self):
+    def test_final_deck_has_twelve_ordered_slides_with_native_charts(self):
         sys.path.insert(0,str(ROOT/"scripts"))
         from build_final_deck import build as build_final, number
         with tempfile.TemporaryDirectory() as d:
             out=Path(d)/"deck.pptx"
             build_final(ROOT/"presentation/template.pptx",out)
             deck=Presentation(out)
-        self.assertEqual([number(s) for s in deck.slides],list(range(1,12)))
-        self.assertEqual(sum(sh.has_chart for s in deck.slides for sh in s.shapes),3)
+        self.assertEqual([number(s) for s in deck.slides],list(range(1,13)))
+        self.assertEqual(sum(sh.has_chart for s in deck.slides for sh in s.shapes),5)
         self.assertTrue(all(s.notes_slide.notes_text_frame.text.startswith("Presenter: ") for s in deck.slides))
 
     def test_p_value_format_drops_the_leading_zero(self):
