@@ -1,17 +1,17 @@
 ### H1: Student-background comparison
 
-The comparison uses the background question as answered, regardless of a respondent's separate current-status answer. The two groups are independent, and the outcome is a two-category count, so the natural test is chi-square of independence. The expected count for correct domestic students is 4.62, below the usual minimum of 5, so we use a two-sided Fisher's exact test, which does not rely on the chi-square approximation. Fisher's test assumes independent responses. We report the difference in proportions as the effect size, with a Welch t-based 95% confidence interval on the 0/1 scores. With counts this small, that interval is approximate.
+We compare the background answers as reported, rather than substituting the separate current-status field. Each respondent contributes one binary source choice. Under the current coding, a correct answer is Passage 1. The groups do not overlap, but independence between respondents is an assumption of the test, not a fact established by the export. The expected domestic-correct count under independence is 4.62, so the chi-square approximation is questionable; we use the specified two-sided Fisher's exact test for the sparse table. The descriptive effect is the international-minus-domestic difference in proportions. Its 95% interval uses a Welch t calculation on the 0/1 outcomes; it is approximate, is not an exact Fisher interval, and is not adjusted for multiplicity.
 
 | Background | Correct | Incorrect | Accuracy |
 |---|---:|---:|---:|
 | International | 9 | 5 | 64.3% |
 | Domestic | 1 | 11 | 8.3% |
 
-The difference was 56.0 percentage points, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This is below the .0167 threshold, so we reject H0.
+The observed choices were 9/14 versus 1/12. The difference was 56.0 percentage points, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .0167, so H0 is rejected under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the corrected p-value.
 
 ![Detection accuracy by student background](../results/quality/group_detection.png)
 
-Figure 1. Share of each student group choosing the AI passage. Because the AI passage was always first, this is also the share choosing Passage 1.
+Figure 1. Proportion of each group selecting the passage coded as AI. Under the fixed AI-first mapping, this is also the proportion selecting Passage 1.
 
 | Sensitivity | International | Domestic | Fisher p |
 |---|---:|---:|---:|
@@ -22,4 +22,6 @@ Figure 1. Share of each student group choosing the AI passage. Because the AI pa
 | Without the last ten responses | 6/10 | 1/6 | .145 |
 | Planned check rule, 54-response snapshot | 7/11 | 1/6 | .1312 |
 
-The direction was the same in every row, with international students correct more often. The result stayed below .0167 under the planned check rule and both legacy-record analyses, but not when restricted to stated Student status or without the last ten responses. Those ten arrived within about 15 minutes, with international students correct 3/4 times and domestic students 0/6 times. The team reports that they came from different people and not a single class or group, so we kept them, but the result leans on them.
+The direction is the same across these subsets and mappings. The first three sensitivity p-values are below .0167, while the stated-Student-only and earlier-response subsets are not. These analyses change the sample or coding; comparing their p-values is not a formal test that the underlying effects differ. The final historical row uses the archived 54-response results, rather than the current workbook.
+
+The last ten analyzed responses arrived within approximately 15 minutes; their counts were 3/4 correct for international-background and 0/6 for domestic-background respondents. The team reports that these were different people, not a single class or group. Timing alone is not evidence that participants discussed answers or that responses were dependent. Removing them is a sensitivity analysis, not evidence that they are invalid observations. Primary and current-workbook sensitivity values come from results/quality/hypothesis_tests.json; the historical snapshot is retained in results/snapshot_group_statistics.json.

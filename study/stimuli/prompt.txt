@@ -1,0 +1,25 @@
+1st prompt:
+"'m running a research study comparing original and AI-rewritten versions of a health-education passage. I need a rewrite that is a genuine rewording but is NOT distinguishable by obvious formatting or style differences. Follow these rules exactly:
+
+1. Rewrite the passage in your own words, sentence by sentence, keeping the same four-paragraph structure and the same order of ideas.
+2. Keep the direct quote from Dr. Matthew Walker EXACTLY as written, including quotation marks and the attribution ("says Dr. Matthew Walker, a sleep scientist at the University of California, Berkeley"). Do not paraphrase it.
+3. Keep the same voice and register as the original: conversational, addressing the reader as "you" where the original does, with the same plain-spoken tone. Do not make it more formal or more polished.
+4. Add NO new facts, claims, examples, or interpretations. Remove nothing that carries factual content.
+5. Match the original's length: the rewrite must be within 5% of the original word count. Report both word counts at the end.
+6. Plain text only. No headings, bullets, bold, italics, em dashes, or lists, and use the same punctuation style as the original.
+7. Output only the rewritten passage, then the two word counts on a separate line. No introduction, no commentary.
+
+ORIGINAL PASSAGE:
+When you learn something new, the best way to remember it is to sleep on it. That’s because sleeping helps strengthen memories you’ve formed throughout the day. It also helps to link new memories to earlier ones. You might even come up with creative new ideas while you slumber.
+What happens to memories in your brain while you sleep? And how does lack of sleep affect your ability to learn and remember? NIH-funded scientists have been gathering clues about the complex relationship between sleep and memory. Their findings might eventually lead to new approaches to help students learn or help older people hold onto memories as they age.
+“We’ve learned that sleep before learning helps prepare your brain for initial formation of memories,” says Dr. Matthew Walker, a sleep scientist at the University of California, Berkeley. “And then, sleep after learning is essential to help save and cement that new information into the architecture of the brain, meaning that you’re less likely to forget it.”
+While you snooze, your brain cycles through different phases of sleep, including light sleep, deep sleep, and rapid eye movement (REM) sleep, when dreaming often occurs. The cycles repeat about every 90 minutes.”
+
+2nd prompt:
+"do it again but:
+"1. Rewrite each paragraph from scratch for a general adult audience, as a skilled science writer would. Change the sentence structure, sentence order within each paragraph, and vocabulary throughout. Do not reuse the original's sentence frames or phrases (short common words like "sleep" and "memory" are fine). Combine or split sentences where it improves flow.
+2. Keep the same four paragraphs in the same order, and keep every factual claim: memory consolidation during sleep, sleep before AND after learning, links to older memories, creative ideas, the NIH-funded research and its possible uses for students and older adults, the sleep stages (light, deep, REM, dreaming), and the 90-minute cycle. Add no new facts, examples, statistics, or interpretations, and drop none.
+3. Keep Dr. Matthew Walker's quote EXACTLY as written, with quotation marks. You may reword the sentence that introduces it, but keep his name, title, and university.
+4. Keep the passage within 5% of the original word count. Report both counts at the end.
+5. Plain text only. No headings, bullets, bold, italics, or em dashes, and no rhetorical questions unless the original has them.
+6. Output only the rewritten passage, then the word counts on a separate line.""
