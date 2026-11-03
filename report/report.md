@@ -1,4 +1,4 @@
-# Do international and domestic students differ in identifying an AI rewrite? A sleep and memory passage study
+# AI rewrite identification and writing quality by student background
 
 Debshree Chowdhury and Jakub Romańczuk
 
@@ -8,7 +8,7 @@ Responses downloaded November 2, 2026
 
 ## Abstract
 
-Our main question was whether international and domestic students differ in identifying an AI rewrite of a science passage. Participants read an original NIH News in Health passage about sleep and memory and an AI rewrite, rated each for clarity, engagement, and overall writing on seven-point scales, answered comprehension checks, and identified the AI passage. The team reports that the form presented the original first and the AI rewrite second, after correcting documentation that recorded the reverse. Of 64 submissions, we analyzed the 26 students who answered both checks correctly: 14 international and 12 domestic. The main test used α = .05. Domestic students selected the AI passage more often than international students, 11/12 (91.7%) versus 5/14 (35.7%), a difference of 56.0 percentage points, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. The written plan labelled this comparison exploratory, and it does not reach the threshold without the last ten responses (p = .145). Because the AI passage was always second, a correct answer always meant choosing Passage 2, so the difference cannot be separated from a preference for the second passage. In an exploratory analysis, students also rated the AI rewrite higher, by 0.487 points, 95% confidence interval [0.175, 0.799], t(25) = 3.213, p = .0036, dz = 0.630; this also cannot be separated from position. Overall, 16 of 26 students (61.5%) chose the AI passage. These results justify a randomized follow-up and do not establish that either group detects AI better.
+We examined whether respondents reporting international and domestic student backgrounds differed in identifying an AI rewrite of a science passage. Respondents read an NIH original and its AI rewrite, rated clarity, engagement and overall writing, answered comprehension checks, and selected the AI passage. Of 64 submissions, 26 student-background respondents passed both checks: 14 international and 12 domestic. Under the final repository's original-first mapping, domestic respondents selected the AI passage more often, 11/12 (91.7%) versus 5/14 (35.7%). The domestic-minus-international gap was 56.0 percentage points, with an approximate marginal 95% confidence interval [23.4, 88.5]; two-sided Fisher's exact p = .0053 at α = .05. An exploratory paired comparison found higher quality ratings for the rewrite, by 0.487 points on a seven-point scale, 95% confidence interval [0.175, 0.799], t(25) = 3.213, p = .0036, dz = 0.630. The reported collection order places the AI rewrite second, so version and position are confounded. Historical order evidence remains contradictory; the reported directions depend on the team's mapping. The earlier plan labelled the group comparison exploratory, and its later emphasis and stricter comprehension exclusion were adopted after results had been examined. The group test did not reject in the earlier-response subset (p = .145). These findings describe source choices and ratings for one passage pair in a convenience sample. They support a prospectively specified, counterbalanced replication rather than a general claim that one student-background group recognizes AI better.
 
 ## Background and motivation
 
@@ -40,6 +40,21 @@ The October 30 plan, drafted with AI assistance, also listed overall detection a
 
 The main analysis compares detection choices between respondents reporting international and domestic student backgrounds. Background was observed rather than assigned, and the binary outcome was whether the respondent selected the passage coded as AI. The secondary quality comparison is within-person: each respondent rated both versions for clarity, engagement and overall writing on scales from 1 (Not at all) to 7 (Extremely). The mean of these three ratings is the quality composite. Confidence in the source choice was recorded from 1 to 5. Names were optional and excluded from analytical data.
 
+### Variables and control conditions
+
+| Component | Operational definition |
+|---|---|
+| H1 grouping variable | Self-reported international or domestic student background; observed between people |
+| H1 dependent variable | Selection of the passage coded as AI, recorded as 1 for Passage 2 and 0 for Passage 1 under the final mapping |
+| H2 within-person factor | Passage version, NIH original versus selected AI rewrite |
+| H2 dependent variable | Mean of clarity, engagement and overall-writing ratings for each version; AI-minus-original difference |
+| Exploratory measures | Individual ratings and confidence from 1 to 5; measured covariates are described in the regression analysis |
+| Reference condition | The NIH original is the comparison text; there is no separate untreated participant group |
+| Shared conditions | One topic, the same factual content and quotation, four paragraphs, plain formatting, rating scales and comprehension question |
+| Assignment and sampling | No verified order randomization or counterbalancing; student background was not assigned; recruitment used a convenience sample |
+
+These shared conditions reduce some differences between stimuli but do not control the effect of reading the same information twice. The intended randomization cannot be claimed as a feature of the collected data.
+
 The form first introduced a short science-reading task without announcing AI authorship. Each passage was followed by the same three ratings and a comprehension question about the approximately 90-minute sleep cycle. After both passages, respondents were told that one was an AI rewrite and made a forced choice with a confidence rating and optional explanation. The source, answer key, reason for initial nondisclosure and study contacts appeared after submission. Response editing was disabled. The team reports that the instructor accepted the initial nondisclosure; this is not a claim of a separate ethics-board review.
 
 The plan proposed randomized passage order, but the circulated version placed the NIH original first and the AI rewrite second. The team reports that the form used for collection presented the NIH original as Passage 1 and the AI rewrite as Passage 2 from the start, and that the reverse labeling in the project documentation and the form's debrief came from a team member mixing up the two passages. A form read on November 2 through the documented link displayed the AI rewrite's wording as Passage 1, so the order rests on the team's report and not on an independent check. The analysis applies the original-first mapping to all retained records, so a correct answer in the analyzed coding always means choosing Passage 2. There is no verified counterbalancing. A group difference can therefore reflect different tendencies to select the second passage as AI rather than different ability to recognize AI writing. Version and position are also confounded in the quality comparison. One legacy record's actual passage order remains uncertain and is examined through omission and reversal sensitivities.
@@ -64,6 +79,8 @@ These calculations were prepared after collection began. They describe power at 
 | .10 vs .60 | 75.4% |
 
 Even the assumed .10 versus .60 scenario falls short of the .80 power target. Moderate underlying gaps would often be missed with groups this small. A statistically significant result in a small study can also overestimate the magnitude of the underlying difference; the observed gap should not be used alone to plan a replication.
+
+For group sizes n1 and n2 and assumed probabilities p1 and p2, power is the sum of Binomial(a; n1, p1) × Binomial(b; n2, p2) over every possible success-count pair (a, b) for which the two-sided Fisher p-value is at most .05. This calculation assumes independent Bernoulli responses within and between groups and fixed sample sizes. The reproducible implementation is scripts/group_power.py, called by scripts/quality/hypothesis_tests.py. Its search finds the first balanced group size reaching .80 power under the specified alternative; this is a model-based planning calculation, not evidence that the recruited sample was adequate.
 
 The table comes from results/quality/hypothesis_tests.json, H1_power_assumed_rates. A future study should choose a practically relevant group difference before recruitment, calculate the sample size at the intended threshold, allow for exclusions, and balance recruitment where possible. For a gap of 30% versus 60%, about 48 respondents per group would reach .80 power at α = .05. More participants would improve precision but would not repair fixed-order confounding or convenience sampling.
 
@@ -115,7 +132,7 @@ We compare the background answers as reported, rather than substituting the sepa
 | International | 5 | 9 | 35.7% |
 | Domestic | 11 | 1 | 91.7% |
 
-The observed choices were 5/14 versus 11/12. The difference was 56.0 percentage points in favor of domestic respondents, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .05, so we reject H0 under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the corrected p-value.
+The observed choices were 5/14 versus 11/12. The difference was 56.0 percentage points in favor of domestic respondents, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .05, so we reject H0 under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the small p-value.
 
 ![Detection accuracy by student background](../results/quality/group_detection.png)
 
@@ -137,6 +154,8 @@ The last ten analyzed responses arrived within approximately 15 minutes; their c
 ### Overall accuracy and confidence (exploratory)
 
 Overall, 16 of 26 respondents selected Passage 2, the passage coded as correct (61.5%). We report this descriptively and do not test it as a hypothesis, as explained under the testing policy.
+
+The Mann-Whitney implementation uses a tie-corrected asymptotic approximation with continuity correction, appropriate to the many ties on the five-category scale. It assumes independent respondents; it is not a test of probability calibration.
 
 The confidence scale runs from 1 (Just guessing) to 5 (Extremely confident). Its labels are ordinal, not numerical probabilities. Mean confidence was 3.31 and the median was 3. Correct respondents (n = 16) averaged 3.50, compared with 3.00 among incorrect respondents (n = 10). The two-sided Mann-Whitney comparison gave U = 104.5, p = .141. The test concerns confidence distributions, not equality of the displayed means. It supplies no clear evidence that confidence separates correct from incorrect choices, does not establish that confidence is unrelated to accuracy, and cannot assess probability calibration. Optional explanations were not systematically coded.
 
@@ -265,9 +284,13 @@ The team reports that collection is closed and that no pilot responses were coll
 
 ## Conclusion and recommendations
 
-Domestic students in this sample selected the AI passage far more often than international students, 11/12 versus 5/14. Because the AI passage was always second, this may reflect a preference for the second passage, and the result weakens without the last ten responses, so we do not conclude that domestic students are better at detecting AI. Students rated the rewrite higher than the original, a result that held across the examined exclusion rules but is also confounded with position. Overall, 16 of 26 students chose the AI passage, which we report descriptively. These findings concern this fixed-order passage pair and sampled respondents.
+Under the final repository's original-first coding, domestic-background respondents selected the passage coded as AI more often than international-background respondents: 11/12 versus 5/14, a 56.0-percentage-point gap, Fisher's exact p = .0053. The exploratory quality comparison favored the rewrite by 0.487 scale points, p = .0036, dz = 0.630. These are associations for one passage pair in the retained sample. They do not establish a causal effect of student background, general AI-detection ability, or the superiority of AI writing.
 
-The priority for a follow-up is to retest the group difference with randomized passage order, so that a correct answer no longer means choosing the same position. It should recruit enough students in each group, roughly 48 per group for a gap of 30% versus 60% at .05, use multiple independently selected passage pairs, preserve model and prompt provenance, and freeze eligibility, exclusions, and the testing policy before recruitment. It should also measure English proficiency, so that background and reading proficiency can be distinguished. If reading-time exclusions or order blocking are essential, use a platform that records those features. Keep names separate from analytical data when participation tracking is needed. Archive the exact form used and record each respondent's passage order with the response, so that passage order never has to be reconstructed from memory or documentation.
+Two uncertainties govern interpretation. First, the reported fixed order makes AI choice identical to choosing Passage 2 and makes the quality difference inseparable from position and repeated exposure. Historical order evidence conflicts with the team's final mapping, so even the direction attributed to authorship remains conditional on that mapping. Second, the lead hypothesis and stricter exclusions were selected after earlier results had been examined. The group result was not statistically significant without the last ten responses, although comparing subset p-values does not establish that the underlying effects differ. The quality advantage retained its direction across the reported sensitivities, but that consistency cannot remove the order confound.
+
+A follow-up should preregister the questions, eligibility rules, exclusions and testing policy, then randomize and balance passage order within each background group. It should use multiple independently selected passage pairs and archive the exact administered texts, form versions, generation settings and each respondent's assigned order. On the current exact-Fisher planning assumptions, 48 analyzable respondents per group give at least 80% power for a 30% versus 60% choice probability at two-sided α = .05. This is an illustrative alternative, not a target estimated from the observed gap; recruitment should allow for exclusions and be recalculated if the design, effect of interest or testing threshold changes.
+
+Collect English reading proficiency and AI-tool use directly, verify adult eligibility, and record page times if reading-time exclusions are intended. Keep identifiers separate from research responses, use a correct debrief, and pilot the complete flow before launch. More observations would improve precision, but credible conclusions also require resolving the assignment record and removing the position confound.
 
 ## References
 
@@ -294,3 +317,5 @@ National Institutes of Health. (n.d.). Frequently asked questions: Copyright and
 The earlier 54-response snapshot used Python 3.10, NumPy 2.2.6, and SciPy 1.15.3; the current analyses use the same NumPy and SciPy versions under Python 3.13. The repository includes executable analysis and power scripts, aggregate JSON outputs, de-identified data, and reproduction instructions. Original exports with names and free text are withheld from GitHub. The report records a November 2 download, and the form has since been closed. AI assistance was used to prepare code and report text; the project members are responsible for reviewing the analysis, references, and final submission.
 
 Section files are stitched in the course order by make report. CONTRIBUTING.md lists which member owns each section.
+
+This report uses main commit 1870ee6 and the committed de-identified data. Current estimates are archived in results/quality/. The final writing revision preserves those outputs and the other member’s owned sections.

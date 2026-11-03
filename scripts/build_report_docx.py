@@ -78,7 +78,7 @@ while i<len(lines):
 for element in (doc.styles.element, doc.element):
  for border in element.xpath('.//w:pBdr'):
   border.getparent().remove(border)
-doc.core_properties.title='Perceived writing quality and AI detection in a sleep and memory passage study'
+doc.core_properties.title='AI rewrite identification and writing quality by student background'
 doc.core_properties.author='Debshree Chowdhury and Jakub Romańczuk'
 doc.core_properties.comments=''
 doc.save(root/'report/Sleep_memory_study_report.docx')
