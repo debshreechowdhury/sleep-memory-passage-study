@@ -1,5 +1,7 @@
 # Report
 
+[Shareable completed report and access details](SHAREABLE_REPORT.md).
+
 Each section is a file in `report/sections/`, numbered in the course's required order. Sections covering all three hypotheses have one file for each, in the order H1, H2. Run `make report` from the repo root to stitch them into **report/report.md** in the course order specified by sections.json. Paste the approved assembled text into Byline and check image placement there. The section files are authoritative; do not edit the generated file directly. The former uppercase report filename has been replaced by report.md.
 
 | Section | Kuba | Debshree / shared |
