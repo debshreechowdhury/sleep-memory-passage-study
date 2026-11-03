@@ -21,19 +21,17 @@ def check():
     prompts=(a/'prompt.txt').read_text()
     assert prompts.index('1st prompt:')<prompts.index('2nd prompt:')
     assert "'m running a research study" in prompts and 'do it again but:' in prompts
-    assert x['n']==26 and x['threshold']==.05/3
+    assert x['n']==26 and x['threshold']==.05
     deck=Presentation(ROOT/'presentation/design_detection.pptx')
-    assert len(deck.slides)==8
-    expected=[1,2,3,4,6,10,11,12]
+    assert len(deck.slides)==7
+    expected=[1,2,3,4,6,10,11]
     for number,slide in zip(expected,deck.slides):
         footer=next(sh.text for sh in slide.shapes if sh.name=='Footer')
         assert footer.startswith(f'{number}  ')
         assert slide.has_notes_slide and slide.notes_slide.notes_text_frame.text
     charts=[sh.chart for slide in deck.slides for sh in slide.shapes if sh.has_chart]
-    assert len(charts)==2
+    assert len(charts)==1
     assert list(charts[0].series[0].values)==[x['H1_group_difference']['groups'][g]['proportion'] for g in ('International','Domestic')]
-    h3=x['H3_overall_detection']
-    assert list(charts[1].series[0].values)==[h3['correct'],h3['n']-h3['correct']]
     for chart in charts:
         for node in chart._chartSpace.xpath('.//c:axId'):
             assert 0<=int(node.get('val'))<=0xffffffff

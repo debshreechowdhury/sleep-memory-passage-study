@@ -4,7 +4,6 @@
   "paired_n": 26,
   "difference_direction": "AI minus original",
   "alpha_nominal": 0.05,
-  "alpha_three_planned_tests_bonferroni": 0.016666666666666666,
   "alpha_item_bonferroni": 0.016666666666666666,
   "exclusion_flow": {
     "submissions": 64,

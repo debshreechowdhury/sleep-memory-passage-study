@@ -13,7 +13,6 @@ ROOT=Path(__file__).resolve().parents[2]
 FONT="Helvetica Neue"
 INK,TEAL,MUTED,GOLD,TINT,GRID=(RGBColor.from_string(x) for x in ("152C35","15616D","536871","AE6A30","F4F7F7","D9E0E3"))
 ITEMS=dict(clear="Clarity",engage="Engagement",write="Overall writing")
-PLANNED_ALPHA=.0166667
 
 def fmt_p(p):
     text=f"{p:.2g}" if p<.01 else f"{p:.3g}"
@@ -117,9 +116,9 @@ def add_slides(deck):
     n=int(power[0]["planned_pairs"])
     mde=lambda alpha:float(at(alpha)[0]["minimum_detectable_dz"])
 
-    s=new_slide(deck,f"H2, and what {n} pairs can detect",4,"The quality half of the shared hypotheses and power slide. Source: results/quality/power_achieved.csv; report section Power analysis. These are assumed effects at the achieved sample size, not observed power. The .0167 threshold covers the three hypothesis tests. Merge with the H1 and H3 half in the final deck.")
-    text(s,f"H2, secondary question\nH0: mean AI-minus-original quality difference = 0\nAlternative: the difference is not 0\nTwo-sided paired t-test\n\nSmallest effect detectable at 80% power:\ndz = {mde(.05):.2f} at α = .05\ndz = {mde(PLANNED_ALPHA):.2f} at α = .0167",51,136,410,350,20,name="Hypotheses")
-    column_chart(s,480,136,432,350,[f"dz = {float(x['assumed_dz']):.1f}" for x in at(.05)],[("α = .05",[float(x["power_at_planned_n"]) for x in at(.05)],TEAL),("α = .0167",[float(x["power_at_planned_n"]) for x in at(PLANNED_ALPHA)],GOLD)],"Power by assumed effect","0%",0,1)
+    s=new_slide(deck,f"H2, and what {n} pairs can detect",4,"The quality half of the shared hypotheses slide. Source: results/quality/power_achieved.csv; report section Power analysis. These are assumed effects at the achieved sample size, not observed power. H2 is exploratory. Merge with the H1 half in the final deck.")
+    text(s,f"H2, exploratory question\nH0: mean AI-minus-original quality difference = 0\nAlternative: the difference is not 0\nTwo-sided paired t-test\n\nSmallest effect detectable at 80% power:\ndz = {mde(.05):.2f} at α = .05",51,136,410,350,20,name="Hypotheses")
+    column_chart(s,480,136,432,350,[f"dz = {float(x['assumed_dz']):.1f}" for x in at(.05)],[("α = .05",[float(x["power_at_planned_n"]) for x in at(.05)],TEAL)],"Power by assumed effect","0%",0,1)
 
     s=new_slide(deck,f"From {flow['submissions']} responses to {flow['included']} students",5,f"Source: results/quality/quality.json exclusion_flow; report section Data collection and cleaning. The student restriction follows from the international versus domestic comparison planned before collection. The stricter check rule was chosen on November 2 after the 54-response results had been seen, so the planned both-wrong rule stays in the report as a sensitivity analysis. By stated status, retained respondents were {flow['included_by_status']['Student']} Student, {flow['included_by_status']['Working professional']} Working professional and {flow['included_by_status']['Yes']} legacy record.")
     width=264
@@ -131,7 +130,7 @@ def add_slides(deck):
     groups=flow["included_by_background"]
     text(s,f"{groups['International']} international and {groups['Domestic']} domestic students\nCheck rule: 90 minutes on both comprehension questions\nThe stricter check rule was set after earlier results and is disclosed as retrospective",51,345,851,140,20,name="Flow notes")
 
-    s=new_slide(deck,"H2: students rated the AI rewrite higher",7,f"Source: results/quality/quality.json ratings; report section Statistical analysis. AI minus original {r['mean_difference']:.3f}, 95% CI [{r['ci95'][0]:.3f}, {r['ci95'][1]:.3f}], t({r['df']}) = {abs(r['t']):.3f}, p = {fmt_p(r['p'])}, dz = {abs(r['cohen_dz']):.3f}. It is below the .05/3 = .0167 threshold for the three hypothesis tests, so we reject H0 for H2. AI higher for {r['AI_higher']}, original higher for {r['original_higher']}, tied for {r['ties']}. Say clearly that the AI rewrite was always second, so this does not prove that authorship caused the difference.")
+    s=new_slide(deck,"H2: students rated the AI rewrite higher",7,f"Source: results/quality/quality.json ratings; report section Statistical analysis. AI minus original {r['mean_difference']:.3f}, 95% CI [{r['ci95'][0]:.3f}, {r['ci95'][1]:.3f}], t({r['df']}) = {abs(r['t']):.3f}, p = {fmt_p(r['p'])}, dz = {abs(r['cohen_dz']):.3f}. It is below .05, so we reject H0 for H2, but this analysis is exploratory. AI higher for {r['AI_higher']}, original higher for {r['original_higher']}, tied for {r['ties']}. Say clearly that the AI rewrite was always second, so this does not prove that authorship caused the difference.")
     outcomes=[(ITEMS[x["item"]],x) for x in q["items"]]+[("Composite",r)]
     column_chart(s,48,136,520,352,[o for o,_ in outcomes],[("AI rewrite",[x["mean_AI"] for _,x in outcomes],GOLD),("Original",[x["mean_O"] for _,x in outcomes],TEAL)],"Mean ratings by version","0.00",1,7,axis_format="0",major_unit=1)
     card(s,592,136,320,112,f"+{r['mean_difference']:.2f} points",f"AI minus original, 95% CI [{r['ci95'][0]:.2f}, {r['ci95'][1]:.2f}], on a 1–7 scale","Effect")
@@ -154,7 +153,7 @@ def add_slides(deck):
     card(s,580,142,332,130,f"+{by['International']['mean_difference']:.2f} vs +{by['Domestic']['mean_difference']:.2f}",f"AI advantage: international vs domestic\nWelch p = {fmt_p(group['welch']['p'])}","Subgroups")
     text(s,"Both groups lean the same way, so there is no Simpson's reversal\nThe AI-use and English questions were not collected",580,290,332,200,18,name="Subgroup notes")
 
-    s=new_slide(deck,"Limits on the rating results",11,"The rating half of the shared limitations slide, from report section Limitations. Merge with the stimulus and sampling points in the final deck.")
+    s=new_slide(deck,"Limits on the rating results",10,"The rating half of the shared limitations slide, from report section Limitations. Merge with the stimulus and sampling points in the final deck.")
     points=(("Fixed order","The AI rewrite was always second, so version and position cannot be separated."),("Exclusions",f"The student restriction cut the sample from {flow['submissions']} to {flow['students']}, and a stricter check rule set after earlier results left {flow['included']}."),("Measurement","Ratings are bounded and subjective, and the three items agreed only partly, especially clarity."),("Data checks","Duplicate responses could not be verified, and AI-use and English were not collected."))
     limit_cards(s,points)
 

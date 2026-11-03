@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 q=json.loads((ROOT/"results/quality/quality.json").read_text())
 reg=json.loads((ROOT/"results/quality/regression.json").read_text())
-text="\n".join((ROOT/"report/sections"/f"{n}.md").read_text(encoding="utf-8") for n in ("04_power_quality","05_data_collection_cleaning","06_analysis_group","06_analysis_quality","06_analysis_detection","07_interpretation_group","07_interpretation_quality","08_limitations_ratings_data"))
+text="\n".join((ROOT/"report/sections"/f"{n}.md").read_text(encoding="utf-8") for n in ("04_power_quality","05_data_collection_cleaning","06_analysis_group","06_analysis_quality","07_interpretation_group","07_interpretation_quality","08_limitations_ratings_data"))
 flow=q["exclusion_flow"];r=q["ratings"]
 
 def require(*values):
@@ -30,11 +30,10 @@ assert "Cronbach" not in text
 planned=json.loads((ROOT/"results/quality/hypothesis_tests.json").read_text())
 assert planned["H2_quality"]["reject_at_threshold"] and abs(planned["H2_quality"]["t"]-abs(r["t"]))<1e-9
 assert planned["n"]==r["n"]
-require(".0167")
-assert planned["H1_future_n_per_group_30_vs_60"]["at_threshold"]==63
-h1,h3=planned["H1_group_difference"],planned["H3_overall_detection"]
-assert h1["table"]==[[5,9],[11,1]] and h1["reject_at_threshold"] and not h3["reject_at_threshold"]
-require(f'{-100*h1["difference_in_proportions"]:.1f}',f'[{-100*h1["difference_ci95_welch_t"][1]:.1f}, {-100*h1["difference_ci95_welch_t"][0]:.1f}]',f'chi-square(1) = {h3["chi2"]:.3f}',f'[{100*h3["ci95_t"][0]:.1f}%, {100*h3["ci95_t"][1]:.1f}%]',f'U = {planned["confidence_exploratory"]["mann_whitney_u"]:.1f}')
+assert planned["H1_future_n_per_group_30_vs_60"]==48
+h1=planned["H1_group_difference"]
+assert h1["table"]==[[5,9],[11,1]] and h1["reject_at_threshold"]
+require(f'{-100*h1["difference_in_proportions"]:.1f}',f'[{-100*h1["difference_ci95_welch_t"][1]:.1f}, {-100*h1["difference_ci95_welch_t"][0]:.1f}]',f'U = {planned["confidence_exploratory"]["mann_whitney_u"]:.1f}')
 for key,row in planned["H1_sensitivity"].items():
     if key=="last_ten_responses": continue
     require(f'{row["table"][0][0]}/{sum(row["table"][0])} | {row["table"][1][0]}/{sum(row["table"][1])}')

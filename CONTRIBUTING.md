@@ -7,8 +7,8 @@ Each member owns specific files. Change the other member's files only after agre
 | Owner | Files and folders |
 |---|---|
 | Kuba (data and quality) | `config/`, `data/`, `scripts/data/`, `scripts/quality/`, `results/quality/`, `report/sections/*_quality.md`, `report/sections/05_data_collection_cleaning.md`, `report/sections/08_limitations_ratings_data.md`, `presentation/data_quality.pptx`, `tests/data/`, `tests/quality/`, `tests/fixtures/` |
-| Debshree (design and detection) | `study/`, `scripts/detection/`, `results/detection/`, `report/sections/*_group.md`, `report/sections/*_detection.md`, `report/sections/01_background.md`, `report/sections/03_design.md`, `report/sections/08_limitations_stimulus_sampling.md`, `presentation/design_detection.pptx`, `tests/detection/` |
-| Shared | `README.md`, `CONTRIBUTING.md`, `Makefile`, `requirements.txt`, `requirements-report.txt`, `docs/`, `report/sections/00_title_abstract.md`, `report/sections/09_conclusion.md`, `report/sections/10_references.md`, `report/sections/11_contribution_note.md`, `report/sections.json`, `report/report.md`, `report/README.md`, `report/REPRODUCE.md`, `report/REVIEW_NOTES.md`, top-level files in `scripts/` and `results/`, `presentation/template.pptx`, `presentation/final.pptx`, `tests/test_pipeline.py` |
+| Debshree (design and detection) | `study/`, `scripts/detection/`, `results/detection/`, `report/sections/*_group.md`, `report/sections/01_background.md`, `report/sections/03_design.md`, `report/sections/08_limitations_stimulus_sampling.md`, `presentation/design_detection.pptx`, `tests/detection/` |
+| Shared | `README.md`, `CONTRIBUTING.md`, `Makefile`, `requirements.txt`, `requirements-report.txt`, `docs/`, `report/sections/00_title_abstract.md`, `report/sections/02_testing_policy.md`, `report/sections/09_conclusion.md`, `report/sections/10_references.md`, `report/sections/11_contribution_note.md`, `report/sections.json`, `report/report.md`, `report/README.md`, `report/REPRODUCE.md`, `report/REVIEW_NOTES.md`, top-level files in `scripts/` and `results/`, `presentation/template.pptx`, `presentation/final.pptx`, `tests/test_pipeline.py` |
 
 ## Rules
 

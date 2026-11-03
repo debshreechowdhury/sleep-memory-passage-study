@@ -1,4 +1,4 @@
-"""Run the three hypothesis tests at a shared Bonferroni threshold; aggregate output only."""
+"""Run the main group test and the exploratory quality test; aggregate output only."""
 import argparse, csv, json, sys
 from pathlib import Path
 import numpy as np
@@ -7,7 +7,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from group_power import fisher_power
 
 GROUPS=("International","Domestic")
-THRESHOLD=.05/3
+THRESHOLD=.05
 SNAPSHOT_ROWS=54
 
 def group_table(rows,reversed_record=lambda r:False):
@@ -37,21 +37,12 @@ def quality_test(rows):
     return {"t":float(test.statistic),"df":int(test.df),"p":float(test.pvalue),"reject_at_threshold":bool(test.pvalue<THRESHOLD)}
 
 def detection_test(rows,reversed_record=lambda r:False):
-    """H3: overall detection accuracy against chance."""
+    """The overall chance test the team dropped; kept only so the report can disclose its result."""
     correct=[(r["detect_correct"]=="1")!=reversed_record(r) for r in rows]
     k=sum(correct);n=len(correct)
     test=stats.chisquare([k,n-k],[n/2,n/2])
     interval=stats.ttest_1samp(np.array(correct,dtype=float),.5).confidence_interval()
     return {"correct":k,"n":n,"proportion":k/n,"proportion_minus_chance":k/n-.5,"ci95_t":[float(interval.low),float(interval.high)],"chi2":float(test.statistic),"df":1,"p":float(test.pvalue),"reject_at_threshold":bool(test.pvalue<THRESHOLD)}
-
-def chi_square_power(n,rate,alpha):
-    """Sum binomial probabilities over the counts that the goodness-of-fit test rejects."""
-    counts=np.arange(n+1)
-    statistic=(counts-n/2)**2/(n/2)*2
-    return float(stats.binom.pmf(counts,n,rate)[stats.chi2.sf(statistic,1)<=alpha].sum())
-
-def first_n_with_power(rate,alpha,target=.8):
-    return next(n for n in range(2,5000) if chi_square_power(n,rate,alpha)>=target)
 
 def first_n_per_group(rate_1,rate_2,alpha,target=.8):
     return next(n for n in range(2,500) if fisher_power(n,n,rate_1,rate_2,alpha=alpha)>=target)
@@ -70,18 +61,14 @@ def summarize(raw):
     planned=[r for r in raw if r["student_background"] in GROUPS and r["included_both_wrong_rule"]=="1"]
     n=[sum(r["student_background"]==g for r in rows) for g in GROUPS]
     return {"threshold":THRESHOLD,"n":len(rows),
-            "H1_group_difference":group_test(rows),"H2_quality":quality_test(rows),"H3_overall_detection":detection_test(rows),
+            "H1_group_difference":group_test(rows),"H2_quality":quality_test(rows),"overall_detection_dropped_test":detection_test(rows),
             "H1_sensitivity":{"planned_both_wrong_rule":fisher(group_table(planned)),"legacy_record_omitted":fisher(group_table([r for r in rows if not legacy(r)])),
                               "legacy_record_reversed":fisher(group_table(rows,legacy)),"status_student_only":fisher(group_table([r for r in rows if r["status"]=="Student"])),
                               "without_responses_after_row_54":fisher(group_table([r for r in rows if position(r)<=SNAPSHOT_ROWS])),
                               "planned_rule_first_54_rows":fisher(group_table([r for r in planned if position(r)<=SNAPSHOT_ROWS])),"last_ten_responses":fisher(group_table([r for r in rows if position(r)>SNAPSHOT_ROWS]))},
-            "H3_sensitivity":{"planned_both_wrong_rule_students":detection_test(planned),"planned_both_wrong_rule_all_respondents":detection_test([r for r in raw if r["included_both_wrong_rule"]=="1"]),
-                              "legacy_record_omitted":detection_test([r for r in rows if not legacy(r)]),"legacy_record_reversed":detection_test(rows,legacy),
-                              "planned_rule_first_54_rows":detection_test([r for r in raw if r["included_both_wrong_rule"]=="1" and position(r)<=SNAPSHOT_ROWS])},
             "confidence_exploratory":confidence_test(rows),
-            "H3_power_assumed_rates":[{"rate":x,"first_n_80_at_05":first_n_with_power(x,.05),"first_n_80_at_threshold":first_n_with_power(x,THRESHOLD),"power_at_n_05":chi_square_power(len(rows),x,.05),"power_at_n_threshold":chi_square_power(len(rows),x,THRESHOLD)} for x in (.6,.7,.8)],
-            "H1_future_n_per_group_30_vs_60":{"at_05":first_n_per_group(.3,.6,.05),"at_threshold":first_n_per_group(.3,.6,THRESHOLD)},
-            "H1_power_assumed_rates":[{"rate_1":a,"rate_2":b,"power_at_05":fisher_power(*n,a,b),"power_at_threshold":fisher_power(*n,a,b,alpha=THRESHOLD)} for a,b in ((.5,.7),(.3,.6),(.5,.8),(.1,.6))]}
+            "H1_future_n_per_group_30_vs_60":first_n_per_group(.3,.6,THRESHOLD),
+            "H1_power_assumed_rates":[{"rate_1":a,"rate_2":b,"power_at_05":fisher_power(*n,a,b)} for a,b in ((.5,.7),(.3,.6),(.5,.8),(.1,.6))]}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
