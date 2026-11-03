@@ -17,7 +17,7 @@ Each section is a file in `report/sections/`, numbered in the course's required 
 | References | Adds sources via PR | sections/10_references.md maintains list |
 | Reproducibility & contribution note | Joint review | sections/11_contribution_note.md |
 
-Shared abstract and conclusion are joint-review drafts and should be finalized last after both members’ sections are agreed. H1 is the international versus domestic detection comparison; report that the written plan labelled it exploratory.
+The abstract and conclusion contain completed text based on the latest analysis and remain subject to partner review. See [course coverage](RUBRIC_CHECKLIST.md) for the requirement-by-requirement map. H1 is the international versus domestic detection comparison; report that the written plan labelled it exploratory.
 
 All chart assets and aggregate inputs live in ../results/. Image links in section files are written relative to the assembled report directory. Statistical source files include a common private-export checksum; names, free text and row-level exports stay private. See REPRODUCE.md and REVIEW_NOTES.md.
 

@@ -1,5 +1,20 @@
 The main analysis compares detection choices between respondents reporting international and domestic student backgrounds. Background was observed rather than assigned, and the binary outcome was whether the respondent selected the passage coded as AI. The secondary quality comparison is within-person: each respondent rated both versions for clarity, engagement and overall writing on scales from 1 (Not at all) to 7 (Extremely). The mean of these three ratings is the quality composite. Confidence in the source choice was recorded from 1 to 5. Names were optional and excluded from analytical data.
 
+### Variables and control conditions
+
+| Component | Operational definition |
+|---|---|
+| H1 grouping variable | Self-reported international or domestic student background; observed between people |
+| H1 dependent variable | Selection of the passage coded as AI, recorded as 1 for Passage 2 and 0 for Passage 1 under the final mapping |
+| H2 within-person factor | Passage version, NIH original versus selected AI rewrite |
+| H2 dependent variable | Mean of clarity, engagement and overall-writing ratings for each version; AI-minus-original difference |
+| Exploratory measures | Individual ratings and confidence from 1 to 5; measured covariates are described in the regression analysis |
+| Reference condition | The NIH original is the comparison text; there is no separate untreated participant group |
+| Shared conditions | One topic, the same factual content and quotation, four paragraphs, plain formatting, rating scales and comprehension question |
+| Assignment and sampling | No verified order randomization or counterbalancing; student background was not assigned; recruitment used a convenience sample |
+
+These shared conditions reduce some differences between stimuli but do not control the effect of reading the same information twice. The intended randomization cannot be claimed as a feature of the collected data.
+
 The form first introduced a short science-reading task without announcing AI authorship. Each passage was followed by the same three ratings and a comprehension question about the approximately 90-minute sleep cycle. After both passages, respondents were told that one was an AI rewrite and made a forced choice with a confidence rating and optional explanation. The source, answer key, reason for initial nondisclosure and study contacts appeared after submission. Response editing was disabled. The team reports that the instructor accepted the initial nondisclosure; this is not a claim of a separate ethics-board review.
 
 The plan proposed randomized passage order, but the circulated version placed the NIH original first and the AI rewrite second. The team reports that the form used for collection presented the NIH original as Passage 1 and the AI rewrite as Passage 2 from the start, and that the reverse labeling in the project documentation and the form's debrief came from a team member mixing up the two passages. A form read on November 2 through the documented link displayed the AI rewrite's wording as Passage 1, so the order rests on the team's report and not on an independent check. The analysis applies the original-first mapping to all retained records, so a correct answer in the analyzed coding always means choosing Passage 2. There is no verified counterbalancing. A group difference can therefore reflect different tendencies to select the second passage as AI rather than different ability to recognize AI writing. Version and position are also confounded in the quality comparison. One legacy record's actual passage order remains uncertain and is examined through omission and reversal sensitivities.

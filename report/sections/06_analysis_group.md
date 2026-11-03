@@ -7,7 +7,7 @@ We compare the background answers as reported, rather than substituting the sepa
 | International | 5 | 9 | 35.7% |
 | Domestic | 11 | 1 | 91.7% |
 
-The observed choices were 5/14 versus 11/12. The difference was 56.0 percentage points in favor of domestic respondents, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .05, so we reject H0 under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the corrected p-value.
+The observed choices were 5/14 versus 11/12. The difference was 56.0 percentage points in favor of domestic respondents, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .05, so we reject H0 under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the small p-value.
 
 ![Detection accuracy by student background](../results/quality/group_detection.png)
 
@@ -29,6 +29,8 @@ The last ten analyzed responses arrived within approximately 15 minutes; their c
 ### Overall accuracy and confidence (exploratory)
 
 Overall, 16 of 26 respondents selected Passage 2, the passage coded as correct (61.5%). We report this descriptively and do not test it as a hypothesis, as explained under the testing policy.
+
+The Mann-Whitney implementation uses a tie-corrected asymptotic approximation with continuity correction, appropriate to the many ties on the five-category scale. It assumes independent respondents; it is not a test of probability calibration.
 
 The confidence scale runs from 1 (Just guessing) to 5 (Extremely confident). Its labels are ordinal, not numerical probabilities. Mean confidence was 3.31 and the median was 3. Correct respondents (n = 16) averaged 3.50, compared with 3.00 among incorrect respondents (n = 10). The two-sided Mann-Whitney comparison gave U = 104.5, p = .141. The test concerns confidence distributions, not equality of the displayed means. It supplies no clear evidence that confidence separates correct from incorrect choices, does not establish that confidence is unrelated to accuracy, and cannot assess probability calibration. Optional explanations were not systematically coded.
 
