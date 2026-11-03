@@ -1,4 +1,4 @@
-"""Combine both member decks into the 12-slide presentation order, merging the shared slides. Charts stay native and editable."""
+"""Combine both member decks into the 11-slide presentation order, merging the shared slides. Charts stay native and editable."""
 import argparse, csv, json, sys
 from pathlib import Path
 from pptx import Presentation
@@ -10,8 +10,7 @@ sys.path[:0]=[str(ROOT/"scripts"/"quality"),str(ROOT/"scripts"/"detection")]
 import build_design_slides, build_slides
 from build_slides import INK, MUTED, TEAL, TINT, new_slide, remove_template_slides, text
 
-PRESENTERS={1:"Debshree",2:"Debshree",3:"Debshree",4:"Both",5:"Kuba",6:"Debshree",7:"Kuba",8:"Kuba",9:"Kuba",10:"Debshree",11:"Both",12:"Both"}
-PLANNED_ALPHA=.0166667
+PRESENTERS={1:"Debshree",2:"Debshree",3:"Debshree",4:"Both",5:"Kuba",6:"Debshree",7:"Kuba",8:"Kuba",9:"Kuba",10:"Both",11:"Both"}
 
 def number(slide):
     footer=next(sh.text_frame.text for sh in slide.shapes if sh.name=="Footer")
@@ -33,20 +32,18 @@ def add_hypotheses(deck):
     x=json.loads((ROOT/"results/quality/hypothesis_tests.json").read_text())
     with open(ROOT/"results/quality/power_achieved.csv",newline="") as f: power=list(csv.DictReader(f))
     h1=next(p for p in x["H1_power_assumed_rates"] if (p["rate_1"],p["rate_2"])==(.3,.6))
-    h2=next(p for p in power if float(p["alpha"])==PLANNED_ALPHA and float(p["assumed_dz"])==.5)
-    h3=next(p for p in x["H3_power_assumed_rates"] if p["rate"]==.7)
-    s=new_slide(deck,"Three hypotheses, one corrected threshold",4,"Sources: report/sections/02_hypotheses_group.md, 02_hypotheses_quality.md, 02_hypotheses_detection.md and the power sections; results/quality/hypothesis_tests.json and power_achieved.csv. All power values use assumed effects, not observed power. The October 30 plan listed the group test as exploratory and quality and overall detection as primary. The new priority, the .05/3 policy and the stricter check rule came after earlier results were seen, so say that aloud.")
-    width=276
+    h2=next(p for p in power if float(p["assumed_dz"])==.5)
+    s=new_slide(deck,"One main question, one exploratory",4,"Sources: report/sections/02_hypotheses_group.md, 02_hypotheses_quality.md, 02_testing_policy.md and the power sections; results/quality/hypothesis_tests.json and power_achieved.csv. Power values use assumed effects, not observed power. The October 30 plan listed the group test as exploratory and quality and overall detection as primary. The team reports that the AI-assisted plan added overall detection, which it did not intend and dropped after results were seen (p = .239); say this aloud if asked. The emphasis and stricter check rule also came after earlier results.")
+    width=423
     for i,(head,body) in enumerate((
-        ("H1: group difference (main)",f"Do international and domestic students differ in the share correct?\n\nH0: the proportions are equal\nFisher's exact test\n\nPower for 30% vs 60%: {h1['power_at_threshold']:.0%}"),
-        ("H2: quality (secondary)",f"Do students rate the original and the rewrite differently?\n\nH0: mean difference = 0\nPaired t-test\n\nPower for dz = 0.5: {float(h2['power_at_planned_n']):.0%}"),
-        ("H3: detection (secondary)",f"Is overall detection different from chance?\n\nH0: the proportion is .50\nChi-square goodness-of-fit\n\nPower for 70% accuracy: {h3['power_at_n_threshold']:.0%}"),
+        ("H1: group difference (main)",f"Do international and domestic students differ in the share correct?\n\nH0: the proportions are equal\nFisher's exact test\n\nPower for 30% vs 60%: {h1['power_at_05']:.0%}"),
+        ("H2: quality (exploratory)",f"Do students rate the original and the rewrite differently?\n\nH0: mean difference = 0\nPaired t-test\n\nPower for dz = 0.5: {float(h2['power_at_planned_n']):.0%}"),
     )): card(s,48+i*(width+18),136,width,276,head,body,f"Hypothesis {i+1}",16)
-    text(s,"All tests two-sided at α = .05/3 = .0167, a policy set after earlier results were seen.",48,428,864,36,16.5,MUTED,name="Threshold")
+    text(s,"Two-sided at α = .05. The emphasis and stricter check rule were set after earlier results were seen.",48,428,864,36,16.5,MUTED,name="Threshold")
 
 def add_limitations(deck):
     flow=json.loads((ROOT/"results/quality/quality.json").read_text())["exclusion_flow"]
-    s=new_slide(deck,"Limits on what we can conclude",11,"Sources: report/sections/08_limitations_stimulus_sampling.md and 08_limitations_ratings_data.md. Fixed order is the most important limit: recognition and second-position choice cannot be separated, and the quality result is confounded with rating a passage second. Passage order rests on the team's report, because the form at the link in earlier documentation shows the reverse. There is no causal claim about background. The team reports that the final ten responses were different people, not one class or group, and timing does not prove coordinated answers. The team reports no pilots, instructor acceptance of nondisclosure and closed collection. No separate ethics-board review is documented. Legacy assignment and generation date remain uncertain.")
+    s=new_slide(deck,"Limits on what we can conclude",10,"Sources: report/sections/08_limitations_stimulus_sampling.md and 08_limitations_ratings_data.md. Fixed order is the most important limit: recognition and second-position choice cannot be separated, and the quality result is confounded with rating a passage second. Passage order rests on the team's report, because the form at the link in earlier documentation shows the reverse. There is no causal claim about background. The team reports that the final ten responses were different people, not one class or group, and timing does not prove coordinated answers. The team reports no pilots, instructor acceptance of nondisclosure and closed collection. No separate ethics-board review is documented. Legacy assignment and generation date remain uncertain.")
     width,height=276,160
     for i,(head,body) in enumerate((
         ("Fixed order","Correct always means Passage 2, and the AI rewrite was always second, so position cannot be separated from either result."),
@@ -74,7 +71,7 @@ def build(template,output):
     deck=Presentation(template);remove_template_slides(deck)
     build_design_slides.add_slides(deck)
     build_slides.add_slides(deck)
-    halves=[slide for slide in deck.slides if number(slide) in (4,11)]
+    halves=[slide for slide in deck.slides if number(slide) in (4,10)]
     # Add before dropping: new slide part names come from the slide count, so dropping first would overwrite a slide.
     add_hypotheses(deck);add_limitations(deck)
     for slide in halves: drop(deck,slide)

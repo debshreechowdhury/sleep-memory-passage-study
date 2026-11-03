@@ -5,11 +5,11 @@ EXPORT_CSV = data/private/responses.csv
 RAW = data/raw/responses_deidentified.csv
 CLEAN = data/clean/analysis.csv
 
-.PHONY: all analysis test data power quality hypotheses regression quality_figures slides detection report check
+.PHONY: all analysis test data power quality hypotheses regression quality_figures slides report check
 
 all: data analysis
 
-analysis: power quality hypotheses regression quality_figures slides detection report
+analysis: power quality hypotheses regression quality_figures slides report
 
 test:
 	$(PYTHON) -m unittest discover -s tests -t . -v
@@ -21,7 +21,7 @@ data:
 
 power:
 	$(PYTHON) scripts/quality/power.py --n 30 --output results/quality/power_scenarios.csv
-	$(PYTHON) scripts/quality/power.py --n 26 --alpha .05 .0166667 --output results/quality/power_achieved.csv
+	$(PYTHON) scripts/quality/power.py --n 26 --alpha .05 --output results/quality/power_achieved.csv
 
 quality:
 	$(PYTHON) scripts/quality/quality.py --input $(CLEAN) --output results/quality/quality.json $(if $(wildcard $(EXPORT)),--source $(EXPORT))
@@ -34,9 +34,6 @@ regression:
 
 quality_figures:
 	$(PYTHON) scripts/quality/figures.py --input $(CLEAN) --statistics results/quality/quality.json --planned results/quality/hypothesis_tests.json --output-dir results/quality
-
-detection:
-	$(PYTHON) scripts/detection/detection.py --input $(CLEAN) --output results/detection/detection.json
 
 slides:
 	$(PYTHON) scripts/quality/build_slides.py --template presentation/template.pptx --output presentation/data_quality.pptx

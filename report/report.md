@@ -8,11 +8,11 @@ Responses downloaded November 2, 2026
 
 ## Abstract
 
-Our main question was whether international and domestic students differ in identifying an AI rewrite of a science passage. Participants read an original NIH News in Health passage about sleep and memory and an AI rewrite, rated each for clarity, engagement, and overall writing on seven-point scales, answered comprehension checks, and identified the AI passage. The team reports that the form presented the original first and the AI rewrite second, after correcting documentation that recorded the reverse. Of 64 submissions, we analyzed the 26 students who answered both checks correctly: 14 international and 12 domestic. The three hypothesis tests used a Bonferroni threshold of .05/3 = .0167. Domestic students selected the AI passage more often than international students, 11/12 (91.7%) versus 5/14 (35.7%), a difference of 56.0 percentage points, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. The written plan labelled this comparison exploratory, and it does not reach the threshold without the last ten responses (p = .145). Because the AI passage was always second, a correct answer always meant choosing Passage 2, so the difference cannot be separated from a preference for the second passage. Students also rated the AI rewrite higher, by 0.487 points, 95% confidence interval [0.175, 0.799], t(25) = 3.213, p = .0036, dz = 0.630; this also cannot be separated from position. Overall detection accuracy, 16/26 (61.5%), did not differ reliably from chance, chi-square(1) = 1.385, p = .239. These results justify a randomized follow-up and do not establish that either group detects AI better.
+Our main question was whether international and domestic students differ in identifying an AI rewrite of a science passage. Participants read an original NIH News in Health passage about sleep and memory and an AI rewrite, rated each for clarity, engagement, and overall writing on seven-point scales, answered comprehension checks, and identified the AI passage. The team reports that the form presented the original first and the AI rewrite second, after correcting documentation that recorded the reverse. Of 64 submissions, we analyzed the 26 students who answered both checks correctly: 14 international and 12 domestic. The main test used α = .05. Domestic students selected the AI passage more often than international students, 11/12 (91.7%) versus 5/14 (35.7%), a difference of 56.0 percentage points, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. The written plan labelled this comparison exploratory, and it does not reach the threshold without the last ten responses (p = .145). Because the AI passage was always second, a correct answer always meant choosing Passage 2, so the difference cannot be separated from a preference for the second passage. In an exploratory analysis, students also rated the AI rewrite higher, by 0.487 points, 95% confidence interval [0.175, 0.799], t(25) = 3.213, p = .0036, dz = 0.630; this also cannot be separated from position. Overall, 16 of 26 students (61.5%) chose the AI passage. These results justify a randomized follow-up and do not establish that either group detects AI better.
 
 ## Background and motivation
 
-Science writing produced with AI may be judged both for how well it reads and for who readers think wrote it. Those judgments need not agree: a passage can seem clear and engaging even when its source is misidentified. Our main question is whether respondents reporting international and domestic student backgrounds differ in which passage they identify as the AI rewrite. We also examine perceived writing quality and overall identification against chance. Student background is an observed grouping variable, not a measure of English proficiency or prior AI experience.
+Science writing produced with AI may be judged both for how well it reads and for who readers think wrote it. Those judgments need not agree: a passage can seem clear and engaging even when its source is misidentified. Our main question is whether respondents reporting international and domestic student backgrounds differ in which passage they identify as the AI rewrite. We also explore perceived writing quality. Student background is an observed grouping variable, not a measure of English proficiency or prior AI experience.
 
 Human source judgments can rely on unreliable cues. Jakesch, Hancock, and Naaman (2023) studied judgments of AI-generated self-presentations, while Gao et al. (2023) studied scientific abstracts evaluated by blinded reviewers. Their findings motivate testing identification rather than assuming it is accurate. Their materials and tasks differ from our paired-passage task, so their detection rates are not benchmarks for this sample.
 
@@ -24,19 +24,17 @@ Our stimuli are an excerpt from NIH News in Health's April 2013 article Sleep On
 
 H0: the probability of choosing the AI passage is equal for respondents reporting international and domestic student backgrounds. The alternative is that these probabilities differ. We use a two-sided Fisher's exact test. Respondents answering Not applicable do not enter this comparison. The labels describe reported student background, not independently verified citizenship, language proficiency, or current employment status.
 
-The October 30 analysis plan listed Fisher's exact test for student status by detection correctness as exploratory, and the instrument asked about international/domestic background. It listed quality and overall detection as primary. We now lead with the group comparison because it is the team's main research interest. This emphasis and the current numbering were adopted on November 2 after earlier results had been examined. The existing record supports a planned exploratory comparison; it does not support presenting the later emphasis or stricter exclusion rule as prospectively confirmatory. The study was not preregistered.
+The October 30 analysis plan listed Fisher's exact test for student status by detection correctness as exploratory, and the instrument asked about international/domestic background. It listed quality and overall detection as primary. The team reports that the group comparison was its main question, with quality as an exploratory addition. This emphasis and the current numbering were adopted in the report on November 2 after earlier results had been examined. The existing record supports a planned exploratory comparison; it does not support presenting the later emphasis or stricter exclusion rule as prospectively confirmatory. The study was not preregistered.
 
-### H2: Perceived quality (secondary)
+### H2: Perceived quality (exploratory)
 
-H0: among current students, the population mean AI-minus-original composite quality difference equals zero. Alternative: the difference is nonzero. The test is two-sided, using the .05/3 = .0167 threshold shared by the three hypothesis tests.
-
-### H3: Overall detection against chance (secondary)
-
-H0: the probability of correctly identifying the AI passage is .50 among the analyzed student-background respondents. The alternative is a probability different from .50. The question is two-sided: we did not choose an above-chance or below-chance direction from the observed result. H2 separately concerns the within-person quality difference.
+H0: among current students, the population mean AI-minus-original composite quality difference equals zero. Alternative: the difference is nonzero. The test is two-sided, at α = .05, and the result is exploratory.
 
 ### Testing policy
 
-The three declared hypothesis tests use a Bonferroni threshold of .05/3 = .0167. This policy was adopted on November 2 and replaces the earlier nominal .05 tests and .025 sensitivity threshold. Applying it consistently to the three tests does not make the later emphasis, sample restriction, or stricter comprehension rule prospective. We therefore distinguish statistical rejection under the current analysis from confirmation in a preregistered study. Item-level analyses, regression, confidence and subgroup/sensitivity analyses remain exploratory. The 95% intervals are marginal and are not simultaneous intervals for this three-test family; their relation to zero is not a substitute for the .0167 decision threshold.
+H1 is tested at α = .05. H2 and the item-level, regression, confidence and subgroup analyses are exploratory; their p-values are descriptive, and the item-level tests use their own Bonferroni correction. The 95% intervals are marginal. These choices were set on November 2, so they do not make the later emphasis, sample restriction, or stricter comprehension rule prospective, and the study was not preregistered.
+
+The October 30 plan, drafted with AI assistance, also listed overall detection against chance as a primary test. The team reports that it did not intend this test and dropped it on November 2, after results had been seen. We disclose it for that reason: 16 of 26 respondents were correct (61.5%), chi-square(1) = 1.385, p = .239, which would not have rejected chance.
 
 ## Description of experimental design
 
@@ -56,46 +54,34 @@ Each person contributed one source choice and one confidence answer. Detection i
 
 ### H1: Between-group detection planning
 
-These calculations were prepared after collection began. They describe power at assumed underlying accuracies, not observed power or a prospective sample-size justification. The committed implementation uses NumPy and SciPy and enumerates independent binomial outcomes for two groups. For each outcome table it applies the two-sided Fisher rejection rule, then sums alternative probabilities over the rejected tables. The current group sizes are 14 and 12. Both the nominal .05 level and the study's .05/3 threshold are shown for comparison; the latter determines the current testing decisions.
+These calculations were prepared after collection began. They describe power at assumed underlying accuracies, not observed power or a prospective sample-size justification. The committed implementation uses NumPy and SciPy and enumerates independent binomial outcomes for two groups. For each outcome table it applies the two-sided Fisher rejection rule, then sums alternative probabilities over the rejected tables. The current group sizes are 14 and 12. The table uses the study's α = .05.
 
-| Assumed accuracies | Power at 14 vs 12, .05 | Power at 14 vs 12, .0167 |
-|---|---:|---:|
-| .50 vs .70 | 12.1% | 6.0% |
-| .30 vs .60 | 27.3% | 15.3% |
-| .50 vs .80 | 27.3% | 15.6% |
-| .10 vs .60 | 75.4% | 59.4% |
+| Assumed accuracies | Power at 14 vs 12, .05 |
+|---|---:|
+| .50 vs .70 | 12.1% |
+| .30 vs .60 | 27.3% |
+| .50 vs .80 | 27.3% |
+| .10 vs .60 | 75.4% |
 
-Even the assumed .10 versus .60 scenario falls short of the .80 power target at the corrected threshold. Moderate underlying gaps would often be missed with groups this small. A statistically significant result in a small study can also overestimate the magnitude of the underlying difference; the observed gap should not be used alone to plan a replication.
+Even the assumed .10 versus .60 scenario falls short of the .80 power target. Moderate underlying gaps would often be missed with groups this small. A statistically significant result in a small study can also overestimate the magnitude of the underlying difference; the observed gap should not be used alone to plan a replication.
 
-The table comes from results/quality/hypothesis_tests.json, H1_power_assumed_rates. A future study should choose a practically relevant group difference before recruitment, calculate the sample size at the intended familywise threshold, allow for exclusions, and balance recruitment where possible. The current table does not establish that a particular larger recruitment target is sufficient. More participants would improve precision but would not repair fixed-order confounding or convenience sampling.
+The table comes from results/quality/hypothesis_tests.json, H1_power_assumed_rates. A future study should choose a practically relevant group difference before recruitment, calculate the sample size at the intended threshold, allow for exclusions, and balance recruitment where possible. For a gap of 30% versus 60%, about 48 respondents per group would reach .80 power at α = .05. More participants would improve precision but would not repair fixed-order confounding or convenience sampling.
 
 ### H2: Paired quality planning
 
 Power calculations were prepared after collection began. They are planning sensitivities under assumed effects, not prospective justification, observed power, or evidence of preregistration. The initial n = 30 scenario refers to complete pairs. We used Python 3.10 and SciPy 1.15.3. The paired-t calculation uses the noncentral t distribution: the noncentrality is the assumed standardized paired difference multiplied by the square root of the number of complete pairs, with n minus one degrees of freedom. Cohen dz uses the standard deviation of within-person differences, not the pooled standard deviation of the two passages.
 
-| Assumed absolute dz | Pairs for 80% power at .05 | Power with 30 pairs at .05 | Pairs for 80% power at .0167 |
-|---|---:|---:|---:|
-| 0.30 | 90 | 35.5% | 120 |
-| 0.50 | 34 | 75.4% | 45 |
-| 0.80 | 15 | 98.8% | 20 |
+| Assumed absolute dz | Pairs for 80% power at .05 | Power with 30 pairs at .05 |
+|---|---:|---:|
+| 0.30 | 90 | 35.5% |
+| 0.50 | 34 | 75.4% |
+| 0.80 | 15 | 98.8% |
 
 No attrition allowance was specified prospectively. For illustration, 34 usable pairs with a 10% allowance would require 38 recruits, calculated by dividing 34 by .90 and rounding up. This is a planning example, not a claim about the actual recruitment target. The report does not compute power from the observed effect.
 
 ### H2: Sensitivity at the achieved sample
 
-The analyzed sample has 26 complete pairs, below both the initial n = 30 scenario and the 34 pairs needed for 80% power at an assumed dz of 0.50. With 26 pairs and 80% power, the smallest detectable standardized paired difference is about dz = 0.57 at .05 and dz = 0.67 at the .0167 threshold. Power at .05 and .0167 is 31.3% and 17.1% for an assumed dz of 0.30, 68.8% and 50.4% for 0.50, and 97.5% and 92.6% for 0.80. These values use assumed effects at the achieved sample size, not the observed effect, so they describe what the design could detect and not the strength of the observed result. They were calculated with the same SciPy version under Python 3.13. The study is therefore poorly placed to detect small differences, and a nonsignificant follow-up in this sample does not show that a difference is absent.
-
-### H3: Overall detection planning
-
-Power is the binomial probability of a correct-response count falling in the rejection region of the specified chi-square goodness-of-fit test against .50. Participant choices are assumed independent with a common underlying accuracy. These are retrospective calculations under assumed rates, not power calculated from the observed accuracy. The target is .80 power, with complete analyzed responses determining n.
-
-| Assumed true accuracy | First n with 80% power at .05 | Power at n = 26, .05 | Power at n = 26, .0167 | First n with 80% power at .0167 |
-|---|---:|---:|---:|---:|
-| .60 | 187 | 22.8% | 5.6% | 257 |
-| .70 | 43 | 62.7% | 29.7% | 61 |
-| .80 | 19 | 94.1% | 74.7% | 24 |
-
-At the corrected threshold, the current sample does not reach .80 power even in the assumed .80-accuracy scenario. Thus, failure to reject H3 does not establish chance-level performance. Rejection regions change discretely, so the first qualifying n is not a guarantee that every larger n attains the target. The assumed-rate results are recorded in results/quality/hypothesis_tests.json, H3_power_assumed_rates. The assumptions do not address possible second-passage response tendencies or uncertainty about participant independence.
+The analyzed sample has 26 complete pairs, below both the initial n = 30 scenario and the 34 pairs needed for 80% power at an assumed dz of 0.50. With 26 pairs and 80% power, the smallest detectable standardized paired difference is about dz = 0.57 at .05. Power at .05 is 31.3% for an assumed dz of 0.30, 68.8% for 0.50, and 97.5% for 0.80. These values use assumed effects at the achieved sample size, not the observed effect, so they describe what the design could detect and not the strength of the observed result. They were calculated with the same SciPy version under Python 3.13. The study is therefore poorly placed to detect small differences, and a nonsignificant follow-up in this sample does not show that a difference is absent.
 
 ## Data collection and cleaning procedures
 
@@ -129,7 +115,7 @@ We compare the background answers as reported, rather than substituting the sepa
 | International | 5 | 9 | 35.7% |
 | Domestic | 11 | 1 | 91.7% |
 
-The observed choices were 5/14 versus 11/12. The difference was 56.0 percentage points in favor of domestic respondents, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .0167, so H0 is rejected under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the corrected p-value.
+The observed choices were 5/14 versus 11/12. The difference was 56.0 percentage points in favor of domestic respondents, 95% confidence interval [23.4, 88.5], Fisher's exact p = .0053. This p-value is below .05, so we reject H0 under the current specification. It is evidence of a difference in choices for this sample and coding, not proof that student background causes better AI recognition. The retrospective analysis decisions remain relevant despite the corrected p-value.
 
 ![Detection accuracy by student background](../results/quality/group_detection.png)
 
@@ -144,11 +130,17 @@ Figure 1. Proportion of each group selecting the passage coded as AI. Under the 
 | Without the last ten responses | 4/10 | 5/6 | .145 |
 | Planned check rule, first 54 responses | 4/11 | 5/6 | .1312 |
 
-The direction is the same across these subsets and mappings. The first three sensitivity p-values are below .0167, while the stated-Student-only and earlier-response subsets are not. These analyses change the sample or coding; comparing their p-values is not a formal test that the underlying effects differ.
+The direction is the same across these subsets and mappings. The first four sensitivity p-values are below .05, while the earlier-response subsets are not. These analyses change the sample or coding; comparing their p-values is not a formal test that the underlying effects differ.
 
 The last ten analyzed responses arrived within approximately 15 minutes; their counts were 1/4 correct for international-background and 6/6 for domestic-background respondents. The team reports that these were different people, not a single class or group. Timing alone is not evidence that participants discussed answers or that responses were dependent. Removing them is a sensitivity analysis, not evidence that they are invalid observations. All values come from results/quality/hypothesis_tests.json.
 
-### H2: Quality analysis
+### Overall accuracy and confidence (exploratory)
+
+Overall, 16 of 26 respondents selected Passage 2, the passage coded as correct (61.5%). We report this descriptively and do not test it as a hypothesis, as explained under the testing policy.
+
+The confidence scale runs from 1 (Just guessing) to 5 (Extremely confident). Its labels are ordinal, not numerical probabilities. Mean confidence was 3.31 and the median was 3. Correct respondents (n = 16) averaged 3.50, compared with 3.00 among incorrect respondents (n = 10). The two-sided Mann-Whitney comparison gave U = 104.5, p = .141. The test concerns confidence distributions, not equality of the displayed means. It supplies no clear evidence that confidence separates correct from incorrect choices, does not establish that confidence is unrelated to accuracy, and cannot assess probability calibration. Optional explanations were not systematically coded.
+
+### H2: Quality analysis (exploratory)
 
 For each participant and version, quality was the arithmetic mean of all three ratings. We calculated the AI-minus-original paired difference, its standard deviation, a two-sided paired t-test, a t-based 95% confidence interval, and Cohen dz. A paired t-test fits because each participant rated both versions, so the differences within people are the unit of analysis. We summarized how closely the three ratings agreed using descriptive pairwise correlations within each version. A two-level paired comparison needs no post hoc test between versions; item-level follow-ups are reported below.
 
@@ -167,7 +159,7 @@ Figure 2a. Diagnostic views of the 26 AI-minus-original composite differences. E
 | Overall writing | 5.769 | 5.346 | 0.423 |
 | Composite quality | 5.962 | 5.474 | 0.487 |
 
-Composite standard deviations were 0.568 for AI and 0.828 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the AI advantage and dz = 0.630. The p-value is below the Bonferroni threshold of .05/3 = .0167 for the three hypothesis tests, so we reject H0. AI quality was higher for 15 participants, original quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
+Composite standard deviations were 0.568 for AI and 0.828 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the AI advantage and dz = 0.630. The p-value is below .05, so we reject H0, although this analysis is exploratory. AI quality was higher for 15 participants, original quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
 
 | Correlation between | AI rewrite | Original |
 |---|---:|---:|
@@ -227,59 +219,27 @@ Reversing the legacy record's version labels did not change the composite compar
 
 The item-level pattern was not stable. In the 49-response analysis, engagement and overall writing met the corrected threshold and clarity did not, the reverse of the primary result, so no individual item should be singled out. That analysis also gave W = 94.0, p = .00242 for the composite Wilcoxon sensitivity.
 
-### H3: Overall detection
-
-For the same 26 student-background respondents, we compare correct and incorrect counts with the 50/50 null using chi-square goodness-of-fit. Both expected counts are 13. The test assumes independent choices and adequate expected counts. This is a single detection response per person, not a paired comparison of two detection scores. We report an approximate t-based 95% interval on the binary scores; it is marginal, not adjusted to match the three-test threshold. No post hoc pairwise test is required.
-
-Sixteen of 26 respondents selected Passage 2, which the analysis codes as correct, while ten selected Passage 1. Accuracy was 61.5%, 95% confidence interval [41.5%, 81.6%], or 11.5 percentage points above chance. The test gave chi-square(1) = 1.385, p = .239. At .0167, we do not reject H0. The interval and the limited sample do not support an equivalence claim.
-
-![Overall detection accuracy against chance](../results/quality/overall_detection.png)
-
-Figure 3. Overall accuracy with an approximate t-based 95% interval. The dashed reference is chance; the interval includes it.
-
-| Sensitivity | n | Correct | Chi-square p |
-|---|---:|---:|---:|
-| Omitting the legacy record | 25 | 16 | .162 |
-| Reversing the legacy record | 26 | 17 | .117 |
-| Planned check rule, students | 27 | 16 | .336 |
-| Planned check rule, all respondents | 59 | 38 | .0269 |
-| Planned check rule, first 54 responses | 49 | 31 | .0633 |
-
-None of these p-values is below .0167. The all-respondent sensitivity includes non-students, so it answers a different population question and should not replace the student result. Mapping uncertainty for the legacy response is disclosed rather than resolved by choosing the most favorable p-value.
-
-### Confidence (exploratory)
-
-The confidence scale runs from 1 (Just guessing) to 5 (Extremely confident). Its labels are ordinal, not numerical probabilities. Mean confidence was 3.31 and the median was 3. Correct respondents (n = 16) averaged 3.50, compared with 3.00 among incorrect respondents (n = 10). The two-sided Mann-Whitney comparison gave U = 104.5, p = .141. With these sample sizes and tied responses, the implementation uses the tie-corrected asymptotic distribution and a continuity correction. The test concerns confidence distributions, not equality of the displayed means.
-
-This analysis supplies no clear evidence that confidence separates correct from incorrect choices. It does not establish that confidence is unrelated to accuracy in the population, and it cannot assess probability calibration. Optional explanations were not systematically coded. Current results are from results/quality/hypothesis_tests.json.
-
 ## Interpretation of results
 
 ### H1: Student-background findings
 
-Domestic-background respondents selected the passage coded as AI more often than international-background respondents in the current sample. The Fisher result meets the stated three-test threshold. Its defensible interpretation is a difference in source choices under this presentation, rather than a general difference in AI-detection ability.
+Domestic-background respondents selected the passage coded as AI more often than international-background respondents in the current sample. The Fisher result is below α = .05. Its defensible interpretation is a difference in source choices under this presentation, rather than a general difference in AI-detection ability.
 
 The central ambiguity is that selecting AI and selecting Passage 2 are the same coded response. The groups could differ in a tendency to label the second passage as AI, in how they interpret the two passages, or in genuine recognition; the design cannot separate these explanations. Student background was observed rather than assigned and is not a measured language-proficiency score, so neither causation nor an English-reading explanation follows from the group gap.
 
-The direction persists across the reported sensitivities, but statistical rejection does not persist in every subset. In particular, the strict current-status Student subset and the earlier-response subset do not meet the threshold. This does not demonstrate that the excluded responses were invalid or that late and early effects differ; their sample sizes and membership change. The team reports that the final responses came from different people, not a single class or group. Their timing does not prove collaboration or dependence, although statistical independence remains an assumption.
+The direction persists across the reported sensitivities, but statistical rejection does not persist in every subset. In particular, the earlier-response subsets do not reach .05. This does not demonstrate that the excluded responses were invalid or that late and early effects differ; their sample sizes and membership change. The team reports that the final responses came from different people, not a single class or group. Their timing does not prove collaboration or dependence, although statistical independence remains an assumption.
 
 The earlier plan labelled the group comparison exploratory, and its promotion to the lead question and the stricter comprehension rule occurred after earlier results were available. The finding is therefore a promising association for a prospectively specified, counterbalanced replication. It should not be presented as a settled ranking of international and domestic students' abilities.
 
+Confidence was descriptively higher among correct choices, but the exploratory comparison is inconclusive. A five-category verbal scale cannot establish calibrated probabilities of being correct, so we keep perceived quality, source choice and confidence separate.
+
 ### H2: Quality findings
 
-The AI rewrite received higher quality ratings among the student respondents, with a mean advantage of about half a scale point and a standardized paired difference of 0.63. The result kept its direction and significance under the planned, broader exclusion rule, where the estimate was somewhat smaller. Both passages still received relatively high ratings. Statistical significance does not establish that every reader preferred the rewrite: 15 of 26 rated it higher and eight rated the versions equally. Nor does it show that this magnitude would matter in every application.
+In this exploratory analysis, the AI rewrite received higher quality ratings among the student respondents, with a mean advantage of about half a scale point and a standardized paired difference of 0.63. The result kept its direction and significance under the planned, broader exclusion rule, where the estimate was somewhat smaller. Both passages still received relatively high ratings. Statistical significance does not establish that every reader preferred the rewrite: 15 of 26 rated it higher and eight rated the versions equally. Nor does it show that this magnitude would matter in every application.
 
 We would not single out one rating as the source of the difference. Clarity alone survived correction here, but a different pair of items did so in the 49-response analysis, which suggests that the item-level pattern depends on who is included. Clarity was also only weakly related to overall writing, so readers may treat being easy to understand and being well written as different qualities, although these data cannot establish why. The student-background comparison and the regression found no reliable differences, but their small samples leave wide intervals, so they do not show that those factors are irrelevant.
 
 The result does not establish that AI authorship caused the higher ratings. The analyzed mapping has every respondent seeing the original first and the AI rewrite second, so version and position are confounded. Readers met the same information a second time when rating the rewrite, and familiarity or contrast could have shifted those ratings regardless of who wrote the text. The supported claim is narrower: in this order, with this passage pair, student respondents rated the second passage (the AI rewrite) higher.
-
-### H3: Overall detection and confidence findings
-
-More analyzed respondents selected the rewrite as AI than selected the original, but the overall test does not reject chance at the stated threshold. The interval includes .50, and the power scenarios show that moderate departures from chance would often be missed with this sample. The conclusion is uncertain identification performance for this passage pair. Neither reliable ability to recognize AI nor equivalence to guessing has been established.
-
-H1 and H3 ask different questions: the groups can differ in their source choices even when the combined sample does not show a clear departure from chance. Opposing group tendencies can be obscured by pooling. Neither result resolves the fixed-order ambiguity.
-
-Confidence was descriptively higher among correct choices, but the exploratory distribution comparison is inconclusive. A five-category verbal scale cannot establish calibrated probabilities of being correct. We therefore keep perceived quality, source choice and confidence separate when interpreting the experiment.
 
 ## Limitations
 
@@ -301,13 +261,13 @@ Recruitment used a voluntary shared link. The analyzed student-background groups
 
 The status and optional-name questions changed during launch, while the current introduction still requests graduate students. This mismatch limits claims that eligibility was consistently understood. Student-background answers and current-status answers do not always agree, and the primary analysis uses the former. One legacy record lacks verified passage assignment; omission and reversal analyses show the consequences of that uncertainty. Background is not a substitute for verified nationality, citizenship, English proficiency or experience with AI tools.
 
-The team reports that collection is closed and that no pilot responses were collected. The group comparison was exploratory in the earlier plan. Its later emphasis, the .05/3 policy and the stricter comprehension rule were adopted after earlier results had been seen. A multiplicity correction does not remove the resulting risk of analysis selection. The findings should be reported with this history and the planned-rule sensitivities. The team reports that the instructor accepted the initial nondisclosure. No separate ethics-board review is documented, and instructor acceptance should not be described as such a review.
+The team reports that collection is closed and that no pilot responses were collected. The group comparison was exploratory in the earlier plan. Its later emphasis, the testing policy, the stricter comprehension rule and the decision to drop the overall chance test were adopted after earlier results had been seen, which carries a risk of analysis selection. The findings should be reported with this history and the planned-rule sensitivities. The team reports that the instructor accepted the initial nondisclosure. No separate ethics-board review is documented, and instructor acceptance should not be described as such a review.
 
 ## Conclusion and recommendations
 
-Domestic students in this sample selected the AI passage far more often than international students, 11/12 versus 5/14. Because the AI passage was always second, this may reflect a preference for the second passage, and the result weakens without the last ten responses, so we do not conclude that domestic students are better at detecting AI. Students rated the rewrite higher than the original, a result that held across the examined exclusion rules but is also confounded with position. Overall detection did not differ reliably from chance. These findings concern this fixed-order passage pair and sampled respondents.
+Domestic students in this sample selected the AI passage far more often than international students, 11/12 versus 5/14. Because the AI passage was always second, this may reflect a preference for the second passage, and the result weakens without the last ten responses, so we do not conclude that domestic students are better at detecting AI. Students rated the rewrite higher than the original, a result that held across the examined exclusion rules but is also confounded with position. Overall, 16 of 26 students chose the AI passage, which we report descriptively. These findings concern this fixed-order passage pair and sampled respondents.
 
-The priority for a follow-up is to retest the group difference with randomized passage order, so that a correct answer no longer means choosing the same position. It should recruit enough students in each group, roughly 63 per group for a gap of 30% versus 60% at .05/3, use multiple independently selected passage pairs, preserve model and prompt provenance, and freeze eligibility, exclusions, and the testing policy before recruitment. It should also measure English proficiency, so that background and reading proficiency can be distinguished. If reading-time exclusions or order blocking are essential, use a platform that records those features. Keep names separate from analytical data when participation tracking is needed. Archive the exact form used and record each respondent's passage order with the response, so that passage order never has to be reconstructed from memory or documentation.
+The priority for a follow-up is to retest the group difference with randomized passage order, so that a correct answer no longer means choosing the same position. It should recruit enough students in each group, roughly 48 per group for a gap of 30% versus 60% at .05, use multiple independently selected passage pairs, preserve model and prompt provenance, and freeze eligibility, exclusions, and the testing policy before recruitment. It should also measure English proficiency, so that background and reading proficiency can be distinguished. If reading-time exclusions or order blocking are essential, use a platform that records those features. Keep names separate from analytical data when participation tracking is needed. Archive the exact form used and record each respondent's passage order with the response, so that passage order never has to be reconstructed from memory or documentation.
 
 ## References
 

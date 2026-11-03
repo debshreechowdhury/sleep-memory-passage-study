@@ -1,4 +1,4 @@
-### H2: Quality analysis
+### H2: Quality analysis (exploratory)
 
 For each participant and version, quality was the arithmetic mean of all three ratings. We calculated the AI-minus-original paired difference, its standard deviation, a two-sided paired t-test, a t-based 95% confidence interval, and Cohen dz. A paired t-test fits because each participant rated both versions, so the differences within people are the unit of analysis. We summarized how closely the three ratings agreed using descriptive pairwise correlations within each version. A two-level paired comparison needs no post hoc test between versions; item-level follow-ups are reported below.
 
@@ -17,7 +17,7 @@ Figure 2a. Diagnostic views of the 26 AI-minus-original composite differences. E
 | Overall writing | 5.769 | 5.346 | 0.423 |
 | Composite quality | 5.962 | 5.474 | 0.487 |
 
-Composite standard deviations were 0.568 for AI and 0.828 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the AI advantage and dz = 0.630. The p-value is below the Bonferroni threshold of .05/3 = .0167 for the three hypothesis tests, so we reject H0. AI quality was higher for 15 participants, original quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
+Composite standard deviations were 0.568 for AI and 0.828 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the AI advantage and dz = 0.630. The p-value is below .05, so we reject H0, although this analysis is exploratory. AI quality was higher for 15 participants, original quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
 
 | Correlation between | AI rewrite | Original |
 |---|---:|---:|

@@ -7,10 +7,9 @@ Paired comparison of an NIH science-news passage and an AI rewrite. Each partici
 | | Question | H0 | Test | Status |
 |---|---|---|---|---|
 | **H1** | Do international and domestic students differ in identifying the AI passage? | The proportion correct is equal in both groups | Fisher's exact | Main question |
-| **H2** | Do students rate the original and the AI rewrite differently? | The mean original-minus-AI quality difference is 0 | Paired t-test | Secondary |
-| **H3** | Do students identify the AI passage better or worse than chance? | The proportion correct is 50% | Chi-square goodness-of-fit | Secondary |
+| **H2** | Do students rate the original and the AI rewrite differently? | The mean AI-minus-original quality difference is 0 | Paired t-test | Exploratory |
 
-All tests are two-sided at .05/3 = .0167. The group comparison, its H0 and its test were written down before collection, and that plan labelled it exploratory; we report it first because it is our main interest. Because the AI passage was always second, a correct answer always means choosing Passage 2. Results are in `results/quality/hypothesis_tests.json`.
+Both tests are two-sided at α = .05. The group comparison, its H0 and its test were written down before collection, and that plan labelled it exploratory; we report it first because it is our main interest. Because the AI passage was always second, a correct answer always means choosing Passage 2. Results are in `results/quality/hypothesis_tests.json`.
 
 ## Current evidence and remaining work
 
@@ -40,7 +39,6 @@ After obtaining authorized response exports, review the exact headers and create
 ```sh
 make data        # original export in data/private/ -> data/raw/responses_deidentified.csv -> data/clean/analysis.csv
 make quality     # results/quality/quality.json
-make detection   # results/detection/detection.json
 make report      # report/report.md
 ```
 
@@ -53,9 +51,9 @@ See [report reproduction](report/REPRODUCE.md) for the completed snapshot analys
 | Folder | Contents | Owner |
 |---|---|---|
 | `config/`, `data/`, `scripts/data/` | Export mapping, data files, import and cleaning | Kuba |
-| `scripts/quality/`, `results/quality/` | Rating analysis (H2), regression, and the three hypothesis tests | Kuba |
+| `scripts/quality/`, `results/quality/` | Rating analysis (H2), regression, and the group and quality tests | Kuba |
 | `study/` | Instrument, form records, stimulus archive | Debshree |
-| `scripts/detection/`, `results/detection/` | Group comparison (H1) and overall detection (H3) | Debshree |
+| `scripts/detection/` | Design slides and stimulus checks | Debshree |
 | Top level of `scripts/` and `results/` | Analysis, figures and slide builder behind the completed report | Both |
 | `report/sections/` | Report sections in the course's required order | Both |
 | `presentation/` | One deck per part, and the combined `final.pptx` | Both |
