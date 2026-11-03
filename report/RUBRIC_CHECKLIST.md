@@ -28,3 +28,7 @@ The assembled `report.md` and its Word copy contain the following course require
 ## Submission boundaries
 
 The report contains every requested section. Contradictory passage-order evidence cannot be resolved from the repository and remains disclosed. A shareable report link is separate from actual course submission. Human partner review, any course submission and sending NIH a publication copy must be recorded when they occur; none is inferred from automated checks.
+
+## Three-page submission version
+
+The same eleven required components are condensed into three_page_report.md and Sleep_memory_study_three_pages.docx. Statistical analysis continues on page 3, followed by interpretation, limitations, recommendations and references. The native Google Docs export is also exactly three pages. SHAREABLE_REPORT.md contains the verified viewer link. The detailed report remains supporting evidence; the condensed text does not change analytical code, results or data.
