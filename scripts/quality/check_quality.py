@@ -31,6 +31,7 @@ planned=json.loads((ROOT/"results/quality/hypothesis_tests.json").read_text())
 assert planned["H2_quality"]["reject_at_threshold"] and abs(planned["H2_quality"]["t"]-abs(r["t"]))<1e-9
 assert planned["n"]==r["n"]
 require(".0167")
+assert planned["H1_future_n_per_group_30_vs_60"]["at_threshold"]==63
 h1,h3=planned["H1_group_difference"],planned["H3_overall_detection"]
 assert h1["table"]==[[9,5],[1,11]] and h1["reject_at_threshold"] and not h3["reject_at_threshold"]
 require(f'{100*h1["difference_in_proportions"]:.1f}',f'[{100*h1["difference_ci95_welch_t"][0]:.1f}, {100*h1["difference_ci95_welch_t"][1]:.1f}]',f'chi-square(1) = {h3["chi2"]:.3f}',f'[{100*h3["ci95_t"][0]:.1f}%, {100*h3["ci95_t"][1]:.1f}%]',f'U = {planned["confidence_exploratory"]["mann_whitney_u"]:.1f}')

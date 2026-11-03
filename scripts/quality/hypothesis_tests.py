@@ -1,4 +1,4 @@
-"""Run the three planned tests at a shared Bonferroni threshold; aggregate output only."""
+"""Run the three hypothesis tests at a shared Bonferroni threshold; aggregate output only."""
 import argparse, csv, json, sys
 from pathlib import Path
 import numpy as np
@@ -53,6 +53,9 @@ def chi_square_power(n,rate,alpha):
 def first_n_with_power(rate,alpha,target=.8):
     return next(n for n in range(2,5000) if chi_square_power(n,rate,alpha)>=target)
 
+def first_n_per_group(rate_1,rate_2,alpha,target=.8):
+    return next(n for n in range(2,500) if fisher_power(n,n,rate_1,rate_2,alpha=alpha)>=target)
+
 def confidence_test(rows):
     """Exploratory: confidence for correct versus incorrect choices."""
     good=[float(r["confidence"]) for r in rows if r["detect_correct"]=="1"]
@@ -75,6 +78,7 @@ def summarize(raw):
                               "legacy_record_omitted":detection_test([r for r in rows if not legacy(r)]),"legacy_record_reversed":detection_test(rows,legacy)},
             "confidence_exploratory":confidence_test(rows),
             "H3_power_assumed_rates":[{"rate":x,"first_n_80_at_05":first_n_with_power(x,.05),"first_n_80_at_threshold":first_n_with_power(x,THRESHOLD),"power_at_n_05":chi_square_power(len(rows),x,.05),"power_at_n_threshold":chi_square_power(len(rows),x,THRESHOLD)} for x in (.6,.7,.8)],
+            "H1_future_n_per_group_30_vs_60":{"at_05":first_n_per_group(.3,.6,.05),"at_threshold":first_n_per_group(.3,.6,THRESHOLD)},
             "H1_power_assumed_rates":[{"rate_1":a,"rate_2":b,"power_at_05":fisher_power(*n,a,b),"power_at_threshold":fisher_power(*n,a,b,alpha=THRESHOLD)} for a,b in ((.5,.7),(.3,.6),(.5,.8),(.1,.6))]}
 
 def main():

@@ -1,3 +1,3 @@
 The earlier 54-response snapshot used Python 3.10, NumPy 2.2.6, and SciPy 1.15.3; the current analyses use the same NumPy and SciPy versions under Python 3.13. The repository includes executable analysis and power scripts, aggregate JSON outputs, de-identified data, and reproduction instructions. Original exports with names and free text are withheld from GitHub. The report records a November 2 download, and the form has since been closed. AI assistance was used to prepare code and report text; the project members are responsible for reviewing the analysis, references, and final submission.
 
-Section files are stitched in the course order by make report. AGENTS.md lists which member owns each section.
+Section files are stitched in the course order by make report. CONTRIBUTING.md lists which member owns each section.

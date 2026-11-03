@@ -222,6 +222,10 @@
       "power_at_n_threshold": 0.747366147478267
     }
   ],
+  "H1_future_n_per_group_30_vs_60": {
+    "at_05": 48,
+    "at_threshold": 63
+  },
   "H1_power_assumed_rates": [
     {
       "rate_1": 0.5,
