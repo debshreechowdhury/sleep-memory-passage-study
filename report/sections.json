@@ -14,6 +14,7 @@
   {
     "heading": "Null and alternative hypotheses",
     "files": [
+      "sections/02_hypotheses_group.md",
       "sections/02_hypotheses_quality.md",
       "sections/02_hypotheses_detection.md"
     ]
@@ -27,6 +28,7 @@
   {
     "heading": "Power analysis",
     "files": [
+      "sections/04_power_group.md",
       "sections/04_power_quality.md",
       "sections/04_power_detection.md"
     ]
@@ -40,6 +42,7 @@
   {
     "heading": "Statistical analysis",
     "files": [
+      "sections/06_analysis_group.md",
       "sections/06_analysis_quality.md",
       "sections/06_analysis_detection.md"
     ]
@@ -47,6 +50,7 @@
   {
     "heading": "Interpretation of results",
     "files": [
+      "sections/07_interpretation_group.md",
       "sections/07_interpretation_quality.md",
       "sections/07_interpretation_detection.md"
     ]

@@ -4,6 +4,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.ticker
 import numpy as np
 from scipy import stats
 from regression import eligible, fit
@@ -47,13 +48,37 @@ def residual_diagnostics(rows,path):
     ax=axes[1];qq(ax,model.resid);ax.set_ylabel("Ordered residuals");ax.set_title("Normal quantile plot")
     fig.savefig(path,dpi=220);plt.close(fig)
 
+def group_detection(planned,path):
+    groups=planned["H1_group_difference"]["groups"]
+    fig,ax=plt.subplots(figsize=(7.2,3.2),layout="constrained")
+    for y,(label,x) in enumerate(reversed(list(groups.items()))):
+        ax.barh(y,x["proportion"],color=BLUE,height=.5)
+        ax.annotate(f"{x['correct']}/{x['n']} ({x['proportion']:.1%})",(x["proportion"],y),xytext=(6,0),textcoords="offset points",va="center",fontsize=10)
+    ax.set_yticks([0,1],list(reversed(list(groups))));ax.set_xlim(0,1);ax.grid(axis="y",visible=False)
+    ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1));ax.set_xlabel("Share choosing the AI passage (always Passage 1)")
+    fig.savefig(path,dpi=220);plt.close(fig)
+
+def overall_detection(planned,path):
+    x=planned["H3_overall_detection"];low,high=x["ci95_t"];value=x["proportion"]
+    fig,ax=plt.subplots(figsize=(7.2,2.3),layout="constrained")
+    ax.plot([low,high],[0,0],color=BLUE,linewidth=2,solid_capstyle="round")
+    ax.scatter(value,0,s=48,color=BLUE,edgecolor="white",linewidth=1,zorder=3)
+    ax.annotate(f"{x['correct']}/{x['n']} ({value:.1%})",(value,0),xytext=(0,9),textcoords="offset points",ha="center",fontsize=10)
+    ax.axvline(.5,color=MUTED,linestyle="--",linewidth=1);ax.annotate("Chance (50%)",(.5,.42),xytext=(5,0),textcoords="offset points",color=MUTED,fontsize=9)
+    ax.set(xlim=(0,1),ylim=(-.5,.6),yticks=[]);ax.grid(axis="y",visible=False)
+    ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1));ax.set_xlabel("Share correctly identifying the AI passage, with t-based 95% CI")
+    fig.savefig(path,dpi=220);plt.close(fig)
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--input",required=True);p.add_argument("--statistics",required=True);p.add_argument("--output-dir",required=True)
+    p.add_argument("--input",required=True);p.add_argument("--statistics",required=True);p.add_argument("--planned",required=True);p.add_argument("--output-dir",required=True)
     a=p.parse_args();out=Path(a.output_dir);out.mkdir(parents=True,exist_ok=True)
     rows=eligible(a.input)
     d=np.array([float(r["quality_O"])-float(r["quality_AI"]) for r in rows])
     difference_diagnostics(d,out/"difference_diagnostics.png")
     item_intervals(json.loads(Path(a.statistics).read_text()),out/"item_differences.png")
     residual_diagnostics(rows,out/"regression_residuals.png")
+    planned=json.loads(Path(a.planned).read_text())
+    group_detection(planned,out/"group_detection.png")
+    overall_detection(planned,out/"overall_detection.png")
 if __name__=="__main__":main()

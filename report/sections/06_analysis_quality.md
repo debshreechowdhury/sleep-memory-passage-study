@@ -1,4 +1,4 @@
-### H1: Quality analysis
+### H2: Quality analysis
 
 For each participant and version, quality was the arithmetic mean of all three ratings. We calculated the original-minus-AI paired difference, its standard deviation, a two-sided paired t-test, a t-based 95% confidence interval, and Cohen dz. A paired t-test fits because each participant rated both versions, so the differences within people are the unit of analysis. We summarized how closely the three ratings agreed using descriptive pairwise correlations within each version. A two-level paired comparison needs no post hoc test between versions; item-level follow-ups are reported below.
 
@@ -6,7 +6,7 @@ We examined the distribution of paired differences with a histogram, a quantile 
 
 ![Paired difference histogram and normal quantile plot](../results/quality/difference_diagnostics.png)
 
-Figure 1a. Diagnostic views of the 26 original-minus-AI composite differences. Eight respondents rated the two versions equally.
+Figure 2a. Diagnostic views of the 26 original-minus-AI composite differences. Eight respondents rated the two versions equally.
 
 ### Quality results
 
@@ -17,7 +17,7 @@ Figure 1a. Diagnostic views of the 26 original-minus-AI composite differences. E
 | Overall writing | 5.346 | 5.769 | 0.423 |
 | Composite quality | 5.474 | 5.962 | 0.487 |
 
-Composite standard deviations were 0.828 for AI and 0.568 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the original advantage and dz = 0.630. The p-value also meets the retrospective two-test Bonferroni threshold of .025. Original quality was higher for 15 participants, AI quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
+Composite standard deviations were 0.828 for AI and 0.568 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the original advantage and dz = 0.630. The p-value is below the Bonferroni threshold of .05/3 = .0167 for the three planned tests, so we reject H0. Original quality was higher for 15 participants, AI quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
 
 | Correlation between | AI rewrite | Original |
 |---|---:|---:|
@@ -39,13 +39,13 @@ To see which ratings contributed to the composite difference, we compared each i
 
 ![Item-level differences with confidence intervals](../results/quality/item_differences.png)
 
-Figure 1b. Original-minus-AI differences for the composite and each item, with unadjusted 95% confidence intervals.
+Figure 2b. Original-minus-AI differences for the composite and each item, with unadjusted 95% confidence intervals.
 
-Only clarity stayed below the corrected threshold. These tests follow up H1 and are not additional primary hypotheses. Because the same respondents rated all three correlated items, Bonferroni is conservative here.
+Only clarity stayed below the corrected threshold. These tests follow up H2 and are not additional planned hypotheses. Because the same respondents rated all three correlated items, Bonferroni is conservative here.
 
-### Student-background subgroup check
+### Quality by student background (exploratory)
 
-We compared the paired difference between groups to check that the combined result was not hiding opposing patterns, as in Simpson's paradox. The original advantage was 0.405 for international students (n = 14; 95% CI [-0.125, 0.934]; p = .123) and 0.583 for domestic students (n = 12; 95% CI [0.210, 0.957]; p = .00557), so both groups point in the same direction. The groups did not differ reliably: Welch t(22.4) = 0.599, p = .555, with a 95% confidence interval for the international-minus-domestic difference of [-0.796, 0.439]. Levene's test did not indicate unequal variances, p = .477, and Mann-Whitney gave U = 103, p = .333. Subgroups this small cannot show that the groups respond alike.
+We compared the paired quality difference between groups to check that the combined result was not hiding opposing patterns, as in Simpson's paradox. The original advantage was 0.405 for international students (n = 14; 95% CI [-0.125, 0.934]; p = .123) and 0.583 for domestic students (n = 12; 95% CI [0.210, 0.957]; p = .00557), so both groups point in the same direction. The groups did not differ reliably: Welch t(22.4) = 0.599, p = .555, with a 95% confidence interval for the international-minus-domestic difference of [-0.796, 0.439]. Levene's test did not indicate unequal variances, p = .477, and Mann-Whitney gave U = 103, p = .333. Subgroups this small cannot show that the groups respond alike.
 
 ### Exploratory regression
 
@@ -62,7 +62,7 @@ The model did not explain significant variation, F(3, 22) = 1.262, p = .312, R-s
 
 ![Regression residuals versus fitted values and normal quantile plot](../results/quality/regression_residuals.png)
 
-Figure 1c. Residual diagnostics for the exploratory regression.
+Figure 2c. Residual diagnostics for the exploratory regression.
 
 ### Sensitivity analyses
 
@@ -70,9 +70,9 @@ Figure 1c. Residual diagnostics for the exploratory regression.
 |---|---:|---:|---:|---:|---:|---:|
 | Primary: students, both checks correct | 26 | 0.487 | [0.175, 0.799] | 3.213 | .0036 | 0.630 |
 | Omitting the legacy record | 25 | 0.507 | [0.184, 0.830] | 3.238 | .00351 | 0.648 |
-| Earlier rule, all 64 submissions | 59 | 0.390 | [0.178, 0.602] | 3.676 | .00052 | 0.479 |
-| Earlier rule, 54-response snapshot | 49 | 0.415 | [0.167, 0.663] | 3.369 | .00149 | 0.481 |
+| Planned check rule, all 64 submissions | 59 | 0.390 | [0.178, 0.602] | 3.676 | .00052 | 0.479 |
+| Planned check rule, 54-response snapshot | 49 | 0.415 | [0.167, 0.663] | 3.369 | .00149 | 0.481 |
 
 Reversing the legacy record's version labels did not change the composite comparison because its two composite scores were equal. The direction and significance of the composite difference are therefore stable across the exclusion rules and version sensitivities, while the estimate ranges from 0.390 to 0.507.
 
-The item-level pattern was not stable. In the earlier 49-response analysis, engagement and overall writing met the corrected threshold and clarity did not, the reverse of the primary result, so no individual item should be singled out. That analysis also gave W = 94.0, p = .00242 for the composite Wilcoxon sensitivity. We reproduced its 49 retained responses, composite difference and detection counts independently from the first 54 rows of the workbook.
+The item-level pattern was not stable. In the 49-response snapshot analysis, engagement and overall writing met the corrected threshold and clarity did not, the reverse of the primary result, so no individual item should be singled out. That analysis also gave W = 94.0, p = .00242 for the composite Wilcoxon sensitivity. We reproduced its 49 retained responses, composite difference and detection counts independently from the first 54 rows of the workbook.

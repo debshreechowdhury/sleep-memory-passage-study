@@ -4,10 +4,10 @@ Jakesch, M., Hancock, J. T., & Naaman, M. (2023). Human heuristics for AI-genera
 
 National Institutes of Health. (2013, April). Sleep On It. NIH News in Health. https://newsinhealth.nih.gov/2013/04/sleep-it
 
-SciPy developers. (n.d.). Statistical functions and distribution documentation for ttest_rel, binomtest, chisquare, shapiro, wilcoxon, nct, binom, fisher_exact, mannwhitneyu, spearmanr, and contingency.odds_ratio. https://docs.scipy.org/doc/scipy/reference/stats.html
+SciPy developers. (n.d.). Statistical functions and distribution documentation for ttest_rel, ttest_ind, chisquare, shapiro, levene, wilcoxon, nct, binom, fisher_exact, and mannwhitneyu. https://docs.scipy.org/doc/scipy/reference/stats.html
 
 SciPy developers. (n.d.). Fisher exact test. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html
 
 SciPy developers. (n.d.). Mann-Whitney U test. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html
 
-SciPy developers. (n.d.). Spearman rank correlation. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html
+statsmodels developers. (n.d.). statsmodels documentation: ordinary least squares and regression diagnostics. https://www.statsmodels.org/stable/index.html
