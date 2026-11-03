@@ -31,13 +31,15 @@ All four questions are required after each passage.
 
 ### Original NIH passage
 
+> Documentation correction (November 2, 2026): the passage below ends with a period. The live form was observed ending with an unmatched closing quote and no period; study/stimuli/original.txt preserves that administered wording. This reference correction did not edit the form or any response data.
+
 When you learn something new, the best way to remember it is to sleep on it. That’s because sleeping helps strengthen memories you’ve formed throughout the day. It also helps to link new memories to earlier ones. You might even come up with creative new ideas while you slumber.
 
 What happens to memories in your brain while you sleep? And how does lack of sleep affect your ability to learn and remember? NIH-funded scientists have been gathering clues about the complex relationship between sleep and memory. Their findings might eventually lead to new approaches to help students learn or help older people hold onto memories as they age.
 
 “We’ve learned that sleep before learning helps prepare your brain for initial formation of memories,” says Dr. Matthew Walker, a sleep scientist at the University of California, Berkeley. “And then, sleep after learning is essential to help save and cement that new information into the architecture of the brain, meaning that you’re less likely to forget it.”
 
-While you snooze, your brain cycles through different phases of sleep, including light sleep, deep sleep, and rapid eye movement (REM) sleep, when dreaming often occurs. The cycles repeat about every 90 minutes”
+While you snooze, your brain cycles through different phases of sleep, including light sleep, deep sleep, and rapid eye movement (REM) sleep, when dreaming often occurs. The cycles repeat about every 90 minutes.
 
 ### AI rewrite
 

@@ -27,3 +27,5 @@ Each deck's visible numbers refer to the final sequence. Merge slide 4's halves 
 ## Rebuild
 
 Run `make slides`, which uses python-pptx and the shared template and needs no raw participant data. Review every rendered slide after content changes. `make slides` rebuilds both decks, so commit only the deck you changed. To change a slide, edit its builder: scripts/quality/build_slides.py or scripts/detection/build_design_slides.py.
+
+Debshree’s reviewed design deck emphasizes correct-in-coding = Passage 1, the retrospective exclusions/priority, and power at .05/3. The final conclusion slide is a joint-discussion draft. The generator normalizes chart-axis IDs for portable import and keeps charts editable. To preserve the other member’s binary deck while running the shared target, build in an isolated copy and copy back only the assigned deck; do not commit a regenerated data_quality.pptx from this task.

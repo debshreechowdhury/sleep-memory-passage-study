@@ -11,3 +11,7 @@ SciPy developers. (n.d.). Fisher exact test. https://docs.scipy.org/doc/scipy/re
 SciPy developers. (n.d.). Mann-Whitney U test. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html
 
 statsmodels developers. (n.d.). statsmodels documentation: ordinary least squares and regression diagnostics. https://www.statsmodels.org/stable/index.html
+
+National Institutes of Health. (n.d.). About NIH News in Health: Share Our Materials. Retrieved November 2, 2026, from https://newsinhealth.nih.gov/about-us
+
+National Institutes of Health. (n.d.). Frequently asked questions: Copyright and NIH logo. Retrieved November 2, 2026, from https://www.nih.gov/about-nih/frequently-asked-questions
