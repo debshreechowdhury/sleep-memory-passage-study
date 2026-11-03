@@ -1,7 +1,7 @@
 """Import CSV exports using reviewed, zero-based column positions; discard identifiers."""
 import argparse, csv, json
 from pathlib import Path
-FIELDS = ["consent", "status", "check_1", "check_2", "detect", "confidence", "ai_use", "english"] + [f"{item}_{pos}" for pos in (1, 2) for item in ("clear", "engage", "write")]
+FIELDS = ["consent", "status", "student_background", "check_1", "check_2", "detect", "confidence", "ai_use", "english"] + [f"{item}_{pos}" for pos in (1, 2) for item in ("clear", "engage", "write")]
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)

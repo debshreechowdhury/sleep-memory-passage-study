@@ -23,4 +23,6 @@ Power assumptions are declared rather than estimated from the observed outcome. 
 
 scripts/build_report_docx.py builds the Word copy from report/report.md and its figures using python-docx. Run make report first. The owner section Markdown files and sections.json are authoritative. Document rendering and visual verification are performed with the bundled document runtime; QA images are not repository deliverables.
 
+The quality sections come from the folder pipeline. With the private workbook at data/private/responses.xlsx and an ignored manifest as described in scripts/README.md, run `make data power quality regression quality_figures slides` and then `make check`.
+
 Debshree’s group script validates the same export schema, imports the student-background category, applies the same comprehension rule, and publishes only aggregate counts, exact Fisher tests and confidence summaries. Group analyses are retrospective/exploratory. The fixed-seed 99,999-label permutation can be reproduced without names or free-text content. `group_power.py` enumerates Fisher rejection regions under assumed rates, not observed effects. `debshree_figures.py` creates the report images and presentation_chart_data.json using aggregate results only. See presentation/README.md for the editable slide builder.

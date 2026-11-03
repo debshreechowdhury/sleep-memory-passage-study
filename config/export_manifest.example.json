@@ -1,8 +1,26 @@
 {
-  "sources": [{
-    "path": "../data/private/REPLACE_WITH_EXPORT.csv",
-    "order": "AI first",
-    "expected_headers": ["REPLACE WITH THE EXACT COMPLETE CSV HEADER ROW"],
-    "columns": {"consent": 0, "status": 1, "clear_1": 2, "engage_1": 3, "write_1": 4, "check_1": 5, "clear_2": 6, "engage_2": 7, "write_2": 8, "check_2": 9, "detect": 10}
-  }]
+  "sources": [
+    {
+      "path": "../data/private/REPLACE_WITH_EXPORT.csv",
+      "order": "AI first",
+      "expected_headers": [
+        "REPLACE WITH THE EXACT COMPLETE CSV HEADER ROW"
+      ],
+      "columns": {
+        "status": 1,
+        "consent": 2,
+        "student_background": 3,
+        "clear_1": 5,
+        "engage_1": 6,
+        "write_1": 7,
+        "check_1": 8,
+        "clear_2": 9,
+        "engage_2": 10,
+        "write_2": 11,
+        "check_2": 12,
+        "detect": 13,
+        "confidence": 14
+      }
+    }
+  ]
 }

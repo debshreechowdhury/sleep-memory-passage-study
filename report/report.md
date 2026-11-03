@@ -22,7 +22,7 @@ We used an excerpt from NIH News in Health's April 2013 article Sleep On It and 
 
 ### H1: Perceived quality
 
-H0: the population mean original-minus-AI composite quality difference equals zero. H1: the difference is nonzero. The test is two-sided.
+H0: among current students, the population mean original-minus-AI composite quality difference equals zero. H1: the difference is nonzero. The test is two-sided.
 
 ### H2: Detection against chance
 
@@ -62,6 +62,10 @@ Power calculations were prepared after collection began. They are planning sensi
 
 No attrition allowance was specified prospectively. For illustration, 34 usable pairs with a 10% allowance would require 38 recruits, calculated by dividing 34 by .90 and rounding up. This is a planning example, not a claim about the actual recruitment target. The report does not compute power from the observed effect.
 
+### H1: Sensitivity at the achieved sample
+
+The analyzed sample has 26 complete pairs, below both the initial n = 30 scenario and the 34 pairs needed for 80% power at an assumed dz of 0.50. With 26 pairs and 80% power, the smallest detectable standardized paired difference is about dz = 0.57 at .05 and dz = 0.64 at the retrospective .025 threshold. Power at .05 and .025 is 31.3% and 21.6% for an assumed dz of 0.30, 68.8% and 57.1% for 0.50, and 97.5% and 94.8% for 0.80. These values use assumed effects at the achieved sample size, not the observed effect, so they describe what the design could detect and not the strength of the observed result. They were calculated with the same SciPy version under Python 3.13. The study is therefore poorly placed to detect small differences, and a nonsignificant follow-up in this sample does not show that a difference is absent.
+
 ### H2: Detection planning
 
 All power calculations were made after collection began and are illustrative planning sensitivities, not prospective justification or observed power. Python 3.10, NumPy 2.2.6 and SciPy 1.15.3 were used. For H2, scripts/report_power.py sums exact binomial alternative probabilities in the two-sided rejection region of a test against .50. Independent, identically distributed participant choices are assumed. Target power is .80; complete cases, rather than recruits, determine n.
@@ -88,43 +92,105 @@ For an assumed 30-percentage-point gap, 50 complete respondents in each group re
 
 ## Data collection and cleaning procedures
 
-The CSV contained 54 submissions dated October 31 to November 2, 2026 in the export's timestamp labels. All 54 affirmed consent. Status was Working professional for 36, Student for 15, Other for two, and the legacy Yes for one. Student-background responses were international for 11, domestic for eight, and not applicable for 35. The mismatch between 19 student-background responses and 15 Student classifications may reflect overlapping work/study roles or interpretation differences; it was not an automatic exclusion. Thirty-five names and 21 optional explanations were supplied.
+The analyzed Google Forms workbook contained 64 submissions dated October 31 to November 2, 2026 in the export's timestamp labels. All 64 affirmed consent. Status was Working professional for 36, Student for 25, Other for two, and the legacy Yes for one. Student background was international for 15, domestic for 14, and not applicable for 35. Thirty-six names and 21 optional explanations were supplied. Ten of the 64 arrived after the earlier 54-response snapshot, within about 15 minutes on November 2; all ten were students.
 
-We preserved the downloaded CSV unchanged in local restricted storage and recorded its SHA-256 checksum in the aggregate results. No names or participant explanations are included in the repository outputs. Because both passage blocks use identical question labels, the report script checks the entire export header sequence and maps passage-position columns explicitly. This avoids confusing repeated column names. Ratings, comprehension responses, confidence, consent, and detection were complete. No missing values were imputed.
+We preserved the downloaded workbook unchanged in local restricted storage and recorded its SHA-256 checksum in the aggregate results. A script converts it to a private CSV, and the importer then keeps only reviewed columns by position, because both passage blocks use the same question labels. Names, timestamps, and participant explanations are discarded at that step and appear in no repository output. Ratings, comprehension responses, confidence, consent, and detection were complete. No missing values were imputed.
 
-The proposed exclusion rule removes a respondent only if both comprehension checks are wrong. Six missed the first check and six missed the second; five missed both. Five were excluded, leaving 49 for both primary analyses. Forty-seven passed both checks and two passed one. No timing exclusion was applied because Google Forms did not collect passage-page times. No verified pilot or duplicate-person labels were available, so no such records were removed. Three repeated answer patterns were observed in the full sample; matching ratings do not establish repeated participation.
+We applied two exclusion rules. First, we kept only respondents who reported being an international or domestic student, because the comparison of interest is between those groups; the 35 who answered "Not applicable — not currently a student" were removed. Second, we required the correct answer, 90 minutes, on both comprehension checks, treating any wrong answer as evidence that the passage may not have been read carefully. Of the 29 student-background respondents, two missed both checks and one missed one, leaving 26 for analysis: 14 international and 12 domestic. By stated status, these were 23 Student, two Working professional, and the one legacy Yes. Status and student background did not align exactly, and we used the student-background answer for the rule.
 
-The primary mapping assumes the current AI-first version for all retained responses. The legacy record's version cannot be verified from the CSV alone. We therefore report analyses omitting it and reversing its version mapping, rather than selecting a treatment based on statistical significance. Names were dropped from analysis, and any request to identify a submitted response would require a separately protected record. Questionnaire revisions and the lack of a verified prospective registration are documented as limitations.
+| Step | Removed | Remaining |
+|---|---:|---:|
+| Submissions | | 64 |
+| Not currently a student | 35 | 29 |
+| Both comprehension checks wrong | 2 | 27 |
+| One comprehension check wrong | 1 | 26 |
+
+These rules are retrospective. They were adopted on November 2, after the 54-response results had been seen, and they replace a proposed rule that removed a respondent only if both checks were wrong. We therefore also report the earlier rule as a sensitivity analysis. Across all 64 submissions, six missed the first check, six missed the second, and five missed both, so the earlier rule retains 59.
+
+No timing exclusion was applied because Google Forms did not collect passage-page times. No verified pilot or duplicate-person labels were available, so no such records were removed. Four answer patterns repeated across the 64 submissions, two of them among the 26 retained; matching answers do not establish repeated participation.
+
+The primary mapping assumes the current AI-first version for all retained responses. The legacy record's version cannot be verified from the export alone, so we report analyses omitting it and reversing its version mapping, rather than selecting a treatment based on statistical significance. Any request to identify a submitted response would require a separately protected record. Questionnaire revisions and the lack of a verified prospective registration are documented as limitations.
 
 ## Statistical analysis
 
 ### H1: Quality analysis
 
-For each participant and version, quality was the arithmetic mean of all three ratings. We calculated the original-minus-AI paired difference, its standard deviation, a two-sided paired t-test, a t-based 95% confidence interval, and Cohen dz. Reliability was summarized using Cronbach alpha separately for the two three-item scales on the 49 retained pairs. A two-level paired comparison needs no post hoc pairwise test.
+For each participant and version, quality was the arithmetic mean of all three ratings. We calculated the original-minus-AI paired difference, its standard deviation, a two-sided paired t-test, a t-based 95% confidence interval, and Cohen dz. A paired t-test fits because each participant rated both versions, so the differences within people are the unit of analysis. We summarized how closely the three ratings agreed using descriptive pairwise correlations within each version. A two-level paired comparison needs no post hoc test between versions; item-level follow-ups are reported below.
 
-We examined the distribution of paired differences with a histogram, a quantile plot, and Shapiro-Wilk. Independence depends on recruitment and duplicate review and cannot be established by this test. Differences deviated from normality, W = .917, p = .00208. The bounded scales and 18 tied composites warranted an exploratory Wilcoxon signed-rank sensitivity analysis. Mathematical ties were preserved by rounding differences to ten decimal places; its p-value uses a normal approximation with zeros omitted. This test has different assumptions and does not directly test the identical population-mean hypothesis.
+We examined the distribution of paired differences with a histogram, a quantile plot, and Shapiro-Wilk. Independence depends on recruitment and duplicate review and cannot be established by this test. Shapiro-Wilk did not reject normality, W = .938, p = .119, although with 26 pairs it has limited power, and the bounded scales and eight tied differences warranted a Wilcoxon signed-rank sensitivity analysis. Mathematical ties were preserved by rounding differences to ten decimal places; its p-value uses a normal approximation with zeros omitted. This test has different assumptions and does not directly test the identical population-mean hypothesis.
 
-![Paired difference histogram and normal quantile plot](../results/figures/difference_diagnostics.png)
+![Paired difference histogram and normal quantile plot](../results/quality/difference_diagnostics.png)
 
-Figure 1. Diagnostic views of the 49 original-minus-AI composite differences. Ties and bounded responses produce departures from the normal reference pattern.
+Figure 1a. Diagnostic views of the 26 original-minus-AI composite differences. Eight respondents rated the two versions equally.
 
 ### Quality results
 
 | Outcome | AI mean | Original mean | Original minus AI |
 |---|---:|---:|---:|
-| Clarity | 5.755 | 6.082 | 0.327 |
-| Engagement | 5.163 | 5.653 | 0.490 |
-| Overall writing | 5.327 | 5.755 | 0.429 |
-| Composite quality | 5.415 | 5.830 | 0.415 |
+| Clarity | 5.923 | 6.423 | 0.500 |
+| Engagement | 5.154 | 5.692 | 0.538 |
+| Overall writing | 5.346 | 5.769 | 0.423 |
+| Composite quality | 5.474 | 5.962 | 0.487 |
 
-Composite standard deviations were 1.127 for AI and 0.869 for the original. The standard deviation of paired differences was 0.862. The paired test gave t(48) = 3.369, p = .00149, with 95% confidence interval [0.167, 0.663] for the original advantage and dz = 0.481. Original quality was higher for 23 participants, AI quality was higher for eight, and 18 tied. Alpha was .865 for AI and .875 for the original. These estimates indicate internal consistency in this sample, not proof of construct validity.
+Composite standard deviations were 0.828 for AI and 0.568 for the original. The standard deviation of paired differences was 0.773. The paired test gave t(25) = 3.213, p = .0036, with 95% confidence interval [0.175, 0.799] for the original advantage and dz = 0.630. The p-value also meets the retrospective two-test Bonferroni threshold of .025. Original quality was higher for 15 participants, AI quality was higher for three, and eight tied. The Wilcoxon sensitivity agreed, W = 22.5, p = .00579.
 
-The exploratory Wilcoxon sensitivity yielded W = 94.0, p = .00242. Omitting the legacy record gave a mean original advantage of 0.424, 95% confidence interval [0.171, 0.676], t(47) = 3.377, p = .00148, and dz = 0.487. Reversing that record's version labels did not change the composite comparison because its two composite scores were equal. Thus, the rating direction and inference are stable under the examined version sensitivities.
+| Correlation between | AI rewrite | Original |
+|---|---:|---:|
+| Clarity and engagement | .45 | .37 |
+| Clarity and overall writing | .30 | .10 |
+| Engagement and overall writing | .60 | .53 |
 
+Engagement and overall writing moved together, while clarity was only weakly related to overall writing, especially for the original. The three ratings therefore do not behave as interchangeable measures, and the composite should be read alongside the items.
 
-### Regression feasibility
+### Item-level post hoc tests
 
-AI-use and English reading proficiency were absent from the export, so the originally proposed regression cannot be fitted. They must not be inferred from student background or replaced with invented covariates. The item means above are descriptive; no item-level significance claim is made here.
+To see which ratings contributed to the composite difference, we compared each item with a paired t-test as a post hoc follow-up. Bonferroni correction for three tests sets the per-test threshold at .05/3 = .0167, which is equivalent to multiplying each p-value by three. Shapiro-Wilk rejected normality for all three item differences, which take few distinct values, so we also report Wilcoxon p-values.
+
+| Item | Original minus AI | 95% CI | t(25) | p | Bonferroni p | dz | Wilcoxon p |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Clarity | 0.500 | [0.264, 0.736] | 4.372 | .00019 | .00057 | 0.857 | .00079 |
+| Engagement | 0.538 | [0.078, 0.999] | 2.409 | .0237 | .0710 | 0.473 | .0253 |
+| Overall writing | 0.423 | [-0.090, 0.936] | 1.698 | .102 | .306 | 0.333 | .133 |
+
+![Item-level differences with confidence intervals](../results/quality/item_differences.png)
+
+Figure 1b. Original-minus-AI differences for the composite and each item, with unadjusted 95% confidence intervals.
+
+Only clarity stayed below the corrected threshold. These tests follow up H1 and are not additional primary hypotheses. Because the same respondents rated all three correlated items, Bonferroni is conservative here.
+
+### Student-background subgroup check
+
+We compared the paired difference between groups to check that the combined result was not hiding opposing patterns, as in Simpson's paradox. The original advantage was 0.405 for international students (n = 14; 95% CI [-0.125, 0.934]; p = .123) and 0.583 for domestic students (n = 12; 95% CI [0.210, 0.957]; p = .00557), so both groups point in the same direction. The groups did not differ reliably: Welch t(22.4) = 0.599, p = .555, with a 95% confidence interval for the international-minus-domestic difference of [-0.796, 0.439]. Levene's test did not indicate unequal variances, p = .477, and Mann-Whitney gave U = 103, p = .333. Subgroups this small cannot show that the groups respond alike.
+
+### Exploratory regression
+
+AI-use and English reading proficiency were absent from the export, so the originally proposed regression cannot be fitted. They must not be inferred from student background or replaced with invented covariates. We instead fit an exploratory multiple linear regression of the original-minus-AI difference on predictors that were collected: international background (1 = international, 0 = domestic), correct detection (1 = correct), and detection confidence (1 to 5).
+
+| Term | Estimate | SE | t(22) | p | 95% CI |
+|---|---:|---:|---:|---:|---:|
+| Intercept | 1.929 | 0.795 | 2.427 | .0239 | [0.281, 3.576] |
+| International | -0.238 | 0.366 | -0.650 | .522 | [-0.998, 0.522] |
+| Correct detection | -0.036 | 0.395 | -0.090 | .929 | [-0.855, 0.783] |
+| Confidence | -0.393 | 0.220 | -1.784 | .0883 | [-0.850, 0.064] |
+
+The model did not explain significant variation, F(3, 22) = 1.262, p = .312, R-squared = .147, adjusted R-squared = .031. Residual plots showed no clear pattern, Shapiro-Wilk on the residuals did not reject normality, W = .959, p = .376, and Breusch-Pagan did not indicate unequal residual variance, LM = 4.874, p = .181. With 26 respondents and three predictors the estimates are imprecise, so these nonsignificant coefficients do not show that the predictors are unrelated to the difference.
+
+![Regression residuals versus fitted values and normal quantile plot](../results/quality/regression_residuals.png)
+
+Figure 1c. Residual diagnostics for the exploratory regression.
+
+### Sensitivity analyses
+
+| Analysis | n | Original minus AI | 95% CI | t | p | dz |
+|---|---:|---:|---:|---:|---:|---:|
+| Primary: students, both checks correct | 26 | 0.487 | [0.175, 0.799] | 3.213 | .0036 | 0.630 |
+| Omitting the legacy record | 25 | 0.507 | [0.184, 0.830] | 3.238 | .00351 | 0.648 |
+| Earlier rule, all 64 submissions | 59 | 0.390 | [0.178, 0.602] | 3.676 | .00052 | 0.479 |
+| Earlier rule, 54-response snapshot | 49 | 0.415 | [0.167, 0.663] | 3.369 | .00149 | 0.481 |
+
+Reversing the legacy record's version labels did not change the composite comparison because its two composite scores were equal. The direction and significance of the composite difference are therefore stable across the exclusion rules and version sensitivities, while the estimate ranges from 0.390 to 0.507.
+
+The item-level pattern was not stable. In the earlier 49-response analysis, engagement and overall writing met the corrected threshold and clarity did not, the reverse of the primary result, so no individual item should be singled out. That analysis also gave W = 94.0, p = .00242 for the composite Wilcoxon sensitivity. We reproduced its 49 retained responses, composite difference and detection counts independently from the first 54 rows of the workbook.
 
 ### H2: Detection methods and results
 
@@ -178,7 +244,11 @@ Optional explanations were not formally coded or treated as validated authorship
 
 ### Quality findings
 
-The original passage received higher quality ratings in this sample, with a mean advantage of approximately four-tenths of a scale point and a standardized paired difference of 0.48. Engagement showed the largest descriptive component gap. Both passages still received relatively high ratings. Statistical significance does not establish that every reader preferred the original, nor that this magnitude would be important in every application.
+The original passage received higher quality ratings among the student respondents, with a mean advantage of about half a scale point and a standardized paired difference of 0.63. The result kept its direction and significance under the earlier, broader exclusion rule, where the estimate was somewhat smaller. Both passages still received relatively high ratings. Statistical significance does not establish that every reader preferred the original: 15 of 26 rated it higher and eight rated the versions equally. Nor does it show that this magnitude would matter in every application.
+
+We would not single out one rating as the source of the difference. Clarity alone survived correction here, but a different pair of items did so under the earlier rule, which suggests that the item-level pattern depends on who is included. Clarity was also only weakly related to overall writing, so readers may treat being easy to understand and being well written as different qualities, although these data cannot establish why. The student-background comparison and the regression found no reliable differences, but their small samples leave wide intervals, so they do not show that those factors are irrelevant.
+
+The result does not establish that human authorship caused the higher ratings. Every verified response saw the AI rewrite first and the original second, so version and position are confounded. Readers met the same information a second time when rating the original, and familiarity or contrast could have shifted those ratings regardless of who wrote the text. The supported claim is narrower: in this order, with this passage pair, student respondents rated the second passage (the original) higher.
 
 ### Detection, group and confidence findings
 
@@ -192,7 +262,11 @@ Confidence did not meaningfully separate correct and incorrect choices in this s
 
 ### Ratings and data
 
-The three bounded rating items are subjective; internal consistency is not proof of construct validity. Paired differences depart from normality and contain many ties, so the nonparametric sensitivity is relevant but does not test exactly the same mean hypothesis. Duplicate-person, pilot and test-response status could not be verified; repeated answer patterns were retained. Age, passage-page timing, AI-use and English proficiency were not collected in the export, preventing the proposed timing exclusion and covariate regression. Optional names made some responses identifiable, and early anonymous and later identified records followed different notices.
+The fixed order bears directly on H1 because the quality difference cannot be separated from the effect of rating a passage second. The exclusion rules were adopted retrospectively, after earlier results had been seen, so they cannot be treated as prospective decisions even though the composite result did not depend on them. They also reduced the sample from 64 to 26, which lowers power, widens intervals and limits conclusions to the student respondents. The three ratings agreed only partly, especially clarity and overall writing, so the composite combines qualities that readers may judge differently. We kept it because H1 was defined on it, and the item-level results are reported alongside it.
+
+The three bounded rating items are subjective, and the t-test treats seven-point ratings and their averages as interval measures. Scores near the top of the scale can compress differences between versions. The nonparametric sensitivity is relevant but does not test exactly the same mean hypothesis. The item-level tests, subgroup check and regression are retrospective and exploratory, and they share the position confound.
+
+Duplicate-person, pilot and test-response status could not be verified; repeated answer patterns were retained. Ten responses arrived within a short window, so some respondents may have been recruited together and their answers may not be fully independent. Age, passage-page timing, AI-use and English proficiency were not collected in the export, preventing the proposed timing exclusion and the proposed covariate regression. Optional names made some responses identifiable, and early anonymous and later identified records followed different notices.
 
 ### Stimulus, design and sampling
 

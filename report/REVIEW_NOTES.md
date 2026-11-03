@@ -8,4 +8,6 @@ Kuba should independently review column mapping, exclusion counts, calculations,
 
 No raw participant data, names, free-text responses, or private crosswalks belong in this PR. The aggregate report evidence is derived from the local private CSV and identified by its SHA-256 checksum in results/report_statistics.json. A fresh data export requires rerunning the evidence script and updating the report numbers and figures together.
 
+The quality and data sections now use the 64-submission workbook under the student-only, both-checks rule (26 retained). The detection sections, abstract and conclusion still report the 54-response snapshot, so the assembled report is not internally consistent until the team agrees on the rule and updates them.
+
 Ownership now follows report/README.md. Confirm the provisional H3 definition (international/domestic background detection) and its retrospective status. The broad group comparison is 7/11 versus 1/6; strict Student-only sensitivity is 4/8 versus 1/5. Current-status and confidence analyses are exploratory. Jointly finalize sections/00_title_abstract.md and sections/09_conclusion.md after Kuba’s review. Member slide positions and the later merge procedure are documented in presentation/README.md.
