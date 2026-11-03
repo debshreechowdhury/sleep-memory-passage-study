@@ -6,7 +6,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[2]/"scripts"/"quality"))
 from hypothesis_tests import THRESHOLD, chi_square_power, confidence_test, first_n_with_power, summarize
 
 def row(i,group,correct,status="Student",included="1",earlier="1"):
-    return dict(response_id=f"R{i:05}",student_background=group,detect_correct=str(correct),status=status,included=included,included_both_wrong_rule=earlier,quality_AI="4",quality_O=str(4+(i%3)),confidence=str(1+i%5))
+    return dict(response_id=f"R{i:05}",student_background=group,detect_correct=str(correct),status=status,included=included,included_both_wrong_rule=earlier,quality_AI=str(4+(i%3)),quality_O="4",confidence=str(1+i%5))
 
 class HypothesisTests(unittest.TestCase):
     def setUp(self):

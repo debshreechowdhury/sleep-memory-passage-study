@@ -46,10 +46,10 @@ def add_hypotheses(deck):
 
 def add_limitations(deck):
     flow=json.loads((ROOT/"results/quality/quality.json").read_text())["exclusion_flow"]
-    s=new_slide(deck,"Limits on what we can conclude",11,"Sources: report/sections/08_limitations_stimulus_sampling.md and 08_limitations_ratings_data.md. Fixed order is the most important limit: recognition and first-position choice cannot be separated, and the quality result is confounded with rating a passage second. There is no causal claim about background. The team reports that the final ten responses were different people, not one class or group, and timing does not prove coordinated answers. The team reports no pilots, instructor acceptance of nondisclosure and closed collection. No separate ethics-board review is documented. Legacy assignment and generation date remain uncertain.")
+    s=new_slide(deck,"Limits on what we can conclude",11,"Sources: report/sections/08_limitations_stimulus_sampling.md and 08_limitations_ratings_data.md. Fixed order is the most important limit: recognition and second-position choice cannot be separated, and the quality result is confounded with rating a passage second. Passage order rests on the team's report, because the form at the link in earlier documentation shows the reverse. There is no causal claim about background. The team reports that the final ten responses were different people, not one class or group, and timing does not prove coordinated answers. The team reports no pilots, instructor acceptance of nondisclosure and closed collection. No separate ethics-board review is documented. Legacy assignment and generation date remain uncertain.")
     width,height=276,160
     for i,(head,body) in enumerate((
-        ("Fixed order","Correct always means Passage 1, and the original was always second, so position cannot be separated from either result."),
+        ("Fixed order","Correct always means Passage 2, and the AI rewrite was always second, so position cannot be separated from either result."),
         ("Retrospective decisions","The lead question and the stricter check rule changed after earlier results were seen."),
         ("Small convenience sample",f"Exclusions took {flow['submissions']} responses to {flow['included']}. Groups of {flow['included_by_background']['International']} and {flow['included_by_background']['Domestic']} give low power and imprecise estimates."),
         ("Independence","The team reports different people, not one group, but H1 weakens without the last 10 responses."),

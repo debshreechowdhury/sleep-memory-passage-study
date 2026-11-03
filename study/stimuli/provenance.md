@@ -8,6 +8,8 @@ Original source: National Institutes of Health, NIH News in Health, “Sleep On 
 
 Editor reference: https://docs.google.com/forms/d/1Q65UDgX-x9PvnkmanHsWrMa9MXg_I2Uhwi6J7-UVCAQ/edit . This is a read-only verification in this task: neither the live form nor participant responses were edited. Verification of the current editor does not establish the exact form version seen by every earlier respondent; the legacy response's assignment remains uncertain.
 
+**Correction on passage order, November 2, 2026:** the team reports that the form used for collection presented the original as Passage 1 and the AI rewrite as Passage 2 from the start. The team attributes the reversed labeling to a team member mixing up the two passages. The editor checked above showed the rewrite's wording as Passage 1, which remains unreconciled with that report. The passage wording in this archive is unaffected, but the form holding the 64 responses should be identified and checked against it.
+
 ## Generation record
 
 - Model label supplied by the team: **GPT-6.1 SOL** (also described by the team as ChatGPT-6.1 Sol). This is a reported interface label, not a verified API model identifier or a pinned model snapshot.

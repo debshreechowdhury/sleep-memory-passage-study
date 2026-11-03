@@ -1,65 +1,65 @@
 response_id,order,consent,status,student_background,check_1,check_2,detect,confidence,ai_use,english,clear_1,engage_1,write_1,clear_2,engage_2,write_2
-R00001,AI first,"Yes, I agree",Yes,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,6,7,7,6,7
-R00002,AI first,"Yes, I agree",Working professional,International student,90 minutes,60 minutes,Passage 1,4 — Very,,,4,5,3,4,4,4
-R00003,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,6,7,7,6,7
-R00004,AI first,"Yes, I agree",Working professional,International student,90 minutes,90 minutes,Passage 1,4 — Very,,,7,7,7,7,6,5
-R00005,AI first,"Yes, I agree",Other,Domestic student,120 minutes,60 minutes,Passage 2,3 — Moderately,,,4,1,5,4,4,3
-R00006,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,6,7,7,6,7
-R00007,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,4 — Very,,,5,3,4,6,6,6
-R00008,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,4,4,5,6,6,6
-R00009,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,2 — Slightly,,,6,7,6,6,7,6
-R00010,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,4 — Very,,,5,6,5,7,6,4
-R00011,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,3,5,3,5,5,5
-R00012,AI first,"Yes, I agree",Working professional,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,5,5,6,6,6
-R00013,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,5,6,5,6
-R00014,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,7,7,7,7,7
-R00015,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,7,7,7,7,7
-R00016,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,3,4,5,5,6
-R00017,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,5,5,5,5,5
-R00018,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,7,7,7,7,7
-R00019,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,4,5,6,6,6
-R00020,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,5,6,6,5,7
-R00021,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,4,6,5,5,6
-R00022,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,2,2,5,4,4
-R00023,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,1 — Just guessing,,,6,4,5,7,7,7
-R00024,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,60 minutes,90 minutes,Passage 2,4 — Very,,,5,6,5,6,5,5
-R00025,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,7,7,7,7,7
-R00026,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,2 — Slightly,,,7,7,7,6,6,6
-R00027,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,120 minutes,120 minutes,Passage 1,4 — Very,,,4,4,4,5,6,6
-R00028,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,5,5,5,5,5
-R00029,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,5,6,6,5,5
-R00030,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,5,4,5,4
-R00031,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,6,7,7,7
-R00032,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,5,6,5,5,6
-R00033,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,4,5,5,5,5
-R00034,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,6,5,5,5,5
-R00035,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,60 minutes,60 minutes,Passage 2,4 — Very,,,7,5,5,7,6,7
-R00036,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,5 — Extremely confident,,,7,7,7,7,7,7
-R00037,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,4 — Very,,,6,6,5,7,7,7
-R00038,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,2,3,4,3,3
-R00039,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,5 — Extremely confident,,,3,3,4,7,6,5
-R00040,AI first,"Yes, I agree",Student,Domestic student,60 minutes,60 minutes,Passage 2,4 — Very,,,2,3,3,2,4,3
-R00041,AI first,"Yes, I agree",Student,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,2 — Slightly,,,7,6,6,7,6,6
-R00042,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,60 minutes,60 minutes,Passage 2,3 — Moderately,,,4,3,4,4,4,4
-R00043,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,5,5,7,6,6
-R00044,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,4,5,7,5,6
-R00045,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,5,4,7,5,5
-R00046,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,5,6,7,5,5
-R00047,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,5,7,5,5,6
-R00048,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,2 — Slightly,,,5,6,5,6,5,6
-R00049,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,1 — Just guessing,,,5,6,5,5,5,5
-R00050,AI first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,7,7,7,7,7
-R00051,AI first,"Yes, I agree",Other,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,3,3,3,5,5,5
-R00052,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,4,4,7,6,6
-R00053,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,6,6,6,6,6
-R00054,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,5,4,7,6,5
-R00055,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,5,3,7,5,5
-R00056,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,4,4,6,5,6
-R00057,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,6,5,7,7,6,5
-R00058,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,7,6,7,6,7
-R00059,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,6,6,6,6,6
-R00060,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,7,6,7,6,7
-R00061,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,5,6,7,6,7
-R00062,AI first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,5 — Extremely confident,,,6,7,6,6,7,6
-R00063,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,5,6,5,5
-R00064,AI first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,5,6,6,4,4
+R00001,Original first,"Yes, I agree",Yes,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,6,7,7,6,7
+R00002,Original first,"Yes, I agree",Working professional,International student,90 minutes,60 minutes,Passage 1,4 — Very,,,4,5,3,4,4,4
+R00003,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,6,7,7,6,7
+R00004,Original first,"Yes, I agree",Working professional,International student,90 minutes,90 minutes,Passage 1,4 — Very,,,7,7,7,7,6,5
+R00005,Original first,"Yes, I agree",Other,Domestic student,120 minutes,60 minutes,Passage 2,3 — Moderately,,,4,1,5,4,4,3
+R00006,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,6,7,7,6,7
+R00007,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,4 — Very,,,5,3,4,6,6,6
+R00008,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,4,4,5,6,6,6
+R00009,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,2 — Slightly,,,6,7,6,6,7,6
+R00010,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,4 — Very,,,5,6,5,7,6,4
+R00011,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,3,5,3,5,5,5
+R00012,Original first,"Yes, I agree",Working professional,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,5,5,6,6,6
+R00013,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,5,6,5,6
+R00014,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,7,7,7,7,7
+R00015,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,7,7,7,7,7
+R00016,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,3,4,5,5,6
+R00017,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,5,5,5,5,5
+R00018,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,7,7,7,7,7
+R00019,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,4,5,6,6,6
+R00020,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,5,6,6,5,7
+R00021,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,4,6,5,5,6
+R00022,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,2,2,5,4,4
+R00023,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,1 — Just guessing,,,6,4,5,7,7,7
+R00024,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,60 minutes,90 minutes,Passage 2,4 — Very,,,5,6,5,6,5,5
+R00025,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,7,7,7,7,7
+R00026,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,2 — Slightly,,,7,7,7,6,6,6
+R00027,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,120 minutes,120 minutes,Passage 1,4 — Very,,,4,4,4,5,6,6
+R00028,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,5,5,5,5,5
+R00029,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,5,6,6,5,5
+R00030,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,5,4,5,4
+R00031,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,6,7,7,7
+R00032,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,5,6,5,5,6
+R00033,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,4,5,5,5,5
+R00034,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,6,5,5,5,5
+R00035,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,60 minutes,60 minutes,Passage 2,4 — Very,,,7,5,5,7,6,7
+R00036,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,5 — Extremely confident,,,7,7,7,7,7,7
+R00037,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,4 — Very,,,6,6,5,7,7,7
+R00038,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,5,2,3,4,3,3
+R00039,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,5 — Extremely confident,,,3,3,4,7,6,5
+R00040,Original first,"Yes, I agree",Student,Domestic student,60 minutes,60 minutes,Passage 2,4 — Very,,,2,3,3,2,4,3
+R00041,Original first,"Yes, I agree",Student,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,2 — Slightly,,,7,6,6,7,6,6
+R00042,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,60 minutes,60 minutes,Passage 2,3 — Moderately,,,4,3,4,4,4,4
+R00043,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,7,5,5,7,6,6
+R00044,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,4,5,7,5,6
+R00045,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,5,4,7,5,5
+R00046,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,7,5,6,7,5,5
+R00047,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,5,7,5,5,6
+R00048,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,2 — Slightly,,,5,6,5,6,5,6
+R00049,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,1 — Just guessing,,,5,6,5,5,5,5
+R00050,Original first,"Yes, I agree",Working professional,Not applicable — not currently a student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,7,7,7,7,7
+R00051,Original first,"Yes, I agree",Other,Not applicable — not currently a student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,3,3,3,5,5,5
+R00052,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,4,4,7,6,6
+R00053,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,6,6,6,6,6
+R00054,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,5,4,7,6,5
+R00055,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,5,3,7,5,5
+R00056,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,4,4,6,5,6
+R00057,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,6,5,7,7,6,5
+R00058,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,7,6,7,6,7
+R00059,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,6,6,6,6,6
+R00060,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,3 — Moderately,,,6,7,6,7,6,7
+R00061,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,4 — Very,,,7,5,6,7,6,7
+R00062,Original first,"Yes, I agree",Student,Domestic student,90 minutes,90 minutes,Passage 2,5 — Extremely confident,,,6,7,6,6,7,6
+R00063,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 2,4 — Very,,,6,5,5,6,5,5
+R00064,Original first,"Yes, I agree",Student,International student,90 minutes,90 minutes,Passage 1,3 — Moderately,,,5,5,6,6,4,4

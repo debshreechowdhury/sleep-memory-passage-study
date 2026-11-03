@@ -6,7 +6,7 @@ Updated November 2, 2026 to reflect chat-documented form changes. Collection had
 
 Within-person comparison of AI and original quality (mean of clarity, engagement and writing items, each 1–7). H0: mean AI-minus-original difference = 0; H1: difference ≠ 0. Detection H0: correctness probability = .5; H1: probability ≠ .5. Nominal alpha .05; two co-primary tests currently have unadjusted p-values. Decide and document a multiplicity policy before interpreting them; report deviations transparently.
 
-Last circulated link is fixed AI first, so Passage 1 maps to *_AI, Passage 2 to *_O, and Passage 1 is the correct detection answer. Importer supports Original first only for a source with verified assignment evidence. Fixed order confounds version with position; no claim of randomized or balanced presentation is justified.
+(Corrected November 2: see the passage-order amendment below.) Last circulated link was recorded as fixed AI first, so Passage 1 mapped to *_AI, Passage 2 to *_O, and Passage 1 was treated as the correct detection answer. Importer supports Original first only for a source with verified assignment evidence. Fixed order confounds version with position; no claim of randomized or balanced presentation is justified.
 
 ## Cleaning baseline for member review
 
@@ -30,6 +30,10 @@ Power: scripts/quality/power.py uses the noncentral t distribution for a two-sid
 ## November 2 completed-analysis amendment
 
 The snapshot contained 54 consenting responses; five failed both checks, leaving 49 complete pairs. See [the report](../report/report.md) and [reproduction instructions](../report/REPRODUCE.md). These are retrospective analyses, not preregistration. Nominal co-primary p-values are accompanied by a retrospective Bonferroni threshold of .025. Distribution diagnostics, a tie-preserving Wilcoxon sensitivity, exact detection-power scenarios, and omission/reversal sensitivities for the first legacy response are complete. No duplicate-pattern exclusion was applied; pilot membership and legacy assignment remain unverified. AI-use/English regression and the time exclusion are unavailable because the required fields were not collected. The report supersedes unfinished-task wording above while preserving the original planning record.
+
+## November 2 passage-order amendment
+
+The team reports that the form used for collection presented the original as Passage 1 and the AI rewrite as Passage 2 from the start, and that the reverse labeling in documentation and the debrief came from a team member mixing up the two passages. All analyses now map Passage 1 to *_O and Passage 2 to *_AI, with Passage 2 as the correct detection answer. This reverses every direction reported earlier, while p-values are unchanged: domestic students, not international students, chose the AI passage more often, and the AI rewrite, not the original, was rated higher. A form read through the documented link displays the rewrite's wording as Passage 1, which remains unreconciled with the team's report. Top-level 54-response files in results/ keep the old coding as a record only.
 
 ## November 2 team confirmations
 

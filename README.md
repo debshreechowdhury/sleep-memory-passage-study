@@ -10,13 +10,13 @@ Paired comparison of an NIH science-news passage and an AI rewrite. Each partici
 | **H2** | Do students rate the original and the AI rewrite differently? | The mean original-minus-AI quality difference is 0 | Paired t-test | Secondary |
 | **H3** | Do students identify the AI passage better or worse than chance? | The proportion correct is 50% | Chi-square goodness-of-fit | Secondary |
 
-All tests are two-sided at .05/3 = .0167. The group comparison, its H0 and its test were written down before collection, and that plan labelled it exploratory; we report it first because it is our main interest. Because the AI passage was always first, a correct answer always means choosing Passage 1. Results are in `results/quality/hypothesis_tests.json`.
+All tests are two-sided at .05/3 = .0167. The group comparison, its H0 and its test were written down before collection, and that plan labelled it exploratory; we report it first because it is our main interest. Because the AI passage was always second, a correct answer always means choosing Passage 2. Results are in `results/quality/hypothesis_tests.json`.
 
 ## Current evidence and remaining work
 
 Report sections are in [report/](report/README.md). Run `make report` to assemble `report/report.md` in the course order. Debshree’s slides and the shared theme are in [presentation/](presentation/README.md); charts and aggregate inputs all live in `results/`.
 
-The circulated form was changed to fixed **AI first** on October 31, 2026, and published. Recruitment eligibility was broadened to adults who are students, working professionals or other. Names are optional; responses with names are identifiable. Debrief is shown after Submit and response editing is off. See [form setup](study/google_forms.md) and [revision log](study/revision_log.md). Live collection status and final form contents need verification; older instrument documentation is historical.
+The team confirms that the form used for collection presented the original as Passage 1 and the AI rewrite as Passage 2 from the start; earlier documentation recorded the reverse because a team member mixed up the passages. Recruitment changes were published on October 31, 2026. Recruitment eligibility was broadened to adults who are students, working professionals or other. Names are optional; responses with names are identifiable. Debrief is shown after Submit and response editing is off. See [form setup](study/google_forms.md) and [revision log](study/revision_log.md). Live collection status and final form contents need verification; older instrument documentation is historical.
 
 The report's results are in `results/quality/`. De-identified data are in `data/raw/` and `data/clean/`; original exports are withheld because names and free text may identify participants. The completed [report](report/report.md) describes actual results, uncertainty and retrospective decisions. Power outputs are assumption-based planning scenarios.
 

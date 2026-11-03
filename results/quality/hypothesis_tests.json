@@ -4,45 +4,45 @@
   "H1_group_difference": {
     "groups": {
       "International": {
-        "correct": 9,
-        "incorrect": 5,
+        "correct": 5,
+        "incorrect": 9,
         "n": 14,
-        "proportion": 0.6428571428571429
+        "proportion": 0.35714285714285715
       },
       "Domestic": {
-        "correct": 1,
-        "incorrect": 11,
+        "correct": 11,
+        "incorrect": 1,
         "n": 12,
-        "proportion": 0.08333333333333333
+        "proportion": 0.9166666666666666
       }
     },
-    "difference_in_proportions": 0.5595238095238095,
+    "difference_in_proportions": -0.5595238095238095,
     "difference_ci95_welch_t": [
-      0.23362521766488054,
-      0.8854224013827385
+      -0.8854224013827385,
+      -0.2336252176648806
     ],
     "expected_counts": [
       [
-        5.384615384615385,
-        8.615384615384615
+        8.615384615384615,
+        5.384615384615385
       ],
       [
-        4.615384615384615,
-        7.384615384615385
+        7.384615384615385,
+        4.615384615384615
       ]
     ],
     "reject_at_threshold": true,
     "table": [
       [
-        9,
-        5
+        5,
+        9
       ],
       [
-        1,
-        11
+        11,
+        1
       ]
     ],
-    "p": 0.005303540180374209
+    "p": 0.005303540180374208
   },
   "H2_quality": {
     "t": 3.2134229345857577,
@@ -51,13 +51,13 @@
     "reject_at_threshold": true
   },
   "H3_overall_detection": {
-    "correct": 10,
+    "correct": 16,
     "n": 26,
-    "proportion": 0.38461538461538464,
-    "proportion_minus_chance": -0.11538461538461536,
+    "proportion": 0.6153846153846154,
+    "proportion_minus_chance": 0.11538461538461542,
     "ci95_t": [
-      0.1842205305960844,
-      0.5850102386346849
+      0.4149897613653152,
+      0.8157794694039157
     ],
     "chi2": 1.3846153846153846,
     "df": 1,
@@ -68,12 +68,12 @@
     "planned_both_wrong_rule": {
       "table": [
         [
-          10,
-          5
+          5,
+          10
         ],
         [
-          1,
-          11
+          11,
+          1
         ]
       ],
       "p": 0.0047172492185279915
@@ -81,12 +81,12 @@
     "legacy_record_omitted": {
       "table": [
         [
-          8,
-          5
+          5,
+          8
         ],
         [
-          1,
-          11
+          11,
+          1
         ]
       ],
       "p": 0.01116704805491991
@@ -94,25 +94,25 @@
     "legacy_record_reversed": {
       "table": [
         [
-          8,
-          6
+          6,
+          8
         ],
         [
-          1,
-          11
+          11,
+          1
         ]
       ],
-      "p": 0.014462242562929058
+      "p": 0.01446224256292906
     },
     "status_student_only": {
       "table": [
         [
-          7,
-          5
+          5,
+          7
         ],
         [
-          1,
-          10
+          10,
+          1
         ]
       ],
       "p": 0.027190738995827166
@@ -120,26 +120,52 @@
     "without_responses_after_row_54": {
       "table": [
         [
-          6,
-          4
+          4,
+          6
         ],
         [
-          1,
-          5
+          5,
+          1
         ]
       ],
-      "p": 0.14510489510489513
+      "p": 0.1451048951048951
+    },
+    "planned_rule_first_54_rows": {
+      "table": [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "p": 0.13122171945701355
+    },
+    "last_ten_responses": {
+      "table": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "p": 0.03333333333333333
     }
   },
   "H3_sensitivity": {
     "planned_both_wrong_rule_students": {
-      "correct": 11,
+      "correct": 16,
       "n": 27,
-      "proportion": 0.4074074074074074,
-      "proportion_minus_chance": -0.09259259259259262,
+      "proportion": 0.5925925925925926,
+      "proportion_minus_chance": 0.09259259259259256,
       "ci95_t": [
-        0.20933243835125762,
-        0.6054823764635572
+        0.3945176235364428,
+        0.7906675616487423
       ],
       "chi2": 0.9259259259259259,
       "df": 1,
@@ -147,13 +173,13 @@
       "reject_at_threshold": false
     },
     "planned_both_wrong_rule_all_respondents": {
-      "correct": 21,
+      "correct": 38,
       "n": 59,
-      "proportion": 0.3559322033898305,
-      "proportion_minus_chance": -0.1440677966101695,
+      "proportion": 0.6440677966101694,
+      "proportion_minus_chance": 0.14406779661016944,
       "ci95_t": [
-        0.2300865500389388,
-        0.4817778567407222
+        0.5182221432592777,
+        0.7699134499610611
       ],
       "chi2": 4.898305084745763,
       "df": 1,
@@ -161,13 +187,13 @@
       "reject_at_threshold": false
     },
     "legacy_record_omitted": {
-      "correct": 9,
+      "correct": 16,
       "n": 25,
-      "proportion": 0.36,
-      "proportion_minus_chance": -0.14,
+      "proportion": 0.64,
+      "proportion_minus_chance": 0.14,
       "ci95_t": [
-        0.15778006572588826,
-        0.5622199342741117
+        0.4377800657258883,
+        0.8422199342741117
       ],
       "chi2": 1.96,
       "df": 1,
@@ -175,28 +201,42 @@
       "reject_at_threshold": false
     },
     "legacy_record_reversed": {
-      "correct": 9,
+      "correct": 17,
       "n": 26,
-      "proportion": 0.34615384615384615,
-      "proportion_minus_chance": -0.15384615384615385,
+      "proportion": 0.6538461538461539,
+      "proportion_minus_chance": 0.15384615384615385,
       "ci95_t": [
-        0.15019165400691778,
-        0.5421160383007745
+        0.4578839616992255,
+        0.8498083459930822
       ],
       "chi2": 2.4615384615384617,
       "df": 1,
       "p": 0.1166644647810231,
       "reject_at_threshold": false
+    },
+    "planned_rule_first_54_rows": {
+      "correct": 31,
+      "n": 49,
+      "proportion": 0.6326530612244898,
+      "proportion_minus_chance": 0.13265306122448983,
+      "ci95_t": [
+        0.4927479482104368,
+        0.7725581742385428
+      ],
+      "chi2": 3.4489795918367347,
+      "df": 1,
+      "p": 0.06329083223334532,
+      "reject_at_threshold": false
     }
   },
   "confidence_exploratory": {
-    "correct_n": 10,
-    "correct_mean": 3.0,
-    "incorrect_n": 16,
-    "incorrect_mean": 3.5,
+    "correct_n": 16,
+    "correct_mean": 3.5,
+    "incorrect_n": 10,
+    "incorrect_mean": 3.0,
     "mean": 3.3076923076923075,
     "median": 3.0,
-    "mann_whitney_u": 55.5,
+    "mann_whitney_u": 104.5,
     "p": 0.14112364834886484
   },
   "H3_power_assumed_rates": [

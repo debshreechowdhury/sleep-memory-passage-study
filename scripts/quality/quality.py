@@ -1,5 +1,5 @@
 """Write paired rating statistics from cleaned data; aggregate output only."""
-import argparse, csv, hashlib, json, math
+import argparse, csv, hashlib, json, math, re
 from collections import Counter
 from itertools import combinations
 from pathlib import Path
@@ -98,14 +98,15 @@ def main():
         output["source_sha256"]=json.loads(Path(a.output).read_text())["source_sha256"]
     if len(paired_rows)>=2:
         output["ratings"]=composite(paired_rows)
-        steps=Counter(round((float(r["quality_O"])-float(r["quality_AI"]))*3) for r in paired_rows)
-        output["original_minus_AI_counts"]=[{"thirds_of_a_point":k,"respondents":steps[k]} for k in range(min(steps),max(steps)+1)]
+        steps=Counter(round((float(r["quality_AI"])-float(r["quality_O"]))*3) for r in paired_rows)
+        output["AI_minus_original_counts"]=[{"thirds_of_a_point":k,"respondents":steps[k]} for k in range(min(steps),max(steps)+1)]
         output["items"]=item_tests(paired_rows)
         output["group_comparison"]=group_comparison(paired_rows)
         legacy=lambda r:r["status"]=="Yes"
         earlier=[r for r in raw if r.get("included_both_wrong_rule")=="1" and complete(r)]
         output["sensitivity"]={"without_legacy_record":composite([r for r in paired_rows if not legacy(r)]),"legacy_record_reversed":composite(paired_rows,legacy),
-                               "earlier_rule_all_respondents":composite(earlier) if len(earlier)>=2 else None}
+                               "earlier_rule_all_respondents":composite(earlier) if len(earlier)>=2 else None,
+                               "earlier_rule_first_54_rows":composite([r for r in earlier if int(re.sub(r"\D","",r["response_id"]))<=54]) if len(earlier)>=2 else None}
         output["item_correlations"]=item_correlations(paired_rows)
     else: output["ratings"]={"warning":"Fewer than two complete pairs"}
     def finite(obj):

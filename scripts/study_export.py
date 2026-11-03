@@ -1,4 +1,5 @@
 """Verified Forms loader. Identifiers and optional free text never enter analytic rows."""
+# Record of the 54-response snapshot, which coded AI as Passage 1. The team later corrected this: Passage 1 was the original.
 import csv
 import hashlib
 import json

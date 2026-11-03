@@ -4,6 +4,10 @@
 
 H1 is the international versus domestic detection comparison, H2 is quality and H3 is overall detection, all two-sided at .05/3 = .0167, on the 26 students who answered both checks correctly. Debshree agreed to this main question.
 
+## Passage order correction
+
+Kuba confirmed that Passage 1 was the original and Passage 2 the AI rewrite from the start, and that the reverse labeling came from a team member mixing up the passages. Every direction in the report was reversed to match, with p-values unchanged. **Debshree has not reviewed this correction**, and some review text below predates it. A form read through the link in `study/google_forms.md` shows the rewrite's wording as Passage 1; the report discloses this as unreconciled.
+
 ## Confirmed by the team
 
 No pilot responses were collected. The last ten responses came from different people and not a single class or group. The rewrite used ChatGPT-6.1 Sol over two prompts, with the second output used. The instructor accepted the initial nondisclosure. The form is closed.

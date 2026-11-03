@@ -4,7 +4,9 @@ Participant link: https://docs.google.com/forms/d/e/1FAIpQLSf5SEjYjmPw3QvF2UZh_j
 
 Editor: https://docs.google.com/forms/d/1Q65UDgX-x9PvnkmanHsWrMa9MXg_I2Uhwi6J7-UVCAQ/edit
 
-Last observed order: Passage 1 AI, Passage 2 original; correct detection is Passage 1. The title was changed to AI first (DRAFT), but the form was published. Do not infer order from an old filename or title. Verify it for every export.
+Order used for collection, as confirmed by the team on November 2, 2026: Passage 1 original, Passage 2 AI rewrite, from the start; correct detection is Passage 2. Earlier versions of this file recorded the reverse because a team member mixed up the two passages.
+
+**To resolve:** the participant link and editor above open a form that displayed the AI rewrite as Passage 1, with a debrief saying so, when read on November 2. They may not be the collection form. Replace them with the links for the form holding the 64 responses, and record what its debrief told participants. Do not infer order from an old filename or title. Verify it for every export.
 
 Last observed flow: intro/consent and status; participant background and optional name; Passage 1 ratings/check; Passage 2 ratings/check; reveal/detection; debrief shown after Submit. AI-use and English items were absent in the last observed form state. See revision_log.md. The historical second form is not confirmed active and must not be treated as an assigned counterbalanced condition without evidence.
 

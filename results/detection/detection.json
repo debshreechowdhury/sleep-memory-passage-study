@@ -4,10 +4,10 @@
   "alpha_three_tests_bonferroni": 0.016666666666666666,
   "detection": {
     "n": 26,
-    "correct": 10,
-    "incorrect": 16,
-    "accuracy": 0.38461538461538464,
-    "accuracy_minus_chance": -0.11538461538461536,
+    "correct": 16,
+    "incorrect": 10,
+    "accuracy": 0.6153846153846154,
+    "accuracy_minus_chance": 0.11538461538461542,
     "chi2": 1.3846153846153846,
     "chi2_df": 1,
     "chi2_p": 0.23931654122149196

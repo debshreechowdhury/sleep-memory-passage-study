@@ -4,7 +4,7 @@ The analysis uses a privately held workbook of 64 submissions downloaded Novembe
 
 Names are now optional and linked to responses. Raw exports and free text may identify people and must remain in approved access-controlled storage. Keep original exports in data/private/, which Git ignores. In data/raw and data/clean, Git only accepts `responses_deidentified.csv` and `analysis.csv`. Do not commit the manifest with raw headers if they contain private details. The team chose to commit those two de-identified files. Commit no other participant data; a private repository still exposes data to collaborators.
 
-For the withheld original: it is a Google Forms workbook downloaded November 2, 2026, from the fixed AI-first form, with 64 rows, held in local restricted storage by the team, and withheld because of optional names and free text. Its SHA-256 checksum is in results/quality/quality.json. Retain original exports unchanged; retain any identifier-to-response crosswalk separately if needed for withdrawals. Do not publish names.
+For the withheld original: it is a Google Forms workbook downloaded November 2, 2026, from the original-first form, with 64 rows, held in local restricted storage by the team, and withheld because of optional names and free text. Its SHA-256 checksum is in results/quality/quality.json. Retain original exports unchanged; retain any identifier-to-response crosswalk separately if needed for withdrawals. Do not publish names.
 
 ## Folders
 - data/private/: unchanged original exports, the CSV converted from them and any withdrawal crosswalk (ignored).

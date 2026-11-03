@@ -1,4 +1,4 @@
-"""Exploratory regression of the original-minus-AI difference on collected predictors; aggregate output only."""
+"""Exploratory regression of the AI-minus-original difference on collected predictors; aggregate output only."""
 import argparse, csv, json
 from pathlib import Path
 import numpy as np
@@ -9,7 +9,7 @@ from scipy import stats
 PREDICTORS=("international","detect_correct","confidence")
 
 def design(rows):
-    y=np.array([float(r["quality_O"])-float(r["quality_AI"]) for r in rows])
+    y=np.array([float(r["quality_AI"])-float(r["quality_O"]) for r in rows])
     x=np.array([[float(r["student_background"]=="International"),float(r["detect_correct"]),float(r["confidence"])] for r in rows])
     return y,x
 
@@ -24,7 +24,7 @@ def summarize(rows):
     names=("intercept",)+PREDICTORS
     shapiro=stats.shapiro(model.resid)
     bp=het_breuschpagan(model.resid,model.model.exog)
-    return {"outcome":"original minus AI composite","n":int(model.nobs),"df_residual":int(model.df_resid),"r_squared":float(model.rsquared),"adjusted_r_squared":float(model.rsquared_adj),
+    return {"outcome":"AI minus original composite","n":int(model.nobs),"df_residual":int(model.df_resid),"r_squared":float(model.rsquared),"adjusted_r_squared":float(model.rsquared_adj),
             "f":float(model.fvalue),"f_p":float(model.f_pvalue),
             "coefficients":[{"term":n,"estimate":float(model.params[i]),"se":float(model.bse[i]),"t":float(model.tvalues[i]),"p":float(model.pvalues[i]),"ci95":[float(ci[i][0]),float(ci[i][1])]} for i,n in enumerate(names)],
             "residual_shapiro":{"statistic":float(shapiro.statistic),"p":float(shapiro.pvalue)},"breusch_pagan":{"lm":float(bp[0]),"p":float(bp[1])}}
