@@ -93,6 +93,9 @@ def main():
             "difference_direction":"AI minus original","alpha_nominal":0.05,"alpha_three_planned_tests_bonferroni":0.05/3,"alpha_item_bonferroni":0.05/len(ITEMS),
             "exclusion_flow":exclusion_flow(raw) if raw and "student_background" in raw[0] else None}
     if a.source: output["source_sha256"]=hashlib.sha256(Path(a.source).read_bytes()).hexdigest()
+    elif Path(a.output).exists() and "source_sha256" in json.loads(Path(a.output).read_text()):
+        # Without the private workbook, keep the checksum recorded when the data were built.
+        output["source_sha256"]=json.loads(Path(a.output).read_text())["source_sha256"]
     if len(paired_rows)>=2:
         output["ratings"]=composite(paired_rows)
         steps=Counter(round((float(r["quality_O"])-float(r["quality_AI"]))*3) for r in paired_rows)

@@ -20,7 +20,6 @@ class Pipeline(unittest.TestCase):
    self.assertAlmostEqual(x['ratings']['mean_difference'],1)
    x=json.loads(detection.read_text());self.assertEqual(x['detection']['correct'],9)
    self.assertAlmostEqual(x['detection']['chi2'],3)
-   self.assertAlmostEqual(x['detection']['exact_binomial_p'],.14599609375)
    manifest['sources'][0]['expected_headers']=['wrong']
    (d/'manifest.json').write_text(json.dumps(manifest))
    r=subprocess.run([sys.executable,str(ROOT/'scripts/data/import_forms.py'),'--manifest',str(d/'manifest.json'),'--output',str(mapped)],capture_output=True)

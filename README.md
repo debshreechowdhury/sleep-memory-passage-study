@@ -18,19 +18,22 @@ Report sections are in [report/](report/README.md). Run `make report` to assembl
 
 The circulated form was changed to fixed **AI first** on October 31, 2026, and published. Recruitment eligibility was broadened to adults who are students, working professionals or other. Names are optional; responses with names are identifiable. Debrief is shown after Submit and response editing is off. See [form setup](study/google_forms.md) and [revision log](study/revision_log.md). Live collection status and final form contents need verification; older instrument documentation is historical.
 
-Aggregate report results are in results/report_statistics.json; raw exports are withheld because names and free text may identify participants. The completed [report](report/report.md) describes actual results, uncertainty and retrospective decisions. Power outputs are assumption-based planning scenarios.
+The report's results are in `results/quality/`. De-identified data are in `data/raw/` and `data/clean/`; original exports are withheld because names and free text may identify participants. The completed [report](report/report.md) describes actual results, uncertainty and retrospective decisions. Power outputs are assumption-based planning scenarios.
 
 ## Reproduction
 
-Python 3.10+; commands run from this directory:
+Use Python 3.10 to 3.13, which the pinned packages require; the current results were run on 3.13. Commands run from this directory:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-report.txt
 make test
-make power
+make analysis    # results, figures, slides and report from the committed de-identified data
+make check       # checks report numbers against the results
 ```
+
+Rebuilding the de-identified data needs the private workbook, so most readers can skip this step.
 
 After obtaining authorized response exports, review the exact headers and create an ignored local manifest as described in [scripts/README.md](scripts/README.md). Example columns must be replaced; never assume they match the actual form.
 
@@ -41,7 +44,7 @@ make detection   # results/detection/detection.json
 make report      # report/report.md
 ```
 
-Original exports stay unchanged in restricted storage and in the ignored `data/private/` folder. Git only accepts the two de-identified files, and they should be committed only after the team confirms sharing is permitted; see [data policy and dictionary](data/README.md). Names, emails, timestamps and free text are not imported. Keep any withdrawal crosswalk separately.
+Original exports stay unchanged in restricted storage and in the ignored `data/private/` folder. Git only accepts the two de-identified files, which the team chose to commit; see [data policy and dictionary](data/README.md). Names, emails, timestamps and free text are not imported. Keep any withdrawal crosswalk separately.
 
 See [report reproduction](report/REPRODUCE.md) for the completed snapshot analysis and [peer-review notes](report/REVIEW_NOTES.md) for outstanding team verification. Core outputs: paired composite difference, 95% CI, paired t statistic and p-value, Cohen dz, item-level tests and correlations; detection counts, chi-square when expected counts permit, Fisher's exact test for the group comparison. Scripts report missing-data denominators and do not fabricate absent covariates or page times. The report includes distribution diagnostics, a Wilcoxon sensitivity analysis and exact detection-power scenarios. Uncollected AI-use and English measures cannot support the proposed regression.
 
@@ -50,16 +53,16 @@ See [report reproduction](report/REPRODUCE.md) for the completed snapshot analys
 | Folder | Contents | Owner |
 |---|---|---|
 | `config/`, `data/`, `scripts/data/` | Export mapping, data files, import and cleaning | Kuba |
-| `scripts/quality/`, `results/quality/` | Rating analysis (H2), regression, and the three planned tests | Kuba |
+| `scripts/quality/`, `results/quality/` | Rating analysis (H2), regression, and the three hypothesis tests | Kuba |
 | `study/` | Instrument, form records, stimulus archive | Debshree |
 | `scripts/detection/`, `results/detection/` | Group comparison (H1) and overall detection (H3) | Debshree |
 | Top level of `scripts/` and `results/` | Analysis, figures and slide builder behind the completed report | Both |
 | `report/sections/` | Report sections in the course's required order | Both |
-| `presentation/` | One deck per part, combined at the end | Both |
+| `presentation/` | One deck per part, and the combined `final.pptx` | Both |
 | `docs/` | Analysis plan and work plan | Both |
 | `tests/` | Tests by owner, plus labeled synthetic data in `tests/fixtures/` | Both |
 
-[AGENTS.md](AGENTS.md) has the full ownership list and the rules AI tools follow.
+[CONTRIBUTING.md](CONTRIBUTING.md) has the full ownership list and project rules.
 
 ## Report and collaboration
 

@@ -23,14 +23,13 @@ def portable_axes(chart):
     return chart
 
 
-def build(template, output):
+def add_slides(deck):
     x = json.loads((ROOT/'results/quality/hypothesis_tests.json').read_text())
     h1, h3, sens, conf = (x[k] for k in ('H1_group_difference', 'H3_overall_detection', 'H1_sensitivity', 'confidence_exploratory'))
     intl, dom = (h1['groups'][g] for g in ('International', 'Domestic'))
     power = next(p for p in x['H1_power_assumed_rates'] if (p['rate_1'],p['rate_2']) == (.3,.6))
     p3 = next(p for p in x['H3_power_assumed_rates'] if p['rate'] == .7)
     low, high = [100*v for v in h1['difference_ci95_welch_t']]
-    deck = Presentation(template); remove_template_slides(deck)
 
     s = new_slide(deck, 'AI detection across student backgrounds', 1,
                   'Research question: do respondents reporting international and domestic student backgrounds differ in which passage they identify as AI? The analysis uses 26 respondents who reported one of those backgrounds and passed both checks. Student background does not always match current-status Student. The current numbering and stricter exclusions were set after earlier results were seen. Source: report/sections/01_background.md; results/quality/hypothesis_tests.json.')
@@ -56,14 +55,14 @@ def build(template, output):
                   f"Source: results/quality/hypothesis_tests.json. International {intl['correct']}/{intl['n']}; Domestic {dom['correct']}/{dom['n']}. Fisher p={h1['p']:.8f} is below .05/3. Expected domestic-correct count={h1['expected_counts'][1][0]:.2f}; sparse cells motivate Fisher. Difference CI is approximate Welch t on 0/1 scores, marginal95%, not an exact Fisher interval or multiplicity-adjusted interval. Correct=Passage1 under the applied mapping, so ability and position choice are confounded. Planned-rule p={sens['planned_both_wrong_rule']['p']:.4f}; legacy omit/reverse p={sens['legacy_record_omitted']['p']:.4f}/{sens['legacy_record_reversed']['p']:.4f}; stated-Student-only p={sens['status_student_only']['p']:.4f}. Subset changes are not a formal test of changing effects. The team reports that the last ten responses came from different people, not one class or group; timing alone does not prove dependence.")
     portable_axes(column_chart(s,48,142,440,346,['International','Domestic'],[('Share choosing Passage 1',[intl['proportion'],dom['proportion']],TEAL)],'Source choices by background','0%',0,1,'Share choosing Passage 1',major_unit=.2))
     text(s,f"{intl['correct']}/{intl['n']} vs {dom['correct']}/{dom['n']} correct\nFisher p = {fmt_p(h1['p'])}",520,146,392,110,28,TEAL,True,'H1 result')
-    text(s,f"Gap: {100*h1['difference_in_proportions']:.1f} percentage points\nApprox. 95% CI [{low:.1f}, {high:.1f}]\n\nMay reflect choosing Passage 1\nEarlier subset: p = {fmt_p(sens['without_responses_after_row_54']['p'])}",520,270,392,215,18.5,name='H1 caveats')
+    text(s,f"Gap: {100*h1['difference_in_proportions']:.1f} percentage points\nApprox. 95% CI [{low:.1f}, {high:.1f}]\n\nMay reflect choosing Passage 1\nWithout the last 10 responses: p = {fmt_p(sens['without_responses_after_row_54']['p'])}",520,270,392,215,18.5,name='H1 caveats')
 
     s = new_slide(deck, 'H3: overall detection remains uncertain', 10,
                   f"Source: results/quality/hypothesis_tests.json. Chi-square({h3['df']})={h3['chi2']:.3f}, p={h3['p']:.6f}; expected counts13percell. Failure to reject does not establish guessing or equivalence. CI uses approximate t on binary outcomes and is marginal95%. Confidence is ordinal: correct n={conf['correct_n']}, incorrect n={conf['incorrect_n']}; Mann-Whitney U={conf['mann_whitney_u']:.1f}, p={conf['p']:.6f}, tie-corrected asymptotic test with continuity correction. The test compares distributions, not the displayed means. No probability-calibration claim. H1 can differ while H3 is inconclusive because pooling groups answers a different question.")
     portable_axes(column_chart(s,48,142,440,346,['Correct','Incorrect'],[('Respondents',[h3['correct'],h3['n']-h3['correct']],TEAL)],'Overall detection counts','0',0,20,f"{h3['n']} student-background respondents",100,major_unit=5))
     text(s,f"{h3['proportion']:.1%} correct\nChi-square p = {fmt_p(h3['p'])}",520,146,392,110,28,TEAL,True,'H3 result')
     lo, hi = [100*v for v in h3['ci95_t']]
-    text(s,f"Approx. 95% CI: {lo:.1f}%–{hi:.1f}%\nNo evidence of equivalence to chance\n\nConfidence: correct {conf['correct_mean']:.2f}\nvs incorrect {conf['incorrect_mean']:.2f}\nMann-Whitney p = {fmt_p(conf['p'])}\nExploratory comparison",520,270,392,215,18.5,name='H3 notes')
+    text(s,f"Approx. 95% CI: {lo:.1f}%–{hi:.1f}%\nThis does not show equivalence to chance\n\nConfidence: correct {conf['correct_mean']:.2f}\nvs incorrect {conf['incorrect_mean']:.2f}\nMann-Whitney p = {fmt_p(conf['p'])}\nExploratory comparison",520,270,392,215,18.5,name='H3 notes')
 
     s = new_slide(deck, 'Limits on the detection findings', 11,
                   'Sources: report/sections/08_limitations_stimulus_sampling.md, 07_interpretation_group.md. First-position preference cannot be separated from recognition; no causal background claim. The team reports that the final ten responses were different people, not one class or group. Timing does not prove coordinated answers. H1 direction persists, while significance depends on some subset definitions. Student-background is self-reported; legacy assignment and generation date remain uncertain. The team reports no pilots, instructor acceptance of nondisclosure, and closed collection. No separate ethics-board review is documented. Report retrospective analysis decisions alongside statistical significance.')
@@ -72,6 +71,11 @@ def build(template, output):
     s = new_slide(deck, 'Conclusion and recommendations', 12,
                   'Sources: results/quality/hypothesis_tests.json; report/sections/07_interpretation_group.md and 07_interpretation_detection.md; report/sections/09_conclusion.md remains for joint review. This is a discussion summary, not approval of the final shared conclusion. H2 also meets the stated threshold but is confounded with position. Do not claim general superiority, chance equivalence or a causal background effect. For replication, calculate recruitment at the intended multiplicity threshold and assumed practical effect; the .05-only 50-per-group illustration does not establish adequacy at .05/3.')
     text(s,'The groups differed in source choices for this passage pair.\nThis does not establish better AI-detection ability.\n\nThe original was rated higher; overall detection was uncertain.\n\nNext: counterbalance order, use several passage pairs,\nand plan recruitment at the corrected testing threshold.',51,142,851,340,22.5,name='Conclusion')
+
+
+def build(template, output):
+    deck = Presentation(template); remove_template_slides(deck)
+    add_slides(deck)
     Path(output).parent.mkdir(parents=True,exist_ok=True);deck.save(output)
 
 

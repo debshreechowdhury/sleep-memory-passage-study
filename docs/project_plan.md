@@ -1,6 +1,6 @@
 # Work allocation and submission tracker
 
-Split by research question. [AGENTS.md](../AGENTS.md) has the exact file list.
+Split by research question. [CONTRIBUTING.md](../CONTRIBUTING.md) has the exact file list.
 
 ## Debshree: design and detection (`debshree/report-design`)
 Owns the background, H1/H3, experimental design, H1/H3 power, detection/group/confidence analysis, detection interpretation, stimulus/sampling limitations and reference-list sections in report/sections/. These sections and presentation/design_detection.pptx were updated to the current hypotheses on Kuba's branch. Debshree agreed to the main question, and the edits await Debshree's review. H1 is the international versus domestic detection comparison. The title/abstract and conclusion sections are joint-review drafts. Review Kuba’s mapping/results PR when available.
@@ -24,8 +24,8 @@ Each member must commit their own substantive contribution and open their own PR
 
 | Member | Branch | PR | Review |
 |---|---|---|---|
-| Debshree | debshree/report-design | [PR #3](https://github.com/debshreechowdhury/sleep-memory-passage-study/pull/3) | Peer review pending |
-| Kuba | kuba/data-analysis | Pending member contribution | Pending |
+| Debshree | debshree/report-design, debshree/review-planned-hypotheses | [PR #3](https://github.com/debshreechowdhury/sleep-memory-passage-study/pull/3); review-branch PR link to add | Kuba's review pending |
+| Kuba | restructure and follow-up branches | [PR #6](https://github.com/debshreechowdhury/sleep-memory-passage-study/pull/6) | Codex-assisted comment posted; Debshree's own sign-off pending |
 
 Existing docs/pilot-protocol work and open PRs are preserved; reconcile with the actual study before merging. The debshree/report-design and kuba/data-analysis branches predate this layout, so start new work from main after this layout merges.
 
@@ -34,4 +34,4 @@ The shared scaffold was merged to main in [PR #2](https://github.com/debshreecho
 
 ## November 2 ownership revision
 
-The section split follows the supplied section and slide assignments. `make report` assembles the course order from report/sections.json. All charts and chart inputs live in results/. Shared title/abstract and conclusion are joint-review drafts to finalize last. No final.pptx or Byline submission is claimed. Debshree’s own sections and eight-slide member deck are prepared; Kuba’s independent contribution and both members’ substantive peer review remain pending.
+The section split follows the supplied section and slide assignments. `make report` assembles the course order from report/sections.json. All charts and chart inputs live in results/. Shared title/abstract and conclusion are joint-review drafts to finalize last. No final.pptx or Byline submission is claimed. Both member decks and report sections are prepared; both members' own review and sign-off remain pending.
