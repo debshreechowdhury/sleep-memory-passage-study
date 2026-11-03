@@ -1,3 +1,3 @@
-### H1: Perceived quality
+### H2: Perceived quality (secondary)
 
-H0: among current students, the population mean original-minus-AI composite quality difference equals zero. H1: the difference is nonzero. The test is two-sided.
+H0: among current students, the population mean original-minus-AI composite quality difference equals zero. Alternative: the difference is nonzero. The test is two-sided, using the .05/3 = .0167 threshold shared by the three planned tests.

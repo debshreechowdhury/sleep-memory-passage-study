@@ -31,9 +31,21 @@ Power: scripts/quality/power.py uses the noncentral t distribution for a two-sid
 
 The snapshot contained 54 consenting responses; five failed both checks, leaving 49 complete pairs. See [the report](../report/report.md) and [reproduction instructions](../report/REPRODUCE.md). These are retrospective analyses, not preregistration. Nominal co-primary p-values are accompanied by a retrospective Bonferroni threshold of .025. Distribution diagnostics, a tie-preserving Wilcoxon sensitivity, exact detection-power scenarios, and omission/reversal sensitivities for the first legacy response are complete. No duplicate-pattern exclusion was applied; pilot membership and legacy assignment remain unverified. AI-use/English regression and the time exclusion are unavailable because the required fields were not collected. The report supersedes unfinished-task wording above while preserving the original planning record.
 
+## November 2 hypothesis amendment
+
+The team's main interest is the difference between international and domestic students, so the hypotheses are renumbered and reordered:
+
+| | Question | H0 | Test | Status |
+|---|---|---|---|---|
+| **H1** | Do international and domestic students differ in identifying the AI passage? | The proportion correct is equal in both groups | Fisher's exact | Main question |
+| **H2** | Do students rate the original and the AI rewrite differently? | The mean original-minus-AI quality difference is 0 | Paired t-test | Secondary |
+| **H3** | Do students identify the AI passage better or worse than chance? | The proportion correct is 50% | Chi-square goodness-of-fit | Secondary |
+
+All are two-sided at .05/3 = .0167, replacing the earlier nominal .05 and .025 thresholds. The October 30 version of this plan listed the group comparison with Fisher's exact test before the first response on October 31, labelled exploratory, and listed quality and overall detection as primary. This change of emphasis was made on November 2, after results had been seen, and it is disclosed as such. The later ownership amendment's statement that the old plan did not define this comparison, and its description of it as provisional, are corrected here. Odds ratios are replaced by the difference in proportions with a Welch t-based interval, and the exact binomial test by chi-square goodness-of-fit, to stay within the course material.
+
 ## November 2 exclusion-rule amendment
 
-After the 54-response results had been seen, Kuba changed the exclusion rule for the quality analysis: keep only international or domestic students, and require both comprehension checks to be correct. A later workbook of 64 submissions leaves 26 under this rule. This is a retrospective decision, not preregistration, and the earlier both-wrong rule remains reported as a sensitivity analysis. Pending team agreement, the detection sections still report the 54-response snapshot. Because Cronbach alpha is not in the course material, the quality sections replace it with descriptive correlations between the items.
+Analyses now keep only international or domestic students, which follows from the planned group comparison, and require both comprehension checks to be correct. A later workbook of 64 submissions leaves 26 under this rule. The stricter check rule was adopted after the 54-response results had been seen, so it is retrospective, and the planned both-wrong rule remains reported as a sensitivity analysis. The detection sections were updated to this rule on November 2, pending Debshree's review. Because Cronbach alpha is not in the course material, the quality sections replace it with descriptive correlations between the items, and the Spearman permutation test is dropped from the confidence analysis.
 
 ## November 2 ownership and exploratory-analysis amendment
 

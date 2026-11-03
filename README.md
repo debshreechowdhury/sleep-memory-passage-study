@@ -1,6 +1,16 @@
 # Sleep and memory passage study
 
-Paired comparison of an NIH science-news passage and an AI rewrite. Each participant rates both passages and attempts to identify the AI version. This repository contains the report and reproducible analysis of a 54-response snapshot, with 49 responses retained after the documented comprehension exclusions.
+Paired comparison of an NIH science-news passage and an AI rewrite. Each participant rates both passages and attempts to identify the AI version. The main question is whether international and domestic students differ in identifying the AI version. The November 2 workbook has 64 responses, and 26 students remain after the documented exclusions.
+
+## Hypotheses
+
+| | Question | H0 | Test | Status |
+|---|---|---|---|---|
+| **H1** | Do international and domestic students differ in identifying the AI passage? | The proportion correct is equal in both groups | Fisher's exact | Main question |
+| **H2** | Do students rate the original and the AI rewrite differently? | The mean original-minus-AI quality difference is 0 | Paired t-test | Secondary |
+| **H3** | Do students identify the AI passage better or worse than chance? | The proportion correct is 50% | Chi-square goodness-of-fit | Secondary |
+
+All tests are two-sided at .05/3 = .0167. The group comparison, its H0 and its test were written down before collection, and that plan labelled it exploratory; we report it first because it is our main interest. Because the AI passage was always first, a correct answer always means choosing Passage 1. Results are in `results/quality/hypothesis_tests.json`.
 
 ## Current evidence and remaining work
 
@@ -33,16 +43,16 @@ make report      # report/report.md
 
 Original exports stay unchanged in restricted storage and in the ignored `data/private/` folder. Git only accepts the two de-identified files, and they should be committed only after the team confirms sharing is permitted; see [data policy and dictionary](data/README.md). Names, emails, timestamps and free text are not imported. Keep any withdrawal crosswalk separately.
 
-See [report reproduction](report/REPRODUCE.md) for the completed snapshot analysis and [peer-review notes](report/REVIEW_NOTES.md) for outstanding team verification. Core outputs: paired composite difference, 95% CI, paired t statistic and p-value, Cohen dz, item-level tests and correlations; detection counts, chi-square when expected counts permit, exact binomial p-value and exact CI. Scripts report missing-data denominators and do not fabricate absent covariates or page times. The report includes distribution diagnostics, a Wilcoxon sensitivity analysis and exact detection-power scenarios. Uncollected AI-use and English measures cannot support the proposed regression.
+See [report reproduction](report/REPRODUCE.md) for the completed snapshot analysis and [peer-review notes](report/REVIEW_NOTES.md) for outstanding team verification. Core outputs: paired composite difference, 95% CI, paired t statistic and p-value, Cohen dz, item-level tests and correlations; detection counts, chi-square when expected counts permit, Fisher's exact test for the group comparison. Scripts report missing-data denominators and do not fabricate absent covariates or page times. The report includes distribution diagnostics, a Wilcoxon sensitivity analysis and exact detection-power scenarios. Uncollected AI-use and English measures cannot support the proposed regression.
 
 ## Repository layout
 
 | Folder | Contents | Owner |
 |---|---|---|
 | `config/`, `data/`, `scripts/data/` | Export mapping, data files, import and cleaning | Kuba |
-| `scripts/quality/`, `results/quality/` | Rating analysis (H1) and regression | Kuba |
+| `scripts/quality/`, `results/quality/` | Rating analysis (H2), regression, and the three planned tests | Kuba |
 | `study/` | Instrument, form records, stimulus archive | Debshree |
-| `scripts/detection/`, `results/detection/` | Detection (H2), group comparisons (H3) | Debshree |
+| `scripts/detection/`, `results/detection/` | Group comparison (H1) and overall detection (H3) | Debshree |
 | Top level of `scripts/` and `results/` | Analysis, figures and slide builder behind the completed report | Both |
 | `report/sections/` | Report sections in the course's required order | Both |
 | `presentation/` | One deck per part, combined at the end | Both |
@@ -66,6 +76,6 @@ Preserve existing branches/PRs; reconcile their proposed changes with the curren
 
 - [NIH News in Health: Sleep On It](https://newsinhealth.nih.gov/2013/04/sleep-it).
 - [SciPy paired t-test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html).
-- [SciPy exact binomial test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html).
+- [SciPy Fisher's exact test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html).
 
 Validation data in tests are explicitly synthetic and are never analyzed as participant responses.

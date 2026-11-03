@@ -1,5 +1,7 @@
 # Reproduce the report evidence
 
+The report's current results come from the folder pipeline. With the private workbook at data/private/responses.xlsx and an ignored manifest as described in scripts/README.md, run `make data power quality hypotheses regression quality_figures slides` and then `make check`. The rest of this page reproduces the earlier 54-response snapshot, which the report keeps as a sensitivity analysis.
+
 The analyzed CSV is withheld because optional names and free text may identify people. The owner can obtain it from the form Responses menu using Download responses CSV. Store it in data/raw/responses.csv or another approved private location. Request access from the repository owner; no raw data are distributed through GitHub. The CSV checksum and exact expected headers are included in results/report_statistics.json and config/report_export_headers.json. The report analyzes the 54-response export, not an automatically updating live dataset.
 
 From the repository root, after installing requirements-report.txt:
@@ -23,6 +25,6 @@ Power assumptions are declared rather than estimated from the observed outcome. 
 
 scripts/build_report_docx.py builds the Word copy from report/report.md and its figures using python-docx. Run make report first. The owner section Markdown files and sections.json are authoritative. Document rendering and visual verification are performed with the bundled document runtime; QA images are not repository deliverables.
 
-The quality sections come from the folder pipeline. With the private workbook at data/private/responses.xlsx and an ignored manifest as described in scripts/README.md, run `make data power quality regression quality_figures slides` and then `make check`.
+The quality sections come from the folder pipeline. With the private workbook at data/private/responses.xlsx and an ignored manifest as described in scripts/README.md, run `make data power quality hypotheses regression quality_figures slides` and then `make check`.
 
 Debshree’s group script validates the same export schema, imports the student-background category, applies the same comprehension rule, and publishes only aggregate counts, exact Fisher tests and confidence summaries. Group analyses are retrospective/exploratory. The fixed-seed 99,999-label permutation can be reproduced without names or free-text content. `group_power.py` enumerates Fisher rejection regions under assumed rates, not observed effects. `debshree_figures.py` creates the report images and presentation_chart_data.json using aggregate results only. See presentation/README.md for the editable slide builder.
