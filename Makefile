@@ -45,5 +45,5 @@ report:
 
 check: report
 	$(PYTHON) scripts/check_report.py
-	$(PYTHON) scripts/check_debshree.py
+	$(PYTHON) scripts/check_snapshot_groups.py
 	$(PYTHON) scripts/quality/check_quality.py

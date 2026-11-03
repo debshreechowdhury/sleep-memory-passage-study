@@ -11,9 +11,9 @@ python -m unittest discover -s tests -t . -v
 python scripts/report_evidence.py --input data/raw/responses.csv --output results/report_statistics.json
 python scripts/report_power.py --output results/report_power.json
 python scripts/report_figures.py --input data/raw/responses.csv --statistics results/report_statistics.json --output-dir results/figures
-python scripts/debshree_analysis.py --input data/raw/responses.csv --output results/debshree_statistics.json
+python scripts/snapshot_group_analysis.py --input data/raw/responses.csv --output results/snapshot_group_statistics.json
 python scripts/group_power.py --output results/group_power.json
-python scripts/debshree_figures.py
+python scripts/snapshot_figures.py
 make check PYTHON=python
 ```
 
@@ -27,4 +27,4 @@ scripts/build_report_docx.py builds the Word copy from report/report.md and its 
 
 The quality sections come from the folder pipeline. With the private workbook at data/private/responses.xlsx and an ignored manifest as described in scripts/README.md, run `make data power quality hypotheses regression quality_figures slides` and then `make check`.
 
-Debshree’s group script validates the same export schema, imports the student-background category, applies the same comprehension rule, and publishes only aggregate counts, exact Fisher tests and confidence summaries. Group analyses are retrospective/exploratory. The fixed-seed 99,999-label permutation can be reproduced without names or free-text content. `group_power.py` enumerates Fisher rejection regions under assumed rates, not observed effects. `debshree_figures.py` creates the report images and presentation_chart_data.json using aggregate results only. See presentation/README.md for the editable slide builder.
+Debshree’s group script validates the same export schema, imports the student-background category, applies the same comprehension rule, and publishes only aggregate counts, exact Fisher tests and confidence summaries. Group analyses are retrospective/exploratory. The fixed-seed 99,999-label permutation can be reproduced without names or free-text content. `group_power.py` enumerates Fisher rejection regions under assumed rates, not observed effects. `snapshot_figures.py` creates the report images and presentation_chart_data.json using aggregate results only. See presentation/README.md for the editable slide builder.

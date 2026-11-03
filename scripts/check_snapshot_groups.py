@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from scipy import stats
 ROOT=Path(__file__).resolve().parents[1]
-a=json.loads((ROOT/'results/debshree_statistics.json').read_text())
+a=json.loads((ROOT/'results/snapshot_group_statistics.json').read_text())
 b=json.loads((ROOT/'results/report_statistics.json').read_text())
 c=json.loads((ROOT/'results/presentation_chart_data.json').read_text())
 assert a['source_sha256']==b['source_sha256']==c['source_sha256']

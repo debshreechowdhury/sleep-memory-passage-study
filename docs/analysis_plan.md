@@ -31,6 +31,10 @@ Power: scripts/quality/power.py uses the noncentral t distribution for a two-sid
 
 The snapshot contained 54 consenting responses; five failed both checks, leaving 49 complete pairs. See [the report](../report/report.md) and [reproduction instructions](../report/REPRODUCE.md). These are retrospective analyses, not preregistration. Nominal co-primary p-values are accompanied by a retrospective Bonferroni threshold of .025. Distribution diagnostics, a tie-preserving Wilcoxon sensitivity, exact detection-power scenarios, and omission/reversal sensitivities for the first legacy response are complete. No duplicate-pattern exclusion was applied; pilot membership and legacy assignment remain unverified. AI-use/English regression and the time exclusion are unavailable because the required fields were not collected. The report supersedes unfinished-task wording above while preserving the original planning record.
 
+## November 2 team confirmations
+
+The team reports no pilot responses, that the last ten responses came from different people and not a single class or group, that the rewrite used ChatGPT-6.1 Sol over two prompts with the second output used, and that the instructor accepted the initial nondisclosure. The form is closed. The legacy response's passage version remains unverified, and it stays in the data with sensitivity analyses.
+
 ## November 2 hypothesis amendment
 
 The team's main interest is the difference between international and domestic students, so the hypotheses are renumbered and reordered:

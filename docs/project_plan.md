@@ -3,7 +3,7 @@
 Split by research question. [AGENTS.md](../AGENTS.md) has the exact file list.
 
 ## Debshree: design and detection (`debshree/report-design`)
-Owns the background, H1/H3, experimental design, H1/H3 power, detection/group/confidence analysis, detection interpretation, stimulus/sampling limitations and reference-list sections in report/sections/. These sections and presentation/design_detection.pptx were updated to the current hypotheses on Kuba's branch and await Debshree's review. H1 is the international versus domestic detection comparison. The title/abstract and conclusion sections are joint-review drafts. Review Kuba’s mapping/results PR when available.
+Owns the background, H1/H3, experimental design, H1/H3 power, detection/group/confidence analysis, detection interpretation, stimulus/sampling limitations and reference-list sections in report/sections/. These sections and presentation/design_detection.pptx were updated to the current hypotheses on Kuba's branch. Debshree agreed to the main question, and the edits await Debshree's review. H1 is the international versus domestic detection comparison. The title/abstract and conclusion sections are joint-review drafts. Review Kuba’s mapping/results PR when available.
 
 ## Kuba: data and quality (`kuba/data-analysis`)
 Owns the H2, H2 power, collection/cleaning, quality/item tests and supported regression, quality interpretation and ratings/data limitations sections in report/sections/. Existing report content was migrated there as a review baseline; it does not constitute Kuba’s authored contribution. Create presentation/data_quality.pptx and review Debshree’s PR.
