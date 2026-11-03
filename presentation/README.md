@@ -26,4 +26,4 @@ Each deck's visible numbers refer to the final sequence. Merge slide 4's halves 
 
 ## Rebuild
 
-Run `make slides`, which uses python-pptx and the shared template and needs no raw participant data. Review every rendered slide after content changes. scripts/build_debshree_slides.mjs built the earlier 54-response deck and is kept until Debshree confirms it is no longer needed.
+Run `make slides`, which uses python-pptx and the shared template and needs no raw participant data. Review every rendered slide after content changes. `make slides` rebuilds both decks, so commit only the deck you changed. To change a slide, edit its builder: scripts/quality/build_slides.py or scripts/detection/build_design_slides.py.

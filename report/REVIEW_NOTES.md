@@ -1,20 +1,23 @@
 # Member review and submission status
 
-Debshree's report and design work is complete for the November 2 response snapshot and awaits peer review. The report contains all requested sections and actual results; it does not claim that unresolved factual details have been verified.
+## Current structure
 
-Before submission, the team must verify the first response's passage version and any known pilot/test submissions, confirm instructor/ethics requirements, and check that the snapshot is the intended final dataset. The report already discloses those uncertainties and presents version sensitivities. Do not choose exclusions or a version mapping to obtain a preferred p-value. The fixed-order limitation cannot be repaired retrospectively.
+H1 is the international versus domestic detection comparison, H2 is quality and H3 is overall detection, all two-sided at .05/3 = .0167, on the 26 students who answered both checks correctly. Debshree agreed to this main question. Kuba's branch updated all report sections, `presentation/design_detection.pptx` and the checks, including Debshree's sections, and **Debshree has not yet reviewed those edits**.
 
-Kuba should independently review column mapping, exclusion counts, calculations, and interpretation. His separate analysis PR and the actual peer-review history remain his contribution. This branch does not mark that work or either member's review as complete. Submit the approved report through the course Byline link and the repository URL through the required submission route; no course submission has been made by this task.
+## For Debshree
 
-No raw participant data, names, free-text responses, or private crosswalks belong in this PR. The aggregate report evidence is derived from the local private CSV and identified by its SHA-256 checksum in results/report_statistics.json. A fresh data export requires rerunning the evidence script and updating the report numbers and figures together.
+- Check `sections/02_hypotheses_group.md`, `sections/06_analysis_group.md` and `sections/07_interpretation_group.md`, and comment on the PR.
+- Check `sections/01_background.md`, `sections/03_design.md`, and the other `_group` and `_detection` sections, and put them in your own words.
+- Archive the stimuli in `study/stimuli/` in your own PR. Copy the passages from the live form, record both prompts, and check the NIH reuse terms. A link to NIH in the survey is attribution and does not confirm reuse is allowed.
 
-## Hypothesis update
+## Confirmed by the team
 
-H1 is the international versus domestic detection comparison, H2 is quality and H3 is overall detection, all two-sided at .05/3 = .0167, on the 26 students who answered both checks correctly. Kuba's branch updated all report sections, `presentation/design_detection.pptx` and the checks to this structure, including Debshree's sections. **Debshree has not yet reviewed these changes**, so they remain a proposal until that review. Please check that:
+No pilot responses were collected. The last ten responses came from different people and not a single class or group. The rewrite used ChatGPT-6.1 Sol over two prompts, with the second output used. The instructor accepted the initial nondisclosure. The form is closed.
 
-- `sections/02_hypotheses_group.md` describes the plan accurately, including that it labelled this comparison exploratory.
-- `sections/01_background.md` and `sections/03_design.md` still say what you intended.
-- `sections/06_analysis_detection.md` and the deck can drop the exact binomial test, odds ratio, Cohen's w and Spearman permutation test; the 54-response analysis keeps them in `results/debshree_statistics.json` as a record.
-- `scripts/build_debshree_slides.mjs` is no longer needed. `make slides` now builds the deck with python-pptx.
+## Still unverified
 
-Still open for the team: verify the first response's passage version and any pilot or test submissions, find out whether the last ten responses came from one group, confirm the model name and date for the rewrite and archive the prompt in `study/stimuli/`, and confirm instructor or ethics requirements.
+The legacy response's passage version, the rewrite's generation date, and the NIH reuse terms. The report discloses the first two, and `provenance.md` should record the third.
+
+## Before submission
+
+Finalize the abstract and conclusion together, combine the decks into `final.pptx`, rebuild the Word report with `python scripts/build_report_docx.py`, and record PR links and review outcomes in `docs/project_plan.md`. Submit the report through the course Byline link and the repository URL through the required route; no submission has been made yet.

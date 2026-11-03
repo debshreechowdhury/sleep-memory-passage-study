@@ -156,7 +156,7 @@ def build(template,output):
     text(s,"Both groups lean the same way, so there is no Simpson's reversal\nThe AI-use and English questions were not collected",580,290,332,200,18,name="Subgroup notes")
 
     s=new_slide(deck,"Limits on the rating results",11,"The rating half of the shared limitations slide, from report section Limitations. Merge with the stimulus and sampling points in the final deck.")
-    points=(("Fixed order","The original was always second, so version and position cannot be separated."),("Exclusions",f"The student restriction cut the sample from {flow['submissions']} to {flow['students']}, and a stricter check rule set after earlier results left {flow['included']}."),("Measurement","Ratings are bounded and subjective, and the three items agreed only partly, especially clarity."),("Data checks","Duplicate and pilot responses could not be verified, and AI-use and English were not collected."))
+    points=(("Fixed order","The original was always second, so version and position cannot be separated."),("Exclusions",f"The student restriction cut the sample from {flow['submissions']} to {flow['students']}, and a stricter check rule set after earlier results left {flow['included']}."),("Measurement","Ratings are bounded and subjective, and the three items agreed only partly, especially clarity."),("Data checks","Duplicate responses could not be verified, and AI-use and English were not collected."))
     limit_cards(s,points)
     Path(output).parent.mkdir(parents=True,exist_ok=True)
     deck.save(output)

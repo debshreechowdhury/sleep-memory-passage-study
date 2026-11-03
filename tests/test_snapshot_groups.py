@@ -5,7 +5,7 @@ import numpy as np
 from scipy import stats
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from group_power import fisher_power
-from debshree_analysis import group_comparison
+from snapshot_group_analysis import group_comparison
 
 class GroupEvidence(unittest.TestCase):
     def test_fisher_power_matches_exhaustive_tables(self):

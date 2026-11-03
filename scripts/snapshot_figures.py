@@ -8,7 +8,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
-    result=json.loads((ROOT/'results/debshree_statistics.json').read_text())
+    result=json.loads((ROOT/'results/snapshot_group_statistics.json').read_text())
     primary=json.loads((ROOT/'results/report_statistics.json').read_text())
     assert result['source_sha256']==primary['source_sha256']
     figures=ROOT/'results/figures';figures.mkdir(exist_ok=True)

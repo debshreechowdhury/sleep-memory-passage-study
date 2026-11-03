@@ -22,4 +22,4 @@ Figure 1. Share of each student group choosing the AI passage. Because the AI pa
 | Without the last ten responses | 6/10 | 1/6 | .145 |
 | Planned check rule, 54-response snapshot | 7/11 | 1/6 | .1312 |
 
-The direction was the same in every row, with international students correct more often. The result stayed below .0167 under the planned check rule and both legacy-record analyses, but not when restricted to stated Student status or without the last ten responses. Those ten arrived within about 15 minutes, with international students correct 3/4 times and domestic students 0/6 times.
+The direction was the same in every row, with international students correct more often. The result stayed below .0167 under the planned check rule and both legacy-record analyses, but not when restricted to stated Student status or without the last ten responses. Those ten arrived within about 15 minutes, with international students correct 3/4 times and domestic students 0/6 times. The team reports that they came from different people and not a single class or group, so we kept them, but the result leans on them.
