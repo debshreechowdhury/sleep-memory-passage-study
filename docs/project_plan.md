@@ -8,7 +8,7 @@ Owns the background, H2/H3, experimental design, H2/H3 power, detection/group/co
 ## Kuba: data and quality (`kuba/data-analysis`)
 Owns the H1, H1 power, collection/cleaning, quality/item tests and supported regression, quality interpretation and ratings/data limitations sections in report/sections/. Existing report content was migrated there as a review baseline; it does not constitute Kuba’s authored contribution. Create presentation/data_quality.pptx and review Debshree’s PR.
 
-First data tasks: assign passage order per response rather than per file, since the form flipped on October 31; keep the form version and the international/domestic answer, which the importer currently drops and H3 needs; then regenerate the synthetic fixture.
+The importer now keeps the international/domestic answer and the pipeline applies the student-only, both-checks rule. Passage order is still assigned per source file rather than per response.
 
 ## Together
 Analysis plan and multiplicity policy, list of deviations from the original design, title, abstract, conclusion and recommendations, rehearsal and final submission.

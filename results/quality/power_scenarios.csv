@@ -1,4 +1,4 @@
-assumed_dz,alpha,target_power,required_complete_pairs,planned_pairs,power_at_planned_n
-0.3,0.05,0.8,90,30,0.35546273116552507
-0.5,0.05,0.8,34,30,0.7539647157437904
-0.8,0.05,0.8,15,30,0.9884752400890072
+assumed_dz,alpha,target_power,required_complete_pairs,planned_pairs,power_at_planned_n,minimum_detectable_dz
+0.3,0.05,0.8,90,30,0.35546273116552507,0.5292356151129142
+0.5,0.05,0.8,34,30,0.7539647157437904,0.5292356151129142
+0.8,0.05,0.8,15,30,0.9884752400890072,0.5292356151129142

@@ -1,6 +1,7 @@
 """Quality script runs on the synthetic fixture; values are not participant results."""
 import csv, json, subprocess, sys, tempfile, unittest
 from pathlib import Path
+import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 FIXTURE=ROOT/'tests'/'fixtures'/'synthetic_analysis.csv'
 
@@ -15,4 +16,8 @@ class Quality(unittest.TestCase):
         self.assertEqual(x['raw_n'],len(rows))
         self.assertEqual(x['paired_n'],expected)
         self.assertIn('ci95',x['ratings'])
+        self.assertNotIn('cronbach_alpha',x)
+        paired=[r for r in rows if r['included']=='1' and r['quality_AI'] and r['quality_O']]
+        expected=np.corrcoef([float(r['clear_O']) for r in paired],[float(r['write_O']) for r in paired])[0,1]
+        self.assertAlmostEqual(x['item_correlations']['O']['clear_write'],expected)
 if __name__=='__main__':unittest.main()

@@ -4,7 +4,7 @@ Git cannot merge `.pptx` files, so each part has a separate deck.
 
 - template.pptx: shared editable 16:9 theme and two reusable layouts (cover/content). Keep its font and palette in both decks.
 - design_detection.pptx: eight slides corresponding to final slide numbers 1, 2, 3, 4 (detection half), 9, 10, 11 (stimulus/sampling half), and 12 (joint conclusion draft).
-- data_quality.pptx: reserved for Kuba’s own slides; not created on his behalf.
+- data_quality.pptx: six slides corresponding to final slide numbers 4 (H1 half), 5, 6, 7, 8 and 11 (ratings and data half). `make slides` rebuilds it from results/quality/ using python-pptx and the shared template. It reports the 26-respondent quality analysis, while design_detection.pptx still reports the 54-response snapshot.
 - final.pptx: create after both member decks and shared slides are reviewed. No combined final deck is claimed yet.
 
 | Final slide | Owner | Member-deck position |
@@ -12,11 +12,11 @@ Git cannot merge `.pptx` files, so each part has a separate deck.
 | 1 Title/research question | Debshree | 1 |
 | 2 Motivation | Debshree | 2 |
 | 3 Design/passages | Debshree | 3 |
-| 4 Hypotheses/power | Both | Debshree 4 + Kuba H1 half |
-| 5–8 Flow, quality, assumptions/items, regression | Kuba | Pending his deck |
+| 4 Hypotheses/power | Both | Debshree 4 + data_quality 1 |
+| 5–8 Flow, quality, assumptions/items, regression | Kuba | data_quality 2–5 |
 | 9 Detection | Debshree | 5 |
 | 10 Groups/confidence | Debshree | 6 |
-| 11 Limitations | Both | Debshree 7 + Kuba ratings/data points |
+| 11 Limitations | Both | Debshree 7 + data_quality 6 |
 | 12 Conclusion/recommendations | Both | Debshree 8, joint-review draft |
 
 The deck’s visible numbers refer to the intended final sequence, so its eight pages are deliberately not numbered 1–8. Merge slide 4’s halves, the limitations points, and the conclusion after joint review. H3 is provisionally the international/domestic detection comparison; confirm it before presenting. Current slides label the group analyses exploratory. If the course time limit requires cuts, preserve the fixed-order limitation and uncertainty around detection.

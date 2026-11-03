@@ -1,4 +1,4 @@
-"""Score mapped participant data; retain exclusions for a count audit."""
+"""Score mapped participant data and apply the study rules; retain exclusions for a count audit."""
 import argparse, csv, re
 from pathlib import Path
 
@@ -42,11 +42,31 @@ def clean_row(row):
     out["exclusion_reason"] = ";".join(reasons)
     return out
 
+def student_background(value):
+    text = str(value or "").strip().lower()
+    if not text: return None
+    for prefix, label in (("international","International"),("domestic","Domestic"),("not applicable","Not applicable")):
+        if text.startswith(prefix): return label
+    raise ValueError("Unexpected student-background category; review mapping")
+
+def analysis_row(row):
+    """Study rule: current students only, with both comprehension checks correct. clean_row keeps the earlier both-wrong rule."""
+    out = clean_row(row)
+    out["student_background"] = student_background(row.get("student_background"))
+    out["included_both_wrong_rule"] = out["included"]
+    reasons = [r for r in out["exclusion_reason"].split(";") if r]
+    if out["student_background"] is None: reasons.append("missing_student_background")
+    elif out["student_background"] == "Not applicable": reasons.append("not_a_student")
+    if sum(out[f"check_{i}"] == 90 for i in (1,2)) == 1: reasons.append("one_check_wrong")
+    out["included"] = int(not reasons)
+    out["exclusion_reason"] = ";".join(reasons)
+    return out
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--input",required=True); p.add_argument("--output",required=True)
     a=p.parse_args()
-    with open(a.input,newline="") as f: rows=[clean_row(r) for r in csv.DictReader(f)]
+    with open(a.input,newline="") as f: rows=[analysis_row(r) for r in csv.DictReader(f)]
     if not rows: raise ValueError("No participant rows")
     ids=[r["response_id"] for r in rows]
     if len(ids)!=len(set(ids)): raise ValueError("Duplicate response IDs; review input")
